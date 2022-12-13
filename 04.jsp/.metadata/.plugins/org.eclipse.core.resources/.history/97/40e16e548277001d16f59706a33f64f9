@@ -1,0 +1,13 @@
+<%-- <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> --%>
+
+<!-- 
+	JSP페이지의 인코딩과 pageEncoding속성
+	
+	JSP파일에서 문자셋을 잘못지정하는 경우 응답결과 페이지의 문자들이 깨져서 출력이 된다.
+	tomcat과 같은 컨테이너(웹서버)는 분석하는 과정에서 (~.java파일 생성) 어떤 인코딩을
+	이용해서 코드를 작성했는지를 검사하고 그 결과를 선택한 캐릭터셋을 이용해서 JSP페이지의
+	문자를 읽어 오게 된다. 웹컨테이너가 JSP페이지를 읽을 때 사용할 문자셋을 결정하는 과정은
+	아래와 같다.
+
+ -->
+현재시간 : <%= new java.util.Date() %>
