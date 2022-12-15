@@ -3,7 +3,7 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
-	String id = request.getParameter("id");
+	String bno = request.getParameter("bno");
 %>
 <!DOCTYPE html>
 <html>
@@ -15,17 +15,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+
 	<div class="container" align="center">
+	<h1><%=bno %>번째 글입니다!</h1>
 	<%
 		Class.forName("org.mariadb.jdbc.Driver");
 		Connection conn = null;
 		Statement stmt = null;
 		ResultSet rs = null;
 		
-		String url = "jdbc:mariadb://localhost:3306/jspstudy";
+		String url = "jdbc:mariadb://192.168.0.38:3306/myboard";
 		String usr = "root";
 		String pwd = "12345";
-		String sql = "select * from member where id='"+id+"'";
+		String sql = "select * from board where bno='"+bno+"'";
 	
 		try{
 			conn=DriverManager.getConnection(url,usr,pwd);
@@ -36,26 +38,34 @@
 %>
 				<table class="table tabl-hover" border="1">
 					<tr>
-						<td>아이디</td>
-						<td><%= id %></td>
+						<td>글번호</td>
+						<td><%= bno %></td>
 					</tr>
 					<tr>
-						<td>비밀번호</td>
-						<td><%= rs.getString("password") %></td>
+						<td>글주제</td>
+						<td><%= rs.getString("subject") %></td>
 					</tr>
 					<tr>
-						<td>이름</td>
-						<td><%= rs.getString("name") %></td>
+						<td>작성자</td>
+						<td><%= rs.getString("writer") %></td>
 					</tr>
 					<tr>
-						<td>이메일</td>
-						<td><%= rs.getString("email") %></td>
+						<td>작성일자</td>
+						<td><%= rs.getString("crtdate") %></td>
+					</tr>
+					<tr>
+						<td>읽은횟수</td>
+						<td><%= rs.getString("readcnt") %></td>
+					</tr>
+					<tr>
+						<td>글내용</td>
+						<td><%= rs.getString("content") %></td>
 					</tr>
 				</table>
 <%				
 				}else{
 %>	
-				<h3 class="bg-danger text-white"><%= id %>는 찾지 못했습니다!</h3>
+				<h3 class="bg-danger text-white"><%= bno %>는 찾지 못했습니다!</h3>
 <%			}
 		}catch(Exception e){
 %>			
@@ -70,6 +80,7 @@
 			}
 		}
 %>
+	
 	</div>
 </body>
 </html>
