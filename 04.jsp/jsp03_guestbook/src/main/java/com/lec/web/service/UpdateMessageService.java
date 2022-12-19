@@ -11,14 +11,14 @@ import com.lec.web.jdbc.ConnectionProvider;
 import com.lec.web.jdbc.JDBCUtil;
 import com.lec.web.model.Message;
 
-public class DeleteMessageService {
-	private DeleteMessageService() {}
-	private static DeleteMessageService instance = new DeleteMessageService(); 
-	public static DeleteMessageService getInstance() {
+public class UpdateMessageService {
+	private UpdateMessageService() {}
+	private static UpdateMessageService instance = new UpdateMessageService(); 
+	public static UpdateMessageService getInstance() {
 		return instance;
 	}
 	
-	public void deleteMessage(int id, String pw) {
+	public void updateMessage(int id, String pw, String msg) {
 		Connection conn = null;
 		
 		try {
@@ -29,16 +29,22 @@ public class DeleteMessageService {
 			// messageDAO.update(conn, );
 			Message message = messageDAO.select(conn, id);
 			
+			
+			if(message ==null||msg.trim().isEmpty()) {
+				//messageDAO.update(conn, );
+				throw new MessageNotFoundException(id + "번 메시지를 찾지 못했거나 메시지가 등록되지 않았습니다!!");
+			}
+			
 			if(!message.matchPassword(pw)) {
 				throw new InvalidPasswordException("비밀번호가 틀립니다!! 다시 입력하세요!!");
 			}
 			
-			messageDAO.delete(conn, id);
+			messageDAO.update(conn, id, msg);
 			
 			conn.commit();
 		} catch (SQLException e) {
 			JDBCUtil.rollback(conn);
-			throw new ServiceException("메시지 삭제실패!! : "+e.getMessage(),e);
+			throw new ServiceException("메시지 수정실패!! : "+e.getMessage(),e);
 		} catch (MessageNotFoundException | InvalidPasswordException e) {
 			JDBCUtil.rollback(conn);
 			throw e;

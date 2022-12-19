@@ -1,5 +1,9 @@
 package com.lec.web.exception;
 
-public class InvalidPasswordException {
+public class InvalidPasswordException extends ServiceException{
 
+	public InvalidPasswordException(String msg) {
+		super(msg);
+	}
+	
 }

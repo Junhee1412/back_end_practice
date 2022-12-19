@@ -1,13 +1,13 @@
 package com.lec.web.model;
 
-//Java Bean, VO, DTO : guestbook 테이블
-
+// Java Bean, VO, DTO ; guestbook 테이블
 public class Message {
 
 	private int id;
 	private String guestName;
 	private String password;
 	private String message;
+	
 	public int getId() {
 		return id;
 	}
@@ -32,12 +32,15 @@ public class Message {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+
 	public boolean hasPassword() {
 		return password != null && !password.isEmpty();
 	}
+	
 	public boolean matchPassword(String pwd) {
 		return password != null && password.equals(pwd);
 	}
+	
 	@Override
 	public String toString() {
 		return "Message [id=" + id + ", guestName=" + guestName + ", message=" + message + "]";
