@@ -2,7 +2,7 @@ package com.lec.board.service;
 
 import java.sql.Connection;
 
-import com.lec.board.DAO.BoardDAO;
+import com.lec.board.dao.BoardDAO;
 import com.lec.board.vo.BoardBean;
 import com.lec.db.JDBCUtility;
 
