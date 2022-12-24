@@ -1,13 +1,14 @@
 <%@page import="java.net.URLEncoder"%>
-<%@page import="java.io.FileInputStream"%>
 <%@page import="java.io.File"%>
+<%@page import="java.io.FileInputStream"%>
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	request.setCharacterEncoding("utf-8");	
-	String fileName = request.getParameter("f");
+	request.setCharacterEncoding("utf-8");
+	String fileName = request.getParameter("fn");
+	System.out.println(fileName);
 	
-	String fromPath = "D:/Back/99.temp/upload/" + fileName;
-	String toPath = "D:/Back/99.temp/download/" + fileName;
+	String fromPath = "D:/Back/99.temp/upload/"+fileName;
+	String toPath = "D:/Back/99.temp/download/"+fileName;
 	
 	byte[] b = new byte[4096];
 	File f = new File(toPath);
@@ -21,7 +22,7 @@
 	
 	response.setContentType(sMimeType);
 	response.setHeader("Content-Transfer-Encoding", "binary");
-	response.setHeader("Content-Disposition", "attachment; filename="+sEncoding1);
+	response.setHeader("Content-Disposition", "attachment; filename= "+sEncoding1);
 	
 	ServletOutputStream os = response.getOutputStream();
 	int numRead;
@@ -45,9 +46,9 @@
       crossorigin="anonymous">  
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	
+
 </head>
 <body>
-	<h3>파일다운로드 성공!!</h3>
+	<h1 align="center">파일다운로드성공</h1>
 </body>
 </html>
