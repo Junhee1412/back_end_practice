@@ -6,8 +6,8 @@
 	request.setCharacterEncoding("utf-8");	
 	String fileName = request.getParameter("f");
 	
-	String fromPath = "D:/Back/99.temp/upload/" + fileName;
-	String toPath = "D:/Back/99.temp/download/" + fileName;
+	String fromPath = "C:/Users/Jun Hee/develop/Github/back_end_practice/04.jsp/jsp05_file/upload" + fileName;
+	String toPath = "C:/Users/Jun Hee/develop/Github/back_end_practice/04.jsp/jsp05_file/download" + fileName;
 	
 	byte[] b = new byte[4096];
 	File f = new File(toPath);

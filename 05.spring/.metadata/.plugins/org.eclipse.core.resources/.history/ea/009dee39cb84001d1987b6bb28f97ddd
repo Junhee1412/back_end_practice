@@ -1,0 +1,8 @@
+package com.lec.basic.poly;
+
+public interface TV {
+	void powerON();
+	void powerOff();
+	void volumnUp();
+	void volumnDown();
+}

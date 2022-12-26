@@ -22,7 +22,7 @@ public class BoardWriteAction implements Action {
 		ActionFoward forward = null;
 		BoardBean board = null;
 		String realFolder = "";
-		String saveFolder = "d:/back/99.temp/upload";
+		String saveFolder = "C:/Users/Jun Hee/develop/Github/back_end_practice/04.jsp/jsp05_file/upload";
 		
 		int filesize = 1024*1024*5;
 		

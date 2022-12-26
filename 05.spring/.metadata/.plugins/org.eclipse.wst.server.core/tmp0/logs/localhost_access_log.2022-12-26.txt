@@ -1,0 +1,14 @@
+127.0.0.1 - - [26/Dec/2022:11:28:23 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [26/Dec/2022:11:28:24 +0900] "GET /basic/ HTTP/1.1" 200 166
+0:0:0:0:0:0:0:1 - - [26/Dec/2022:11:28:24 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+127.0.0.1 - - [26/Dec/2022:12:00:35 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [26/Dec/2022:12:00:43 +0900] "GET /basic/ HTTP/1.1" 200 165
+0:0:0:0:0:0:0:1 - - [26/Dec/2022:12:00:51 +0900] "GET /basic/hello.do HTTP/1.1" 200 -
+127.0.0.1 - - [26/Dec/2022:13:12:24 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [26/Dec/2022:13:12:24 +0900] "GET /basic/WEB-INF/classes/com/lec/basic/poly/LGTV.java HTTP/1.1" 404 721
+127.0.0.1 - - [26/Dec/2022:13:16:36 +0900] "GET / HTTP/1.1" 404 807
+127.0.0.1 - - [26/Dec/2022:13:17:17 +0900] "GET / HTTP/1.1" 404 807
+127.0.0.1 - - [26/Dec/2022:14:31:08 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [26/Dec/2022:14:31:08 +0900] "GET /basic/WEB-INF/classes/com/lec/basic/poly2/SamsungTV.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [26/Dec/2022:14:48:05 +0900] "GET /basic/WEB-INF/classes/applicationContext2.xml HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [26/Dec/2022:14:48:24 +0900] "GET /basic/WEB-INF/classes/applicationContext2.xml HTTP/1.1" 404 721

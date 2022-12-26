@@ -1,0 +1,24 @@
+package com.lec.basic;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class HelloServlet extends HttpServlet {
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		doProcess(req, res);
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		doProcess(req, res);
+	}
+	
+	private void doProcess(HttpServletRequest req, HttpServletResponse res) {
+		System.out.println("doGet / doPost 메서드 호출!!!");
+	}
+}

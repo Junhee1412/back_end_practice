@@ -29,7 +29,7 @@
 		PreparedStatement pstmt = null;
 		ResultSet rs =null;
 		
-		String URL = "jdbc:mariadb://192.168.0.38:3306/myboard";
+		String URL = "jdbc:mariadb://localhost:3306/myboard";
 		String USER = "root";
 		String PWD = "12345";
 		String sql="select * from board order by bno";

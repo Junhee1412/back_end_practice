@@ -1,0 +1,21 @@
+package com.lec.basic.poly;
+
+public class LGTV implements TV{
+	
+	public LGTV() {
+		System.out.println("==> LGTV()생성자 호출!!");
+	}
+	public void powerOn() {
+		System.out.println("LG TV - powerOn!!");
+	}
+	public void powerOff() {
+		System.out.println("LG TV - powerOff!!");
+	}
+	public void volumnUp() {
+		System.out.println("LG TV - volumnUp!!");
+	}
+	public void volumnDown() {
+		System.out.println("LG TV - volumnDown!!");
+	}
+	
+}

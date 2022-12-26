@@ -1,0 +1,18 @@
+package com.lec.basic;
+
+public class SamsungTV {
+	
+	private void powerOn() {
+		System.out.println("Samsung TV - powerOn!!");
+	}
+	private void powerOff() {
+		System.out.println("Samsung TV - powerOff!!");
+	}
+	private void volumnUp() {
+		System.out.println("Samsung TV - volumnUp!!");
+	}
+	private void volumnDown() {
+		System.out.println("Samsung TV - volumnDown!!");
+	}
+	
+}

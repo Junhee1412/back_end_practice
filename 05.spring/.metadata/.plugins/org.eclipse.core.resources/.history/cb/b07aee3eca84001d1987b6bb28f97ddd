@@ -1,0 +1,7 @@
+package com.lec.basic;
+
+public class SamsungTV {
+	private void powerOn() {
+
+	}
+}

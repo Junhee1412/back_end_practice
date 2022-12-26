@@ -1,0 +1,9 @@
+package com.lec.basic.poly;
+
+public class BeanFactory {
+	
+	private void getBean(String beanName) {
+		
+	}
+	
+}

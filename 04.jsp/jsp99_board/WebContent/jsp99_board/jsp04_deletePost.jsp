@@ -14,7 +14,7 @@
     int count = 0;
     boolean isConn = true;
 	
-    String url = "jdbc:mariadb://192.168.0.38:3306/myboard";
+    String url = "jdbc:mariadb://localhost:3306/myboard";
 	String usr = "root";
 	String pwd = "12345";
 	String sql = "delete from board where bno = ?";

@@ -1,0 +1,12 @@
+package com.lec.basic.poly;
+
+public class BeanFactory {
+	
+	private Object getBean(String beanName) {
+		
+		if(beanName.equals("LGTV"))
+		
+		return null;
+	}
+	
+}

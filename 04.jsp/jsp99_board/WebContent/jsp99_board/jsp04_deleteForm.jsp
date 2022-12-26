@@ -16,7 +16,7 @@
     Statement stmt = null;
     ResultSet rs = null;
     
-    String url = "jdbc:mariadb://192.168.0.38:3306/myboard";
+    String url = "jdbc:mariadb://localhost:3306/myboard";
 	String usr = "root";
 	String pwd = "12345";
 	String sql = "select * from board where bno = '" + bno + "'";

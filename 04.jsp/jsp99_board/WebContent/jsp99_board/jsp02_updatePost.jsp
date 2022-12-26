@@ -11,7 +11,7 @@
 	
 	// 1. 드라이버 로드
    Class.forName("org.mariadb.jdbc.Driver"); // db연결작업
-   String URL = "jdbc:mariadb://192.168.0.38:3306/myboard";
+   String URL = "jdbc:mariadb://localhost:3306/myboard";
    String USER = "root";
    String PWD = "12345";
    String sql="update board set subject=?, content=?, writer=?, crtdate=now() where bno=?";

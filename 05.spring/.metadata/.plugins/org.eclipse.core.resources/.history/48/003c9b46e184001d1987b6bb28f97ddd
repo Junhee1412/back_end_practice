@@ -1,0 +1,21 @@
+package com.lec.basic.poly3;
+
+public class AppleSpeaker implements Speaker{
+
+	public AppleSpeaker() {
+		System.out.println("==> AppleSpeaker 객체 생성!!");
+	}
+	
+	@Override
+	public void volumnUp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void volumnDown() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

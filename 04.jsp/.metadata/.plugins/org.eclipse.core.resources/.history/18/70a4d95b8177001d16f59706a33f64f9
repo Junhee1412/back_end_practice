@@ -1,9 +1,0 @@
-<!--  <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> -->
-
-<!-- 
-	JSP페이지의 인코딩과 pageEncoding속성
-	
-	JSP파일에서 
-
- -->
-현재시간 : <%= new java.util.Date() %>
