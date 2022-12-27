@@ -12,7 +12,7 @@ public class TVUser3 {
 		TV tv1 = (TV) factory.getBean("tv");
 		TV tv2 = (TV) factory.getBean("tv");
 		TV tv3 = (TV) factory.getBean("tv");
-	
+		factory.close();
 	}
 	
 }

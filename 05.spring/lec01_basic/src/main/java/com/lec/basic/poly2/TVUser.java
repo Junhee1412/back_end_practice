@@ -9,6 +9,7 @@ public class TVUser {
 
 		AbstractApplicationContext factory = new GenericXmlApplicationContext("applicationContext2.xml");
 		
+		factory.close();
 	}
 
 }
