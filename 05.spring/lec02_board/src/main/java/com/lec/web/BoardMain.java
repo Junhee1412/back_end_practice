@@ -9,6 +9,9 @@ public class BoardMain {
 
 	public static void main(String[] args) {
 
+		
+		
+		
 		AbstractApplicationContext factory = new GenericXmlApplicationContext("boardContext.xml");
 		BoardService boardService = (BoardService) factory.getBean("boardService");
 
