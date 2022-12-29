@@ -9,6 +9,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.lec.mvc.db.JDBCUtility;
+import com.lec.mvc.vo.PageInfo;
 import com.lec.mvc.vo.UserVO;
 
 @Repository("userDAO")
@@ -19,6 +20,42 @@ public class UserDAO {
 	private ResultSet rs = null;
 	UserVO user = null;
 	
+	public PageInfo getPageInfo(String tableName, int currentPage, int perPage) {
+		
+		PageInfo pageInfo = new PageInfo();
+		String sql = "select count(*) from " + tableName;
+		
+		int totalCount = 0;
+		int totalPages = 0;
+		int startPage = 0;
+		int endPage = 0;
+		
+		try {
+			conn = JDBCUtility.getConnection();
+			stmt = conn.prepareStatement(sql);
+			rs = stmt.executeQuery();
+			if(rs.next()) totalCount = rs.getInt(1);
+		} catch (Exception e) {
+			System.out.println("DB." + tableName + " 접속 실패 !! : " + e.getMessage());
+		} finally {
+			JDBCUtility.close(conn, stmt, rs);
+		}
+
+		if(totalCount>0) {
+			totalPages = (int)(totalCount / perPage) + ((totalCount % perPage == 0) ? 0 : 1);
+			startPage = (int)(currentPage / perPage) * perPage + 1 + ((currentPage % perPage == 0) ? -perPage : 0);
+			endPage = (startPage >= totalPages) ? totalPages : startPage + perPage - 1;
+		}
+				
+		pageInfo.setTotalCount(totalCount);
+		pageInfo.setTotalPages(totalPages);
+		pageInfo.setCurrentPage(currentPage);
+		pageInfo.setStartPage(startPage);
+		pageInfo.setEndPage(endPage);
+			
+		return pageInfo;
+	}
+		
 	public UserVO getUser(String id) {
 
 		String sql = "select * from user where id = ?";
@@ -72,12 +109,12 @@ public class UserDAO {
 	}
 
 	public int insertUser(UserVO userVO) {
-			
+		
 		String sql = "insert into user(id, password, name, role) values(?,?,?,?)";
-		int insertCount=0;
+		int insertCount = 0;
 		
 		String role = (userVO.getRole() !=null) ? "ADMIN" : "USER";
-		
+			
 		try {
 			conn = JDBCUtility.getConnection();
 			stmt = conn.prepareStatement(sql);
@@ -86,7 +123,6 @@ public class UserDAO {
 			stmt.setString(3, userVO.getName());
 			stmt.setString(4, role);
 			insertCount = stmt.executeUpdate();
-			
 		} catch (Exception e) {
 			System.out.println("DB.USER 접속 실패!!! : " + e.getMessage());
 		} finally {
@@ -97,7 +133,7 @@ public class UserDAO {
 
 	public int deleteUser(String id) {
 		
-		String sql = "delete from user where id = ? ";
+		String sql = "delete from user where id = ?";
 		int deleteCount = 0;
 		
 		try {
@@ -109,13 +145,30 @@ public class UserDAO {
 			System.out.println("DB.USER 접속 실패!!! : " + e.getMessage());
 		} finally {
 			JDBCUtility.close(conn, stmt, rs);
-		}
-		
-		
+		}		
 		return deleteCount;
-		
 	}
 
+	public int updateUser(UserVO userVO) {
+		
+		String sql="update user set name=?, password=?, role=? where id=?";
+		int UpdateCount = 0;
+		
+		try {
+			conn = JDBCUtility.getConnection();
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, userVO.getName());
+			stmt.setString(2, userVO.getPassword());
+			stmt.setString(3, userVO.getRole()!=null? "ADMIN" : "USER");
+			stmt.setString(4, userVO.getId());
+			UpdateCount = stmt.executeUpdate();
+		} catch (Exception e) {
+			System.out.println("DB.USER 접속 실패!!! : " + e.getMessage());
+		} finally {
+			JDBCUtility.close(conn, stmt, rs);
+		}
+		return UpdateCount;
+	}
 }
 
 
