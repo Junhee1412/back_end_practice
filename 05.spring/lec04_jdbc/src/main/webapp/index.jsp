@@ -19,7 +19,6 @@
 			<p>상세설명......................</p>
 		</div>
 		<br>
-		
 		<a href="login.do" class="btn btn-primary">로그인</a>
 	</div>		
 </body>

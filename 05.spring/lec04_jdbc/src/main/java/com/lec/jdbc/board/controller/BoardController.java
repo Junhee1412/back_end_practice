@@ -27,32 +27,40 @@ public class BoardController {
 		return "board/board_list.jsp";
 	}
 	
-	@RequestMapping("insertBoard.bo")
+	@RequestMapping(value="board/insertBoard.bo", method=RequestMethod.POST)
 	public String insertBoard(BoardVO boardVO) {
 		boardService.insertBoard(boardVO);
-		return "boardList.bo";
+		return "../boardList.bo";
 	}
 	
-	@RequestMapping(value="/deleteBoard.bo", method=RequestMethod.GET)
+	@RequestMapping(value="deleteBoard.bo", method=RequestMethod.GET)
 	public String deleteBoardView(@RequestParam int seq) {
 		return "board/board_delete.jsp?seq="+seq;
 	}
 	
-	@RequestMapping(value="/deleteBoard.bo", method=RequestMethod.POST)
+	@RequestMapping(value="deleteBoard.bo", method=RequestMethod.POST)
 	public String deleteBoard(@RequestParam int seq) {
 		boardService.deleteBoard(seq);
 		return "boardList.bo";
 	}
 	
-	@RequestMapping(value="/updateBoard.bo", method=RequestMethod.GET)
+	@RequestMapping(value="updateBoard.bo", method=RequestMethod.GET)
 	public String updateBoard(Model model, @RequestParam int seq) {
 		model.addAttribute("board", boardService.selectBoard(seq));
-		return "board/board_update.jsp";
+		return "board/board_update.jsp?seq="+seq;
 	}
 	
-	@RequestMapping(value="/updateBoard.bo", method=RequestMethod.POST)
+	@RequestMapping(value="updateBoard.bo", method=RequestMethod.POST)
 	public String updateBoard(BoardVO boardVO) { 
 		boardService.updateBoard(boardVO);
 		return "boardList.bo";
+		}
+	
+	@RequestMapping(value="selectBoard.bo", method=RequestMethod.GET)
+	public String selectBoard(@RequestParam int seq, Model model) { 
+		model.addAttribute("board", boardService.selectBoard(seq));
+		boardService.selectBoard(seq);
+		boardService.countUp(seq);
+		return "board/board_select.jsp?seq="+seq;
 		}
 }

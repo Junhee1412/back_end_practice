@@ -15,15 +15,40 @@
 <body>
    <div class="container" align="center">
       <div class="mt-4 p-5 bg-primary text-white rounded">
-         <h3>board_Delete!!!!!!!!!</h3>
-         <p>아니 지울꺼면 왜 쓴거임?</p>
-      </div>
+         <h3>Board_Select!!!!</h3>
+         <p>쓴거 보셈</p>
+               </div>
+        <table class="table table-hover">
+			<thead>
+				<th scope="col">글 번호</th>
+				<th scope="col">제목</th>
+				<th scope="col">작성자</th>
+				<th scope="col">내용</th>
+				<th scope="col">작성일자</th>
+				<th scope="col">조회수</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td scope="row">${ board.getSeq() }</td>
+					<td>${ board.getTitle() }</a></td>
+					<td>${ board.getWriter() }</td>
+					<td>${ board.getContent() }</td>
+					<td>${ board.getRegdate() }</td>
+					<td>${ board.getCnt() }</td>
+				</tr>
+			</tbody>
+		</table>
       <br>
-      <form action="deleteBoard.bo" method="post">
-			<input type="hidden" name="seq" value="${ param.seq }">
-			<button type="submit" class="btn btn-danger text-white"><b>${ param.seq }</b>번 글을 삭제하겠습니까?</button>
+       <div style="display:inline; white-space:nowrap;">
+	  	<form action="updateBoard.bo" method="get">
+	  		<input type="hidden" name="seq" id="seq" value="${board.getSeq()}"> 
+			<button type="submit" class="btn btn-primary" >수정하기</button>
 		</form>
-      
+		<form action="deleteBoard.bo" method="get">
+			<input type="hidden" name="seq" id="seq" value="${board.getSeq()}"> 
+			<button type="submit" class="btn btn-danger" >삭제하기</button>
+		</form>
+	</div>
    </div>      
 </body>
 </html>   

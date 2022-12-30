@@ -16,7 +16,12 @@ public class BoardDAO {
 	
 	private JdbcTemplate jdbcTemplate;
 	
-
+	public void selectBoard(int seq) {
+		String sql = "select * from board where seq= ?";
+		
+		jdbcTemplate.update(sql, seq);
+	}
+	
 	public void insertBoard(BoardVO boardVO) {
 		String sql = "insert into board(title, writer, content, cnt) values(?,?,?,0)";
 		
@@ -37,10 +42,9 @@ public class BoardDAO {
 	public BoardVO getBoard(int seq) {
 
 		String sql = "select * from board where seq = ?";
-		String sql1 = "update board set cnt=cnt+1 where seq="+seq;
+
 		Object[] args = {seq};
 		
-		jdbcTemplate.update(sql1);
 		return (BoardVO)jdbcTemplate.queryForObject(sql, args, new BoardRowMapper());
 	}
 
@@ -51,7 +55,13 @@ public class BoardDAO {
 		return jdbcTemplate.query(sql, args, new BoardRowMapper());
 		
 	}
-
+	public void countUp(int seq) {
+		
+		String sql = "update board set cnt=cnt+1 where seq="+seq;
+		
+		jdbcTemplate.update(sql, seq);
+		
+	}
 	public BoardDAO() {
 		AbstractApplicationContext container = new  GenericXmlApplicationContext("applicationContext.xml");
 		this.jdbcTemplate = (JdbcTemplate) container.getBean("jdbcTemplate");

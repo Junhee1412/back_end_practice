@@ -35,7 +35,12 @@ public class BoardServiceImpl implements BoardService{
 	public BoardVO selectBoard(int seq) {
 		return boardDAO.getBoard(seq);
 	}
-
+	
+	@Override
+	public void countUp(int seq) {
+		boardDAO.countUp(seq);
+	}
+	
 	@Override
 	public List<BoardVO> getBoardList(int currentPage, int perPage) {
 		return boardDAO.getBoardList(currentPage, perPage);

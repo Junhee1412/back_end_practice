@@ -18,34 +18,30 @@
          <h3>board_Update!!!!!!!!!</h3>
          <p>귀찮게 뭐하러 글을 수정하고 그러냐..</p>
          <form action="updateBoard.bo" method="post">
-         
 			<div class="input-group-text mb-3">
 				<div class="input-group-text"><i class="fas fa-user"></i></div>
-				<input type="text" class="form-control" value="${ boardList.getseq()}" disabled>
+				<input type="text" class="form-control" value="${ board.getSeq()}" disabled>
 			</div>
 			
 			<div class="input-group-text mb-3">
 				<div class="input-group-text"><i class="fas fa-user"></i></div>
-				<input type="text" name="title" id="title" class="form-control" value="${ boardList.getTitle() }" required>
+				<input type="text" name="title" id="title" class="form-control" value="${ board.getTitle() }" required>
 			</div>
 			
 			<div class="input-group-text mb-3">
 				<div class="input-group-text"><i class="fas fa-user"></i></div>
-				<input type="text" name="writer" id="writer" class="form-control" value="${ boardList.getWriter() }" required>
+				<input type="text" name="writer" id="writer" class="form-control" value="${ board.getWriter() }" required>
 			</div>
 			
 			<div class="input-group-text mb-3">
 				<div class="input-group-text"><i class="fas fa-user"></i></div>
-				<input type="text" name="content" id="content" class="form-control" value="${ boardList.getContent() }" required>
+				<input type="text" name="content" id="content" class="form-control" value="${ board.getContent() }" required>
 			</div>
-			
-		<input type="hidden" name="seq" id="seq" class="form-control" value="${ boardList.getSeq() }">
-			<button type="submit" class="btn btn-primary text-white"><b>"${ boardList.getSeq() }"</b>를 수정하겠습니까?</button>
+			<input type="hidden" name="seq" id="seq" class="form-control" value="${ board.getSeq() }">
+			<button type="submit" class="btn btn-primary text-white"><b>"${ board.getSeq() }"</b>번 글을 수정하겠습니까?</button>
 		</form>
       </div>
       <br>
-      
-      
    </div>      
 </body>
 </html>   

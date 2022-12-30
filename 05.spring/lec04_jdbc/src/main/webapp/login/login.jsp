@@ -47,7 +47,7 @@
 			    </div>
 			    
 	  		  	<div class="col input-group justify-right">
-			    	<button type="submit" class="btn btn-primary">Submit</button>
+			    	<button type="submit" class="btn btn-primary">Log In!</button>
 			    </div>
 			</div>
 		</form>	

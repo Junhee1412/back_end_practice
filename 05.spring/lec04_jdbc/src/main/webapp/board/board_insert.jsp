@@ -15,15 +15,27 @@
 <body>
    <div class="container" align="center">
       <div class="mt-4 p-5 bg-primary text-white rounded">
-         <h3>board_Delete!!!!!!!!!</h3>
-         <p>아니 지울꺼면 왜 쓴거임?</p>
-      </div>
-      <br>
-      <form action="deleteBoard.bo" method="post">
-			<input type="hidden" name="seq" value="${ param.seq }">
-			<button type="submit" class="btn btn-danger text-white"><b>${ param.seq }</b>번 글을 삭제하겠습니까?</button>
-		</form>
-      
-   </div>      
+         <h3>Board Insert~</h3>
+         <p>글쓰고 빨리 지나가세요</p>
+		</div>
+	</div>
+			<form action="insertBoard.bo" method="post">
+ 				<div class="input-group-text mb-3">
+					<div class="input-group-text"><i class="fas fa-user"></i></div>
+					<input type="text" name="title" class="form-control" id="title" required placeholder="제목....">
+				</div>
+				
+				<div class="input-group-text mb-3">
+					<div class="input-group-text"><i class="fas fa-user"></i></div>
+					<input type="text" name="writer" class="form-control" id="writer" required placeholder="작성자명...">
+				</div>
+				
+				<div class="input-group-text mb-3">
+					<div class="input-group-text"><i class="fas fa-user"></i></div>
+					<input type="text" name="content" class="form-control" id="content" required placeholder="내용....">
+				</div>
+				<button type="submit" class="btn btn-primary">글작성</button>
+
+			</form>
 </body>
 </html>   

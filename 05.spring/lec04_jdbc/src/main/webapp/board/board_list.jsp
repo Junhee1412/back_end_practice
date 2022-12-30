@@ -36,39 +36,39 @@
 			<tbody>
 			<c:forEach var="board" items="${ boardList }">
 				<tr>
-					<td scope="row"><a href="updateBoard.bo?seq=${ board.getSeq() }">${ board.getSeq() }</a></td>
-					<td>${ board.getTitle() }</td>
+					<td scope="row">${ board.getSeq() }</td>
+					<td><a href="selectBoard.bo?seq=${board.getSeq()}">${ board.getTitle() }</a></td>
 					<td>${ board.getWriter() }</td>
 					<td>${ board.getContent() }</td>
 					<td>${ board.getRegdate() }</td>
 					<td>${ board.getCnt() }</td>
 					<td align="center">
-						<a href="deleteBoard.bo?seq=${ board.getSeq() }" class="btn btn-danger"><i class="fas fa-trash"></i>
-						</a>
+						<a href="deleteBoard.bo?seq=${ board.getSeq() }" class="btn btn-danger"><i class="fas fa-trash"></i></a>
 					</td>
 				</tr>
 			</c:forEach>
 			</tbody>
 		</table>
-		
 		<div class="container">
 		<div class="row">
 			<div class="col-sm-auto">
-				<ul class="pagination justify-content-center">					
+				<ul class="pagination justify-content-center">	
+					<button type="button" class="btn btn-primary" ><a href="board/board_insert.jsp" style="color:white;text-decoration: none;">글작성하기</a></button>
+				&nbsp;&nbsp;&nbsp;&nbsp;
 					<c:if test="${ pageVO.getStartPage() != 1 }">
-						<li class="page-item"><a href="getBoardList.bo?p=1" class="page-link"><i class="fas fa-fast-backward"></i></a></li>
-						<li class="page-item"><a href="getBoardList.bo?p=${ pageVO.getStartPage() - 10 }" class="page-link"><i class="fas fa-backward"></i></a></li>				
+						<li class="page-item"><a href="boardList.bo?p=1" class="page-link"><i class="fas fa-fast-backward"></i></a></li>
+						<li class="page-item"><a href="boardList.bo?p=${ pageVO.getStartPage() - 10 }" class="page-link"><i class="fas fa-backward"></i></a></li>				
 					</c:if>
-				
+
 					<c:set var="cp" value="${ pageVO.getCurrentPage() }"/>
-				
+
 					<c:forEach var="page" begin="${ pageVO.getStartPage() }" end="${ pageVO.getEndPage() }">
-						<li class="page-item ${ (cp==page) ? 'active' : ''}"><a href="getBoardList.bo?p=${page}" class="page-link">${page}</a></li>
+						<li class="page-item ${ (cp==page) ? 'active' : ''}"><a href="boardList.bo?p=${page}" class="page-link">${page}</a></li>
 					</c:forEach>
-					
+
 					<c:if test="${ pageVO.getEndPage() < pageVO.getTotalPages() }">
-						<li class="page-item"><a href="getBoardList.bo?p=${ pageVO.getEndPage() + 1 }" class="page-link"><i class="fas fa-forward"></i></a></li>				
-						<li class="page-item"><a href="getBoardList.bo?p=${ pageVO.getTotalPages() }" class="page-link"><i class="fas fa-fast-forward"></i></a></li>				
+						<li class="page-item"><a href="boardList.bo?p=${ pageVO.getEndPage() + 1 }" class="page-link"><i class="fas fa-forward"></i></a></li>				
+						<li class="page-item"><a href="boardList.bo?p=${ pageVO.getTotalPages() }" class="page-link"><i class="fas fa-fast-forward"></i></a></li>				
 					</c:if>
 				</ul>
 			</div>
