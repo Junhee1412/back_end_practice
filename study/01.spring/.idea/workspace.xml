@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="13a8004f-4467-4026-9af7-0786d1825e09" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/.location" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/.location" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.projects/lec01_basic/.indexes/af/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.projects/lec01_basic/.indexes/af/history.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.projects/lec01_basic/.indexes/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.projects/lec01_basic/.indexes/history.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.projects/lec01_basic/.markers" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.projects/lec01_basic/.markers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.projects/lec01_basic/org.eclipse.jdt.core/state.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.projects/lec01_basic/org.eclipse.jdt.core/state.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.root/2.tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/1271323698.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/1558452210.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/1561733259.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/1599461056.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/1779458751.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/1779458751.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/2158267127.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/2332370178.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/2358307092.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/2515106708.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/2543735451.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/307851585.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/3523064724.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/3616084957.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/3648770354.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/3788987918.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/4272627315.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/749105246.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/954965908.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/968941735.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/969704488.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/977059632.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/996007140.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_0.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_0.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_0.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_1.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_1.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_1.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments_3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_43.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_43.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_43.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_43.nvd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_43.nvm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_43.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_43_1.liv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_43_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_43_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_43_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_43_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_44.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_44.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_44.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_45.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_45.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_45.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_46.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_46.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/_46.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/segments_3a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/26082cdbc666757f190924355c9b3ef6/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_1.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_1.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_1.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_2.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_2.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_2.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_3.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_3.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_3.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_4.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_4.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_4.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments_6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/write.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.jdt/lec01_basic.container" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.jdt/lec01_basic.container" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.16.1.20210603-1006.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.wst.validation/dep.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.wst.validation/dep.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.wst.xml.core/system_catalog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/.plugins/org.eclipse.wst.xml.core/system_catalog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/anno/AppleSpeaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/anno/AppleSpeaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/anno/LGTV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/anno/LGTV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/anno/SonySpeaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/anno/SonySpeaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/anno/Speaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/anno/Speaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/anno/TV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/anno/TV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/anno/TVUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/anno/TVUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/collection/CollectionBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/collection/CollectionBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/collection/CollectionBeanMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/collection/CollectionBeanMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/BeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/BeanFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/LGTV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/LGTV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/SamsungTV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/SamsungTV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/TV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/TV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/TVUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/TVUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/TVUser1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/TVUser1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/TVUser2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/TVUser2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/TVUser3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly/TVUser3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly2/SamsungTV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly2/SamsungTV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly2/SonySpeaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly2/SonySpeaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly2/TVUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly2/TVUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly3/AppleSpeaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly3/AppleSpeaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly3/SamsungTV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly3/SamsungTV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly3/SonySpeaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly3/SonySpeaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly3/Speaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly3/Speaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly3/TVUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly3/TVUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly4/AppleSpeaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly4/AppleSpeaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly4/LGTV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly4/LGTV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly4/SonySpeaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly4/SonySpeaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly4/Speaker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly4/Speaker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly4/TV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly4/TV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly4/TVUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/poly4/TVUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/scan/LGTV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/scan/LGTV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/scan/TV.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/scan/TV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/scan/TVUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/classes/com/lec/basic/scan/TVUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/m2e-wtp/web-resources/META-INF/maven/com.lec/basic/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/m2e-wtp/web-resources/META-INF/maven/com.lec/basic/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/m2e-wtp/web-resources/META-INF/maven/com.lec/basic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05.spring/lec01_basic/target/m2e-wtp/web-resources/META-INF/maven/com.lec/basic/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-spring/src/main/java/ezen/hellospring/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring/src/main/java/ezen/hellospring/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-spring/src/test/java/ezen/hellospring/repository/MemoryMemberRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring/src/test/java/ezen/hellospring/repository/MemoryMemberRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-spring/src/test/java/ezen/hellospring/service/MemberServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring/src/test/java/ezen/hellospring/service/MemberServiceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2JfWTo0u9BWtNZQYFemJtvkSSYx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jun Hee/develop/Github/back_end_practice/study/01.spring/hello-spring&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Confirmation&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13a8004f-4467-4026-9af7-0786d1825e09" name="Changes" comment="" />
+      <created>1672469627537</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672469627537</updated>
+    </task>
+    <servers />
+  </component>
+</project>
