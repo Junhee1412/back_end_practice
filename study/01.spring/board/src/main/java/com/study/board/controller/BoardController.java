@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -21,9 +22,14 @@ public class BoardController {
     }
 
     @PostMapping("/board/writedo")
-    public String boardWritePro(Board board){
+    public String boardWritePro(Board board, Model model){
         boardService.write(board);
-        return "";
+
+        //if문을 이용해서 글 내용이 없으면 내용이 없습니다. 라는 알림을 주는 경우도 있음.
+
+        model.addAttribute("message", "글 작성이 완료 되었습니다.");
+        model.addAttribute("searchUrl", "/board/list");
+        return "message";
     }
 
     @GetMapping("/board/list")
@@ -44,5 +50,26 @@ public class BoardController {
 
         return "redirect:/board/list";
     }
+
+    @GetMapping("/board/modify/{id}")
+    public String boardModify(@PathVariable("id") Integer id, Model model) {
+
+        model.addAttribute("board", boardService.boardView(id));
+
+        return "boardmodify";
+    }
+
+    @PostMapping("/board/update/{id}")
+    public String boardUpdate(@PathVariable("id") Integer id, Board board){
+
+        Board boardTemp = boardService.boardView(id);
+        boardTemp.setTitle(board.getTitle());
+        boardTemp.setContent(board.getContent());
+
+        boardService.write(boardTemp);
+
+        return "redirect:/board/list";
+    }
+
 
 }
