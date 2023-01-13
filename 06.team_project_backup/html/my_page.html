@@ -10,8 +10,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/my_page.css">
-
+    <link rel="stylesheet" href="/css/my_page.css">
   </head>
   <body>
     <script
@@ -23,7 +22,7 @@
     <!-- nav -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container px-4">
-          <a class="logo" href="#page-top"><img alt="Brand" src="img/logo.png"></a>
+          <a class="logo" href="#page-top"><img alt="Brand" src="/img/logo.png"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ms-auto">
@@ -40,27 +39,74 @@
   </nav>
   <!-- nav - end-->
 
-    <h1 style="text-align: center;">my Page</h1>
-     <!-- Header - set the background image for the header in the line below-->
-     <header class="py-3">
-      <div class="text-center my-1">
-          <img class="img-fluid rounded-circle mb-4" src="https://dummyimage.com/150x150/6c757d/dee2e6.jpg" alt="..." />
-          <h1 class="text-dark fs-3 fw-bolder">Full Width Pics</h1>
-          <p class="text-dark-50 mb-0">Landing Page Template</p>
+
+<!-- header -->
+  <header>
+    <div class="thumb-wrapper stagger-item">
+      <a href="#"
+        ><img class="thumb" src="/img/portfolio-2.jpg"/></a>
+    </div>
+
+    <div class="text-area">
+      <h3 class="greeting stagger-item">준성이</h3>
+      <div class="desc stagger-item" style="text-align: center; width: 20%; margin: 0 auto;">
+        <div style=" text-align: center; margin: 10px;">
+        <p>이름 : 고민호 <br>
+           닉네임 : 마이노<br>
+           핸드폰번호 : 010-0000-0000 <br>
+           기타정보 : 제주도 살아요
+        </p>
       </div>
+      </div>
+    </div>
+
+    <div class="mail mouse-effect stagger-item">
+      <a href="mailto:anjihhg@gmail.com">알잘딱깔센@gmail.com</a>
+    </div>
   </header>
-  <!-- Content section-->
-  <section class="py-5">
-      <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-lg-6">
-                  <h2>Full Width Backgrounds</h2>
-                  <p class="lead">A single, lightweight helper class allows you to add engaging, full width background images to sections of your page.</p>
-                  <p class="mb-0">The universe is almost 14 billion years old, and, wow! Life had no problem starting here on Earth! I think it would be inexcusably egocentric of us to suggest that we're alone in the universe.</p>
-              </div>
-          </div>
+<!-- header - end -->
+
+<!-- section -->
+<section style="height: 400px; width: 25%; margin: 0 auto;" >
+  <ul class="list">
+    <li class="item mouse-effect stagger-item mg">
+      <div class="left">
+        <img src="/img/icon/bookmark.svg" />
+        <div class="name">내글 모아보기</div>
       </div>
-  </section>
+      <div class="right"> <a href="#"> <img src="/img/icon/right_arrow.svg" /></a></div>
+    </li>
+
+    <li class="item mouse-effect stagger-item mg">
+      <div class="left">
+        <img src="/img/icon/bag-heart.svg" />
+        <div class="name">내가쓴 댓글 모아보기</div>
+      </div>
+      <div class="right"><a href="#"> <img src="/img/icon/right_arrow.svg" /></a></div>
+    </li>
+
+    <li class="item mouse-effect stagger-item mg">
+      <div class="left">
+        <img src="/img/icon/balloon-heart-fill.svg" />
+        <div class="name">좋아요 목록보기</div>
+      </div>
+      <div class="right"><a href="#"> <img src="/img/icon/right_arrow.svg" /></a></div>
+    </li>
+
+    <li class="item mouse-effect stagger-item mg">
+      <div class="left">
+        <img src="/img/icon/bell.svg" />
+        <div class="name">내후원 목록보기</div>
+      </div>
+      <div class="right"><a href="#"> <img src="/img/icon/right_arrow.svg" /></a></div>
+    </li>
+  </ul>
+
+  <div class="text-center">
+  <button class="w-30 btn btn-lg btn-dark " style="margin-top: 30px; " type="submit">회원정보 변경하기</button>
+  </div>
+</section>
+<!-- section - end -->
 
    <!-- footer -->
       <footer class="py-5 bg-dark">

@@ -689,8 +689,6 @@ footer.footer .social-link:hover {
 
 /* footer - end */
 
-
-
 /* primary */
 .btn-primary {
   color: #fff;
@@ -711,49 +709,35 @@ footer.footer .social-link:hover {
   height: 65px;
 }
 
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
-}
 
-.form-signin .checkbox {
-  font-weight: 400;
-}
+	.bg-light{
+		height: 1053px;
+		padding-top:55px;
+		padding-bottom:75px;
+	}
+	.flex-fill.mx-xl-5.mb-2{
+		margin: 0 auto;
+		width : 700px;
+		padding-right: 7rem;
+		padding-left: 7rem;
+	}
+ 
+	.container.py-4{
+		margin: 0 auto;
+		width : 503px;
+	}
+  
+	.d-grid.gap-2{
+		padding-top: 30px;
+	}
+    
+  
+	.bir_yy,.bir_mm,.bir_dd{
+		width:160px;
+		display:table-cell;
+	}
+	.bir_mm+.bir_dd, .bir_yy+.bir_mm{
+		padding-left:10px;
+	}
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
-}
-
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.login_menu a{
-  color: #000;
-}
-
-.login_menu a:hover{
-  color: #dc3545;
-}
-
-/* 모달 */
-.modal.modal-center {
-  text-align: center;
-  margin-top: 200px;
-}
-
-.modal-dialog {
-  text-align: left;
-  vertical-align: middle; 
-}
-
+ 

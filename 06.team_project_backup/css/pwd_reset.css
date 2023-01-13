@@ -691,19 +691,6 @@ footer.footer .social-link:hover {
 
 
 
-/* primary */
-.btn-primary {
-  color: #fff;
-  background-color: #1D809F;
-  border-color: #1D809F;
-}
-.btn-primary:hover {
-  color: #fff;
-  background-color: #196d87;
-  border-color: #17667f;
-}
-/* primary - end */
-
 /* 추가 */
 
 .logo img{
@@ -746,14 +733,4 @@ footer.footer .social-link:hover {
   color: #dc3545;
 }
 
-/* 모달 */
-.modal.modal-center {
-  text-align: center;
-  margin-top: 200px;
-}
-
-.modal-dialog {
-  text-align: left;
-  vertical-align: middle; 
-}
 
