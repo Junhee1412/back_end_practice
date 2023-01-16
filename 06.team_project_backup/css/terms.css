@@ -703,6 +703,19 @@ footer.footer .social-link:hover {
 
 /* footer - end */
 
+/* primary */
+.btn-primary {
+  color: #fff;
+  background-color: #1d809f;
+  border-color: #1d809f;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #196d87;
+  border-color: #17667f;
+}
+/* primary - end */
+
 /* 추가 */
 
 .logo img {
@@ -710,53 +723,44 @@ footer.footer .social-link:hover {
   height: 65px;
 }
 
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
+.bg-light {
+  height: 1053px;
+  padding-top: 55px;
+  padding-bottom: 75px;
+}
+.flex-fill.mx-xl-5.mb-2 {
+  margin: 0 auto;
+  width: 700px;
+  padding-right: 7rem;
+  padding-left: 7rem;
 }
 
-.form-signin .checkbox {
-  font-weight: 400;
+.container.py-4 {
+  margin: 0 auto;
+  width: 503px;
+}
+.container.py-3 {
+  margin: 0 auto;
+  width: 700px;
+  height: 700px;
 }
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
+.d-grid.gap-2 {
+  padding-top: 30px;
 }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+.bir_yy,
+.bir_mm,
+.bir_dd {
+  width: 160px;
+  display: table-cell;
+}
+.bir_mm + .bir_dd,
+.bir_yy + .bir_mm {
+  padding-left: 10px;
 }
 
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.login_menu a {
-  color: #000;
-}
-
-.login_menu a:hover {
-  color: #dc3545;
-}
-
-section {
-  height: 800px;
-}
-.martop_30 {
-  margin-top: 30px;
-}
-.padbot_30 {
-  padding-bottom: 30px;
-}
-.marbot_5{
-  margin-bottom: 5px;
-}
-.marbot_30{
-  margin-bottom: 30px;
+.left {
+  display: flex;
+  align-items: center;
 }

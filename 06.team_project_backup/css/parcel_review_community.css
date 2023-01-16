@@ -743,3 +743,20 @@ header .card {
   align-items: center;
   justify-content: center;
 }
+
+header h5 {
+  font-size: xx-large;
+}
+.card-img-overlay {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.top_btn {
+  right: 18%;
+}
+.badge {
+  top: 0.5rem;
+  right: 0.5rem;
+}

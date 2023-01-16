@@ -11,16 +11,15 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-
 /* font */
 
- @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 
- /* font - end */
+/* font - end */
 
- /* root */
+/* root */
 :root {
-  --bs-blue: #1D809F;
+  --bs-blue: #1d809f;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -42,7 +41,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #1D809F;
+  --bs-primary: #1d809f;
   --bs-secondary: #ecb807;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -62,10 +61,19 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: 'Jua', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  --bs-body-font-family: "Jua", sans-serif, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -91,18 +99,20 @@
 }
 
 .nav-link {
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
   display: block;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
   }
 }
-.nav-link:hover, .nav-link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: #17667f;
 }
 .nav-link.disabled {
@@ -121,7 +131,8 @@
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
-.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
   border-color: #e9ecef #e9ecef #dee2e6;
   isolation: isolate;
 }
@@ -150,7 +161,7 @@
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #1D809F;
+  background-color: #1d809f;
 }
 
 .nav-fill > .nav-link,
@@ -179,7 +190,7 @@
 }
 
 .navbar {
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -311,7 +322,7 @@
     transform: none;
   }
   .navbar-expand-sm .offcanvas-top,
-.navbar-expand-sm .offcanvas-bottom {
+  .navbar-expand-sm .offcanvas-bottom {
     height: auto;
     border-top: 0;
     border-bottom: 0;
@@ -364,7 +375,7 @@
     transform: none;
   }
   .navbar-expand-md .offcanvas-top,
-.navbar-expand-md .offcanvas-bottom {
+  .navbar-expand-md .offcanvas-bottom {
     height: auto;
     border-top: 0;
     border-bottom: 0;
@@ -417,7 +428,7 @@
     transform: none;
   }
   .navbar-expand-lg .offcanvas-top,
-.navbar-expand-lg .offcanvas-bottom {
+  .navbar-expand-lg .offcanvas-bottom {
     height: auto;
     border-top: 0;
     border-bottom: 0;
@@ -470,7 +481,7 @@
     transform: none;
   }
   .navbar-expand-xl .offcanvas-top,
-.navbar-expand-xl .offcanvas-bottom {
+  .navbar-expand-xl .offcanvas-bottom {
     height: auto;
     border-top: 0;
     border-bottom: 0;
@@ -523,7 +534,7 @@
     transform: none;
   }
   .navbar-expand-xxl .offcanvas-top,
-.navbar-expand-xxl .offcanvas-bottom {
+  .navbar-expand-xxl .offcanvas-bottom {
     height: auto;
     border-top: 0;
     border-bottom: 0;
@@ -590,13 +601,15 @@
 .navbar-light .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
 }
-.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus {
   color: rgba(0, 0, 0, 0.9);
 }
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.55);
 }
-.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
   color: rgba(0, 0, 0, 0.7);
 }
 .navbar-light .navbar-nav .nav-link.disabled {
@@ -625,13 +638,15 @@
 .navbar-dark .navbar-brand {
   color: #fff;
 }
-.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:focus {
   color: #fff;
 }
 .navbar-dark .navbar-nav .nav-link {
   color: rgb(255, 255, 255);
 }
-.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
   color: rgba(255, 255, 255, 0.75);
 }
 .navbar-dark .navbar-nav .nav-link.disabled {
@@ -658,7 +673,6 @@
 }
 /* nav - end */
 
-
 /* bg-dark */
 .bg-dark {
   --bs-bg-opacity: 1;
@@ -678,7 +692,7 @@ footer.footer .social-link {
   width: 4rem;
   line-height: 4.3rem;
   font-size: 1.5rem;
-  background-color: #1D809F;
+  background-color: #1d809f;
   transition: background-color 0.15s ease-in-out;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
@@ -689,13 +703,11 @@ footer.footer .social-link:hover {
 
 /* footer - end */
 
-
-
 /* primary */
 .btn-primary {
   color: #fff;
-  background-color: #1D809F;
-  border-color: #1D809F;
+  background-color: #1d809f;
+  border-color: #1d809f;
 }
 .btn-primary:hover {
   color: #fff;
@@ -706,7 +718,7 @@ footer.footer .social-link:hover {
 
 /* 추가 */
 
-.logo img{
+.logo img {
   width: 100%;
   height: 65px;
 }
@@ -738,11 +750,11 @@ footer.footer .social-link:hover {
   border-top-right-radius: 0;
 }
 
-.login_menu a{
+.login_menu a {
   color: #000;
 }
 
-.login_menu a:hover{
+.login_menu a:hover {
   color: #dc3545;
 }
 
@@ -754,6 +766,49 @@ footer.footer .social-link:hover {
 
 .modal-dialog {
   text-align: left;
-  vertical-align: middle; 
+  vertical-align: middle;
 }
 
+section {
+  height: 950px;
+}
+
+#find_id_head {
+  margin-bottom: 30px;
+}
+.marbot_5 {
+  margin-bottom: 5px;
+}
+.marbot_10 {
+  margin-bottom: 10px;
+}
+.modal-header {
+  display: flex;
+  justify-content: center;
+}
+.modal-body {
+  margin-left: 50px;
+}
+.form-label {
+  text-align: left;
+}
+
+#sign_name {
+  width: 87%;
+}
+#sign_email {
+  width: 70%;
+}
+.marleft_1 {
+  margin-left: 1px;
+}
+.martop_30 {
+  margin-top: 30px;
+}
+.martop_20 {
+  margin-top: 20px;
+}
+.form_box {
+  display: flex;
+  height: 40px;
+}

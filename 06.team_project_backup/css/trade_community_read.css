@@ -737,22 +737,134 @@ header .card {
   height: 700px;
   opacity: 0.6;
 }
-.bi-heart{
+.bi-heart {
   font-size: 50px;
   line-height: 50px;
-  color:crimson;
+  color: crimson;
 }
 
-.bi-heart-fill{
+.bi-heart-fill {
   font-size: 50px;
   line-height: 50px;
-  color:crimson;
+  color: crimson;
 }
 
-.bi:hover{
+.bi:hover {
   cursor: pointer;
 }
 
-.footer-btn-group button{
-  margin:10px;
+.footer-btn-group button {
+  margin: 10px;
+}
+
+#community_type {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+#community_type h5 {
+  font-size: xx-large;
+}
+
+#carouselExampleIndicators {
+  margin-top: 50px;
+  width: 60%;
+  height: 60%;
+  display: block;
+  left: 20%;
+}
+
+.default_margin {
+  margin: 0 21%;
+}
+
+.bi-heart,
+.bi-heart-fill {
+  margin-left: auto;
+  margin-right: 50px;
+}
+.title_box {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.title_box h1 {
+  position: relative;
+  margin: 50px 0 50px 21%;
+  width: 100%;
+}
+.title_box h3 {
+  white-space: nowrap;
+  margin-right: 21%;
+}
+
+.heart {
+  display: flex;
+  position: relative;
+}
+
+.profile_box {
+  margin-left: 10px;
+  position: relative;
+  margin-top: 5px;
+}
+
+.community_content {
+  position: relative;
+  margin: 50px 21%;
+}
+
+.reply_input {
+  width: 88%;
+}
+#button-addon {
+  width: 10%;
+}
+
+#width_100per {
+  width: 100%;
+}
+.single_comment_box {
+  margin-left: 20px;
+}
+#width_80per {
+  width: 80%;
+}
+.marleft_20 {
+  margin-left: 20px;
+}
+#reply_content {
+  width: 80%;
+  margin-right: auto;
+}
+.flex_box {
+  display: flex;
+}
+
+.reply_btn_group {
+  margin-left: auto;
+  width: 10%;
+  height: 100%;
+  position: relative;
+  top: 20px;
+}
+.reply_btn_group a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.footer_list_btn_group {
+  margin: 0 21%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_post_btn_group {
+  margin: 0 21%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 50px;
 }

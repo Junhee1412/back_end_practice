@@ -743,3 +743,31 @@ header .card {
   align-items: center;
   justify-content: center;
 }
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#community_type {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+#community_type h5 {
+  font-size: xx-large;
+}
+.badge {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.marbot_100 {
+  margin-bottom: 100px;
+}
+
+.right_18per {
+  right: 18%;
+}

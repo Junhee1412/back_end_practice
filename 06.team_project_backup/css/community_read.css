@@ -737,22 +737,120 @@ header .card {
   height: 700px;
   opacity: 0.6;
 }
-.bi-heart{
+.bi-heart {
   font-size: 50px;
   line-height: 50px;
-  color:crimson;
+  color: crimson;
 }
 
-.bi-heart-fill{
+.bi-heart-fill {
   font-size: 50px;
   line-height: 50px;
-  color:crimson;
+  color: crimson;
 }
 
-.bi:hover{
+.bi:hover {
   cursor: pointer;
 }
 
-.footer-btn-group button{
-  margin:10px;
+.footer-btn-group button {
+  margin: 10px;
+}
+#community_type {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+#community_head {
+  font-size: xx-large;
+}
+#community_sect {
+  margin: 0 21%;
+}
+#carouselExampleIndicators {
+  margin-top: 50px;
+  width: 60%;
+  height: 60%;
+  display: block;
+  left: 20%;
+}
+.heart {
+  display: flex;
+  margin: 0px 21%;
+  position: relative;
+}
+.bi-heart {
+  margin-left: auto;
+  margin-right: 50px;
+}
+#writer {
+  margin-left: 10px;
+  position: relative;
+  margin-top: 5px;
+}
+#community_content {
+  position: relative;
+  margin: 50px 21%;
+}
+#comment_section {
+  margin: 0 21%;
+}
+#comment_form {
+  width: 88%;
+}
+#button-addon {
+  width: 10%;
+}
+#single_comment {
+  display: flex;
+}
+#reply_button_group {
+  margin-left: auto;
+  width: 10%;
+  height: 100%;
+  position: relative;
+  top: 20px;
+}
+a {
+  text-decoration: none;
+}
+#list_button_group {
+  margin: 0 21%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#post_button_group {
+  margin: 0 21%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 50px;
+}
+#comment_flexbox {
+  width: 100%;
+}
+#comment_profile_pic {
+  margin-left: 20px;
+}
+#comment_box {
+  width: 100%;
+}
+#comment_user_id {
+  width: 80%;
+}
+#comment_date {
+  margin-left: 20px;
+}
+#reply_content_box {
+  display: flex;
+}
+#reply_content {
+  width: 80%;
+  margin-right: auto;
+}
+#post_title {
+  position: relative;
+  margin: 50px 21%;
 }
