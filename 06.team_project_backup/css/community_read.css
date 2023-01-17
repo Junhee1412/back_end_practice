@@ -780,7 +780,8 @@ header .card {
   margin: 0px 21%;
   position: relative;
 }
-.bi-heart {
+.bi-heart,
+.bi-heart-fill {
   margin-left: auto;
   margin-right: 50px;
 }
