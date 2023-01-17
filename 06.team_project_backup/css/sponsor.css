@@ -760,44 +760,17 @@ footer.footer .social-link:hover {
   padding-left: 10px;
 }
 
-/* 테이블 */
-
-.left {
-  display: flex;
-  align-items: center;
-  margin-left: 5%;
+#sponsor_box {
+  width: 600px;
 }
-
-textarea,
-.fake_textarea {
-  resize: none;
-  width: 90%;
-  border-radius: 4px;
-  border: 1px solid gray;
-
-  font-size: 15px;
-  font-weight: normal;
-
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 .martop_10 {
   margin-top: 10px;
 }
 
-.txt_align_ctr {
-  text-align: center;
+.form_info ~ small{
+  display:block;
 }
 
-.bot_btn_group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  margin-bottom: 70px;
-}
-
-.marright_10 {
-  margin-right: 10px;
+.marbot_70{
+  margin-bottom:70px;
 }
