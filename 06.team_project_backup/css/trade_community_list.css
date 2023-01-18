@@ -744,12 +744,6 @@ header .card {
   justify-content: center;
 }
 
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #community_type {
   display: flex;
   flex-flow: column;
