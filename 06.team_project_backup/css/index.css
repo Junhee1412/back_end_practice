@@ -11998,3 +11998,43 @@ header .card {
 .callout {
   height: 800px;
 }
+
+/* map */
+css .map {
+  height: 30rem;
+}
+.map iframe {
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@media (max-width: 992px) {
+  .map {
+    height: 75%;
+  }
+}
+
+/* aside 반응형 */
+
+.img_aside {
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 1em;
+}
+
+@media (max-width: 800px) {
+  .img_aside {
+    display: none;
+  }
+}
+/* aside 반응형 - end  */
+
+.img_aside1 {
+  width: 15%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 1em;
+}
