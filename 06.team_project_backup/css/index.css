@@ -11,7 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@300&family=Noto+Serif+KR:wght@300&display=swap");
 :root {
   --bs-blue: #1d809f;
   --bs-indigo: #6610f2;
@@ -65,9 +65,9 @@
     rgba(255, 255, 255, 0.15),
     rgba(255, 255, 255, 0)
   );
-  --bs-body-font-family: "Jua", sans-serif, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-family: "Noto Serif KR", serif, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -11870,35 +11870,25 @@ footer.footer .social-link:hover {
       rgba(255, 255, 255, 0.1) 0%,
       rgba(255, 255, 255, 0.1) 100%
     ),
-    url("../img/bg-masthead.jpg");
-  background-position: center center;
+    url("../img/felix-lindvik-57HqbvgG4Ww-unsplash.jpg");
+  background-position: 50% 20%;
   background-repeat: no-repeat;
-  background-size: cover;
-}
-.masthead h1,
-.masthead .h1 {
-  font-size: 4rem;
-  margin: 0;
-  padding: 0;
+  background-size: 100%;
 }
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
   }
-  .masthead h1,
-  .masthead .h1 {
-    font-size: 5.5rem;
-  }
 }
 
-.portfolio-item {
+.catstar_item {
   display: block;
   position: relative;
   overflow: hidden;
   max-width: 530px;
   margin: auto auto 1rem;
 }
-.portfolio-item .caption {
+.catstar_item .caption {
   display: flex;
   height: 100%;
   width: 100%;
@@ -11908,25 +11898,25 @@ footer.footer .social-link:hover {
   bottom: 0;
   z-index: 1;
 }
-.portfolio-item .caption .caption-content {
+.catstar_item .caption .caption-content {
   color: #fff;
   margin: auto 2rem 2rem;
 }
-.portfolio-item .caption .caption-content h2,
-.portfolio-item .caption .caption-content .h2 {
+.catstar_item .caption .caption-content h2,
+.catstar_item .caption .caption-content .h2 {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
-.portfolio-item .caption .caption-content p {
+.catstar_item .caption .caption-content p {
   font-weight: 300;
   font-size: 1.2rem;
 }
 @media (min-width: 992px) {
-  .portfolio-item {
+  .catstar_item {
     max-width: none;
     margin: 0;
   }
-  .portfolio-item .caption {
+  .catstar_item .caption {
     transition: background-color 0.7s, -webkit-clip-path 0.25s ease-out;
     transition: clip-path 0.25s ease-out, background-color 0.7s;
     transition: clip-path 0.25s ease-out, background-color 0.7s,
@@ -11934,24 +11924,24 @@ footer.footer .social-link:hover {
     -webkit-clip-path: inset(0px);
     clip-path: inset(0px);
   }
-  .portfolio-item .caption .caption-content {
+  .catstar_item .caption .caption-content {
     transition: opacity 0.25s;
     margin-left: 5rem;
     margin-right: 5rem;
     margin-bottom: 5rem;
   }
-  .portfolio-item img {
+  .catstar_item img {
     transition: -webkit-clip-path 0.25s ease-out;
     transition: clip-path 0.25s ease-out;
     transition: clip-path 0.25s ease-out, -webkit-clip-path 0.25s ease-out;
     -webkit-clip-path: inset(-1px);
     clip-path: inset(-1px);
   }
-  .portfolio-item:hover img {
+  .catstar_item:hover img {
     -webkit-clip-path: inset(2rem);
     clip-path: inset(2rem);
   }
-  .portfolio-item:hover .caption {
+  .catstar_item:hover .caption {
     background-color: rgba(29, 128, 159, 0.9);
     -webkit-clip-path: inset(2rem);
     clip-path: inset(2rem);
@@ -12019,10 +12009,9 @@ css .map {
 /* aside 반응형 */
 
 .img_aside {
-  width: 50%;
-  height: auto;
-  overflow: hidden;
-  border-radius: 1em;
+  position: relative;
+  left: 20px;
+  width: 80%;
 }
 
 @media (max-width: 800px) {
@@ -12032,9 +12021,70 @@ css .map {
 }
 /* aside 반응형 - end  */
 
-.img_aside1 {
-  width: 15%;
+.chat_img {
   height: auto;
   overflow: hidden;
-  border-radius: 1em;
+}
+
+#aside_banner {
+  position: fixed;
+  right: 0px;
+  top: 20%;
+  z-index: 99999;
+}
+#chat_btn {
+  position: fixed;
+  right: 10px;
+  top: 85%;
+  z-index: 99999;
+}
+#chat_btn :hover {
+  width: 105%;
+}
+#aside_banner :hover {
+  width: 85%;
+}
+
+#catstargram_btn {
+  width: 250px;
+  margin: 0 auto -50px;
+}
+
+.nav-item a {
+  white-space: nowrap;
+}
+
+.adopt_img {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    url("../img/bg-callout.jpg");
+  background-position: 50% 20%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+@media (min-width: 992px) {
+  .adopt_img {
+    height: 100vh;
+  }
+}
+
+.trade_section {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+#navbarResponsive ul li a {
+  font-family: "Jua", "Noto Serif KR", serif, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
