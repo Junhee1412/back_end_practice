@@ -8,6 +8,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.util.UUID;
 
+//논리명 중고거래
 @Entity
 @Getter
 @NoArgsConstructor
@@ -15,10 +16,7 @@ import java.util.UUID;
 @Table(name="SCND_HNDTR")
 public class SecondHandTrade {
 
-    @Id
     @Column(name="USER_NO")
-    @GeneratedValue(generator = "uuids")
-    @GenericGenerator(name= "uuid2", strategy = "uuid")
     private UUID userNo;
 
     @Id

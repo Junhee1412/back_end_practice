@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//논리명 결제방식
 @Entity
 @Getter
 @NoArgsConstructor

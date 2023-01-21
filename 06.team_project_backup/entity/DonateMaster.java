@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.sql.Date;
 import java.util.UUID;
 
+//논리명 후원
 @Entity
 @Getter
 @NoArgsConstructor
@@ -22,10 +23,7 @@ public class DonateMaster {
     @Column(name="DNTN_BSNS_CODE")
     private String donateBusinessCode;
 
-    @Id
     @Column(name="USER_NO")
-    @GeneratedValue(generator = "uuids")
-    @GenericGenerator(name= "uuid2", strategy = "uuid")
     private UUID userNo;
 
     @Column(name="DNTN_NAME")

@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//논리명 글종류
 @Entity
 @Getter
 @NoArgsConstructor

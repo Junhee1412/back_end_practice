@@ -9,6 +9,8 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+
+//논리명 커뮤니티글정보
 @Entity
 @Getter
 @NoArgsConstructor
@@ -20,17 +22,12 @@ public class CommunityMaster {
     @Column(name="POST_NO")
     private Long postNo;
 
-    @Id
     @Column(name="USER_NO")
-    @GeneratedValue(generator = "uuids")
-    @GenericGenerator(name= "uuid2", strategy = "uuid")
     private UUID userNo;
 
-    @Id
     @Column(name="CMNTY_ID")
     private String communityId;
 
-    @Id
     @Column(name="POST_ID")
     private String postId;
 

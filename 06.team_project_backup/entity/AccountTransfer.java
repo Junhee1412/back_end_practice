@@ -20,10 +20,7 @@ public class AccountTransfer {
     @Column(name="DNTN_CODE")
     private String donateCode;
 
-    @Id
     @Column(name="USER_NO")
-    @GeneratedValue(generator = "uuids")
-    @GenericGenerator(name= "uuid2", strategy = "uuid")
     private UUID userNo;
 
     @Column(name="BANK")

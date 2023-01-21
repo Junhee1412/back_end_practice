@@ -9,6 +9,7 @@ import javax.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
+//논리명 관리자채팅
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder

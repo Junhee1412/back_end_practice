@@ -6,9 +6,10 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
+
+//논리명 신용카드
 @Entity
 @Getter
 @NoArgsConstructor
@@ -20,10 +21,7 @@ public class CreditcardPayment {
     @Column(name = "DNTN_CODE")
     private String donateCode;
 
-    @Id
     @Column(name="USER_NO")
-    @GeneratedValue(generator = "uuids")
-    @GenericGenerator(name= "uuid2", strategy = "uuid")
     private UUID userNo;
 
     @Column(name = "BANK")

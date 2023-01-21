@@ -10,6 +10,7 @@ import java.sql.Date;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+//논리명 사용자정보
 @Entity
 @Getter
 @NoArgsConstructor
@@ -23,7 +24,6 @@ public class UserMaster {
     @GenericGenerator(name= "uuid2", strategy = "uuid")
     private UUID userNo;
 
-    @Id
     @Column(name="USER_TYPE")
     private String userType;
 

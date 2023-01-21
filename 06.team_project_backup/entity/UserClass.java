@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//논리명 회원타입
 @Entity
 @Getter
 @NoArgsConstructor

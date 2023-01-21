@@ -9,6 +9,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+//논리명 댓글
 @Entity
 @Getter
 @NoArgsConstructor
@@ -16,10 +17,7 @@ import java.util.UUID;
 @Table(name="REPLY")
 public class Reply {
 
-    @Id
     @Column(name="USER_NO")
-    @GeneratedValue(generator = "uuids")
-    @GenericGenerator(name= "uuid2", strategy = "uuid")
     private UUID userNo;
 
     @Id
