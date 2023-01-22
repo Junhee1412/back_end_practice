@@ -35,7 +35,7 @@
       type="image/x-icon"
       sizes="16x16"
     />
-    <title>Meow_me_you</title>
+    <title>내 글 목록 보기</title>
     <!-- Font Awesome icons (free version)-->
     <script
       src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
@@ -114,10 +114,10 @@
         <img src="../img/parcel_review_menu.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" />
         <div class="card-img-overlay" id="community_type">
           <h5 class="card-title text-dark text-center fs-1">
-            분양하기 커뮤니티
+            글 목록
           </h5>
           <p class="card-text text-dark text-center fs-3">
-            고양이를 분양을 하는 곳입니다. 새로운 가족을 찾아주세요~
+            ~~님의 글입니다.
           </p>
         </div>
       </div>
@@ -125,7 +125,7 @@
   
     <section>
       <div class="dropdown" id="top_dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+        <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
           aria-expanded="false">
           작성일자 순 정렬
         </button>
@@ -136,11 +136,9 @@
           <li><a class="dropdown-item" href="#">커뮤니티 별 정렬</a></li>
         </ul>
       </div>
-      <hr class="border border-white">
-      <hr class="border border-dark">
   
   
-      <div>
+      <div id="table_box">
         <table class="table pad_4">
           <thead>
             <tr>
@@ -292,14 +290,14 @@
         <hr class="border border-white">
       </div>
       <div class="col" id="delete_btn_group">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3" id="search_box">
           <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
             aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">+</button>
+          <button class="btn btn-outline-dark" type="button" id="button-addon2">+</button>
           &nbsp;&nbsp;
           <div>
-            <button type="button" class="btn btn-warning">선택 삭제</button>
-            <button type="button" class="btn btn-danger">전체 삭제</button>
+            <button type="button" class="btn btn-outline-dark">선택 삭제</button>
+            <button type="button" class="btn btn-outline-danger">전체 삭제</button>
           </div>
         </div>
       </div>
