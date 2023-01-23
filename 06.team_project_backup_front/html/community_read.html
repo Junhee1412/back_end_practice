@@ -242,8 +242,9 @@
         <div id="writer">
           작성자 : 미우미우<br />작성일자 : 2023-01-11 PM:15:56
         </div>
-        <i class="bi bi-heart"></i>
-
+        <div id="heart_box">
+          <i class="bi bi-heart"></i> <span class="fs-2" id="like_number">111150</span>
+        </div>
         <script>
           var i = 0;
           $(".bi-heart").on("click", function () {
@@ -292,7 +293,7 @@
               ></textarea>
             </form>
             <button
-              class="btn btn-outline-dark"
+              class="btn btn-secondary"
               type="submit"
               id="button-addon"
             >
@@ -312,36 +313,7 @@
                 />
               </div>
               <div class="ms-3" id="comment_box" >
-                <div class="fw-bold" id="comment_user_id">
-                  제주핵주먹<span class="fw-lighter fs-6" id="comment_date"
-                    >2023.01.10 오후 11시</span
-                  >
-                </div>
-
-                <div id="reply_content_box">
-                  <div class="text-break" id="reply_content">reply content</div>
-                </div>
-              </div>
-            </div>
-            <div id="reply_button_group">
-              <a class="text- primary" href="#">수정</a>
-              <a class="text-danger" href="#">삭제</a>
-            </div>
-          </div>
-
-          <!-- Comment with nested comments-->
-          <div id="single_comment">
-            <div class="d-flex mb-4" id="comment_flexbox">
-              <!-- Single comment-->
-              <div class="flex-shrink-0" id="comment_profile_pic">
-                <img
-                  class="rounded-circle"
-                  src="https://dummyimage.com/50x50/ced4da/6c757d.jpg"
-                  alt="..."
-                />
-              </div>
-              <div class="ms-3" id="comment_box">
-                <div class="fw-bold" id="comment_user_id">
+                <div id="comment_user_id">
                   제주핵주먹<span class="fw-lighter fs-6" id="comment_date"
                     >2023.01.10 오후 11시</span
                   >
@@ -370,7 +342,36 @@
                 />
               </div>
               <div class="ms-3" id="comment_box">
-                <div class="fw-bold" id="comment_user_id">
+                <div id="comment_user_id">
+                  제주핵주먹<span class="fw-lighter fs-6" id="comment_date"
+                    >2023.01.10 오후 11시</span
+                  >
+                </div>
+
+                <div id="reply_content_box">
+                  <div class="text-break" id="reply_content">reply content</div>
+                </div>
+              </div>
+            </div>
+            <div id="reply_button_group">
+              <a class="text-primary" href="#">수정</a>
+              <a class="text-danger" href="#">삭제</a>
+            </div>
+          </div>
+
+          <!-- Comment with nested comments-->
+          <div id="single_comment">
+            <div class="d-flex mb-4" id="comment_flexbox">
+              <!-- Single comment-->
+              <div class="flex-shrink-0" id="comment_profile_pic">
+                <img
+                  class="rounded-circle"
+                  src="https://dummyimage.com/50x50/ced4da/6c757d.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="ms-3" id="comment_box">
+                <div id="comment_user_id">
                   제주핵주먹<span class="fw-lighter fs-6" id="comment_date"
                     >2023.01.10 오후 11시</span
                   >
