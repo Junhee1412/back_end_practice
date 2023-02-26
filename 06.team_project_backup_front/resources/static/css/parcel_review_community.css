@@ -706,6 +706,7 @@ progress {
     max-width: 1140px;
   }
 }
+/*수정*/
 @media (min-width: 1400px) {
   .container-xxl,
   .container-xl,
@@ -713,7 +714,7 @@ progress {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1320px;
+    max-width: 1400px;
   }
 }
 .row {
@@ -4402,9 +4403,9 @@ fieldset:disabled .btn {
   border-color: #1d809f;
 }
 .page-item.disabled .page-link {
-  color: #6c757d;
+  color: #fff;
   pointer-events: none;
-  background-color: #fff;
+  background-color: #5c636a;
   border-color: #dee2e6;
 }
 
@@ -11638,3 +11639,20 @@ section{
   BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif,
   Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
+
+.page-item.disabled .page-link {
+  color: #fff;
+  pointer-events: none;
+  background-color: #5c636a;
+  border-color: #dee2e6;
+}
+
+
+.btn-ll{
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+    margin-top:-60px;
+    margin-bottom:10px;
+}
+

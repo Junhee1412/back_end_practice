@@ -23,6 +23,7 @@ public class CommunityLike {
     @Column(name="USER_NO")
     private Long userNo;
 
-    @Column(name="LIKE_USER")
-    private Long likeUser;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "post_no", insertable = false, updatable = false)
+    private CommunityMaster communityMaster;
 }

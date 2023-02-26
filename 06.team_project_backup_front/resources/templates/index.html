@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--<html lang="en">-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -18,7 +19,7 @@
    <link href="../css/bootstrap-icons.css" rel="stylesheet">
     <meta
       property="og:image"
-      content="http://mintable1.cafe24.com/Meow_me_you_front/img/kakao_preview.jpg"
+      content="http://mintable1.cafe24.com/Meow_me_you_front/img/index/kakao_preview.jpg"
     />
     <meta
       property="og:site_name"
@@ -58,44 +59,36 @@
   
        
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <a class="logo d-flex align-items-center" href="#page-top"><img alt="Brand" src="../img/logo/logo4.png"></a>
+
+          <a class="logo d-flex align-items-center" href="/"><img alt="Brand" src="../img/logo/logo_remove_bg.png"></a>
         </a>
   
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list "></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x "></i>
         <nav id="navbar" class="navbar">
           <ul>
-            <li class="dropdown"><a href="#"><span>Meow me, you</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <li class="dropdown"><a href="loginpage"><span>Meow me, you</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
-                <li><a href="#">사업소개</a></li>
-                <li><a href="#">후원내역</a></li>
+                <li><a href="business">사업소개</a></li>
+                <li><a href="loginpage">후원내역</a></li>
               </ul>
             </li>
-            <li><a href="#">후원하기</a></li>
-            <li class="dropdown"><a href="#"><span>물품거래</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <li><a href="loginpage">후원하기</a></li>
+            <li class="dropdown"><a href="loginpage"><span>물품거래</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
-                <li><a href="#">무료 나눔</a></li>
-                <li><a href="#">중고 거래</a></li>
+                <li><a href="loginpage">무료 나눔</a></li>
+                <li><a href="loginpage">중고 거래</a></li>
               </ul>
             </li>
-            <li class="dropdown"><a href="#"><span>커뮤니티</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <li class="dropdown"><a href="loginpage"><span>커뮤니티</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
-                <li><a href="#">분양하기</a></li>
-                <li><a href="#">분양후기</a></li>
-                <li><a href="#">캣스타그램</a></li>
+                <li><a th:href="loginpage">분양하기</a></li>
+                <li><a href="loginpage">분양후기</a></li>
+                <li><a href="loginpage">캣스타그램</a></li>
               </ul>
             </li>
-            <li class="dropdown"><a href="#"><span>마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a href="#">내 글 모아보기</a></li>
-                <li><a href="#">내가 쓴 댓글 모아보기</a></li>
-                <li><a href="#">좋아요 목록 보기</a></li>
-                <li><a href="#">내 후원 목록보기</a></li>
-                <li><a href="#">회원정보 수정하기</a></li>
-              </ul>
-            </li>
-            <li><a class="get-a-quote" href="#">로그아웃</a></li>
+            
+            <li><a class="get-a-quote" href="loginpage">로그인</a></li>
           </ul>
         </nav>
         <!-- .navbar -->
@@ -113,7 +106,7 @@
         <p class="mb-4 fs-5">
           내일을 기대할 수 있게 해주세요
         </p>
-        <a class="btn btn-outline-dark btn-lg fs-5 mb-3 mt-5" href="#"
+        <a class="btn btn-outline-dark btn-lg fs-5 mb-3 mt-5" href="loginpage"
           >Meow me, you 후원내역보기</a
         ><br />
       </div>
@@ -129,7 +122,7 @@
         class="btn_ga_send quicks"
         id="chat_btn"
       >
-        <img src="../img/chat.png" class="chat_img" alt="채팅상담"
+        <img src="../img/aside/chat_aside.png" class="chat_img" alt="채팅상담"
       /></a>
     </section>
     <!-- trade-->
@@ -139,7 +132,7 @@
           
           <div class="col-lg-10">
             <div>
-              <img src="../img/second_trade-removebg.png" class="trade_img" alt="중고거래" style="background-size:cover;"
+              <img src="../img/index/second_trade-removebg.png" class="trade_img" alt="중고거래" style="background-size:cover;"
               />
             </div>
             <h2>중고거래, 무료나눔을 해보세요</h2>
@@ -148,10 +141,10 @@
               다양한 물건을 판매하고 구매할 수 있는 공간!
             </p>
             <div class="row d-flex justify-content-center">
-            <a class="btn btn-outline-dark btn-sm fs-5 col-2 mt-4" href="#"
+            <a class="btn btn-outline-dark btn-sm fs-5 col-2 mt-4" href="loginpage"
               >중고거래</a
             ><br />
-            <a class="btn btn-outline-dark btn-sm fs-5 col-2 mt-4" href="#"
+            <a class="btn btn-outline-dark btn-sm fs-5 col-2 mt-4" href="loginpage"
               >무료나눔</a
             >
           </div>
@@ -166,17 +159,17 @@
         <h3 class="mb-3">유리창 너머를 꿈꾸는 아이들에게</h3>
         <h3 class="mb-5">당신이라는 꿈을 선물해주세요</h3>
 
-        <a class="btn btn-outline-light btn-lg fs-5 mb-3" style=" border-radius: 25px;" href="#"
+        <a class="btn btn-outline-light btn-lg fs-5 mb-3" style=" border-radius: 25px;" href="loginpage"
           >분양하기 바로가기</a
         ><br />
-        <a class="btn btn-outline-light btn-lg fs-5"  style=" border-radius: 25px;" href="#"
+        <a class="btn btn-outline-light btn-lg fs-5"  style=" border-radius: 25px;" href="loginpage"
           >분양후기 바로가기</a
         >
       </section>
 
       <div id="aside_donate">
         <a
-          href="../img/temp.png"
+          href="loginpage"
           data-btn="regular"
           data-alt-a="캠페인버튼클릭"
           data-alt-b="girl22"
@@ -184,11 +177,11 @@
           class="btn_ga_send quicks"
           id="aside_banner"
         >
-        <img src="../img/aside6.png" class="img_aside" alt="후원하기"
+        <img src="../img/aside/donate_aside.png" class="img_aside" alt="후원하기"
       /></a>
       </div>
       <a
-        href="../img/temp.png"
+        href="loginpage"
         data-btn="regular"
         data-alt-a="캠페인버튼클릭"
         data-alt-b="girl22"
@@ -196,7 +189,7 @@
         class="btn_ga_send quicks"
         id="chat_btn"
       >
-        <img src="../img/chat.png" class="chat_img" alt="채팅상담"
+        <img src="../img/aside/chat_aside.png" class="chat_img" alt="채팅상담"
       /></a>
     </div>
 
@@ -209,76 +202,86 @@
         </div>
         <div class="row gx-0">
           <div class="col-lg-6">
-            <a class="catstar_item" href="#">
+            <a class="catstar_item" href="loginpage">
               <div class="caption">
                 <div class="caption-content">
                   <div class="h2">미유집사</div>
                   <p class="mb-0">미유와 함께 떠난 당일치기 피크닉</p>
                 </div>
               </div>
-              <img class="img-fluid" src="../img/portfolio-1.jpg" alt="..." />
+              <img class="img-fluid" src="../img/index/portfolio-1.jpg" alt="..." />
             </a>
           </div>
           <div class="col-lg-6">
-            <a class="catstar_item" href="#">
+            <a class="catstar_item" href="loginpage">
               <div class="caption">
                 <div class="caption-content">
                   <div class="h2">미노미노</div>
                   <p class="mb-0">사랑스러운 우리집 콩이</p>
                 </div>
               </div>
-              <img class="img-fluid" src="../img/portfolio-2.jpg" alt="..." />
+              <img class="img-fluid" src="../img/index/portfolio-2.jpg" alt="..." />
             </a>
           </div>
           <div class="col-lg-6">
-            <a class="catstar_item" href="#">
+            <a class="catstar_item" href="loginpage">
               <div class="caption">
                 <div class="caption-content">
                   <div class="h2">코리누나</div>
                   <p class="mb-0">우리집 코리 애교 자랑!</p>
                 </div>
               </div>
-              <img class="img-fluid" src="../img/portfolio-3.jpg" alt="..." />
+              <img class="img-fluid" src="../img/index/portfolio-3.jpg" alt="..." />
             </a>
           </div>
           <div class="col-lg-6">
-            <a class="catstar_item" href="#">
+            <a class="catstar_item" href="loginpage">
               <div class="caption">
                 <div class="caption-content">
                   <div class="h2">애플이네</div>
                   <p class="mb-0">[애플이네] 새 식구 들이는 날</p>
                 </div>
               </div>
-              <img class="img-fluid" src="../img/portfolio-4.jpg" alt="..." />
+              <img class="img-fluid" src="../img/index/portfolio-4.jpg" alt="..." />
             </a>
           </div>
           <a class="btn btn-outline-secondary btn-sm fs-6"
             id="catstargram_btn"
-            href="#">더 보기</a>
+            href="loginpage">더 보기</a>
         </div>
       </div>
     </section>
 
-
     <!-- Map-->
     <div class="map_wrap">
-      <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
-      <div id="menu_wrap" class="bg_white">
-        <div class="option">
-          <div>
-            <form onsubmit="searchPlaces(); return false;">
-              키워드 : <input type="text" value="서울 동물보호센터" id="keyword" size="15">
-              <button class="serchbtn" type="submit">검색하기</button>
-            </form>
-          </div>
-        </div>
-        <hr>
-        <ul id="placesList"></ul>
-        <div id="pagination"></div>
+      <div id="map" ></div>
+      <div class="option">
+        <select id="area" onchange="selectArea()"> <!--aria-label=".form-select-lg example-->
+          <option selected>지역을 선택해주세요.</option>
+          <option value="서울">서울</option>
+          <option value="경기">경기도</option>
+          <option value="인천">인천</option>
+          <option value="대전">대전</option>
+          <option value="대구">대구</option>
+          <option value="부산">부산</option>
+          <option value="울산">울산</option>
+          <option value="광주">광주</option>
+          <option value="제주">제주</option>
+        </select>
+        <!--<div>
+          <form onsubmit="searchPlaces(); return false;">
+            키워드 : <input type="text" value="서울 동물보호센터" id="keyword" size="15">
+            <button class="serchbtn" type="submit">검색하기</button>
+          </form>
+        </div>-->
       </div>
+      <hr>
+      <ul id="placesList"></ul>
+      <div id="pagination"></div>
     </div>
     <!--    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=680531978ab426a7e809968516cc71d7"></script>-->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=680531978ab426a7e809968516cc71d7&libraries=services"></script>
+    <!--<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=680531978ab426a7e809968516cc71d7&libraries=services"></script>-->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=680531978ab426a7e809968516cc71d7"></script>
 
     <!-- Footer-->
     <footer class="py-5 bg-dark">

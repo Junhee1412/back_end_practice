@@ -1,0 +1,32 @@
+
+.front_img {
+  width:70%;
+  z-index: 99;
+}
+hr {
+  margin: 0 auto;
+  width: 70%;
+}
+
+section {
+  margin: 150px 0;
+}
+
+.business_info_text_box {
+  margin: 75px 0;
+}
+.btn_box{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:100px;
+}
+.foot_home_btn{
+  margin-right:10px;
+}
+.foot_top_btn{
+  margin-left:10px;
+}
+.img_deathchart{
+  width:60%;
+}

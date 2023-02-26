@@ -7,6 +7,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 //논리명 사용자정보
 @Entity
@@ -45,8 +46,8 @@ public class UserMaster {
     @Column(name = "NICK_NAME")
     private String nickName;
 
-    @Column(name = "DETAIL_ADDR")
-    private String detailAddress;
+    @Column(name = "ADDR")
+    private String Address;
 
     @NotBlank(message = "통신사는 필수 입력값입니다.")
     @Column(name = "PHONE_TYPE")
@@ -59,19 +60,16 @@ public class UserMaster {
     @Column(name = "INTRODUCE")
     private String introduce;
 
-    @Column(name = "USER_PRF")
-    private String userProfile;
-
     @Column(name = "PRF_IMG_NAME")
     private String profileImageName;
 
-    @Column(name = "PRF_IMG_SIZE")
-    private String profileImageSize;
+    @Column(name = "PRF_IMG_PATH")
+    private String profileImagePath;
 
     @Column(name = "USER_JOIN_DATE")
     private LocalDateTime userJoinDate;
 
-    @Column(name = "USER_DELETE_DATE")
-    private LocalDateTime userDeleteDate;
+    @OneToMany(mappedBy = "userMaster" ,orphanRemoval = true)
+    private Set<CommunityMaster> communityMasters;
 
 }
