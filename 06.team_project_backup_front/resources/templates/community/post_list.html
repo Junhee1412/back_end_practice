@@ -79,21 +79,22 @@
             <li class="dropdown"><a href="/"><span>Meow me, you</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
                 <li><a href="business">사업소개</a></li>
-                <li><a href="#">후원내역</a></li>
+                <!--                <li><a th:href="@{/boardlist?(id=ADP_REV)}">후원내역</a></li>-->
               </ul>
             </li>
             <li><a href="donatehome">후원하기</a></li>
             <li class="dropdown"><a href="#"><span>물품거래</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
-                <li><a href="#">무료 나눔</a></li>
-                <li><a href="#">중고 거래</a></li>
+                <li><a th:href="@{/boardlist?(id=FRE_SEL)}">무료 나눔</a></li>
+                <li><a th:href="@{/boardlist?(id=USD_TRN)}">중고 거래</a></li>
               </ul>
             </li>
             <li class="dropdown"><a href="#"><span>커뮤니티</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
-                <li><a href="boardlist">분양하기</a></li>
-                <li><a href="#">분양후기</a></li>
-                <li><a href="#">캣스타그램</a></li>
+   <!--                <li><a th:href="@{/boardlist?(id=NOTICE)}">공지사항</a></li>-->
+                <li><a th:href="@{/boardlist?(id=ADP_ACT)}">분양하기</a></li>
+                <li><a th:href="@{/boardlist?(id=ADP_REV)}">분양후기</a></li>
+                <li><a th:href="@{/boardlist?(id=CAT_STR)}">캣스타그램</a></li>
               </ul>
             </li>
             <li class="dropdown"><a href="my_page"><span>마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -114,13 +115,11 @@
     </header><!-- End Header -->
 
      <!-- section -->
-     <div class="header-card">
+    <div th:switch="${comid}">
+
+     <div th:case="'ADP_ACT'" class="header-card">
       <div class="card bg-crop">
-        <img
-          src="../img/mypost/post.jpg"
-          class="card-img rounded mx-auto d-block bg-menu"
-          alt="커뮤니티설명"
-        />
+        <img src="../img/banner/adopt_action_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" style="top:-250px;left:0px;"/>
         <div class="card-img-overlay">
           <h5 class="card-title text-dark text-center fs-1">
             분양하기 커뮤니티
@@ -131,7 +130,95 @@
         </div>
       </div>
      </div>
+
+        <div th:case="'ADP_REV'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/adopt_review_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" style="top:-100px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        분양후기 커뮤니티
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        분양 받은 고양이들이 어떻게 지내고 있는지 알려주세요!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div th:case="'CAT_STR'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/cat_star_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" style="top:-150px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        캣스타그램
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        고양이들의 일상을 적어보는 커뮤니티!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div th:case="'DON_HST'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/donate_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" style="top:-150px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        Meow me you 후원내역입니다.
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        후원해주신 모금액은 아래와 같이 전달되고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div th:case="'FRE_SEL'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/free_sell_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명"  style="top:-100px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        고양이, 집사용품 무료나눔!
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        가지고 있기에 아까운 물품들을 나눠주세요!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div th:case="'USD_TRN'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/used_trans_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" style="top:-200px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        고양이, 집사용품 중고거래!
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        고양이, 집사용품을 거래할 수 있는 커뮤니티입니다~
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div th:case="'NOTICE'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/notice_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" style="top:-100px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        공지사항
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        Meow, me you 공지사항입니다!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
     <!-- 검색창-->
+
 <!--    <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
 <!--      <div class="container-fluid">-->
 
@@ -149,6 +236,7 @@
       <form th:action="@{/boardlist}" method="get">
         <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
           <div class="input-group">
+            <input type="hidden" name="id" th:value="${comid}"><!--230224 여기 추가-->
             <input type="search" name="searchKeyword" placeholder="제목을 입력하세요" aria-describedby="button-addon1" class="form-control border-0 bg-light">
             <div class="input-group-append">
               <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
@@ -165,29 +253,29 @@
           <div class="col mb-5" th:each="communityMaster ,status: ${list}"  style="height: 400px;">
             <div class="card h-100">
             <!--  badge-->
-              <div th:switch="${communityMaster.postId}">
-                <div th:case="'ADT_CMPL'" class="badge bg-secondary position-absolute fs-5">분양 완료</div>
-                <div th:case="'ADT_ING'" class="badge bg-warning text-dark position-absolute fs-5">분양 중</div>
+<!--              <div th:switch="${communityMaster.postId}">-->
+<!--                <div th:case="'ADT_CMPL'" class="badge bg-secondary position-absolute fs-5">분양 완료</div>-->
+<!--                <div th:case="'ADT_ING'" class="badge bg-warning text-dark position-absolute fs-5">분양 중</div>-->
 
-                <div th:case="'CTWR_SELL'" class="badge bg-primary position-absolute fs-5">캣타워판매글</div>
-                <div th:case="'FDST_SELL'" class="badge bg-success position-absolute fs-5">식사용품판매글</div>
-                <div th:case="'FOOD_SELL'" class="badge bg-success position-absolute fs-5">소모품(식사류)판매글</div>
-                <div th:case="'HSW_SELL'" class="badge bg-warning position-absolute fs-5">집사용품판매글</div>
-                <div th:case="'HYG_SELL'" class="badge bg-info position-absolute fs-5">위생용품판매글</div>
-                <div th:case="'WSH_SELL'" class="badge bg-info position-absolute fs-5">목욕용품판매글</div>
-                <div th:case="'SELL_CMPL'" class="badge bg-secondary position-absolute fs-5">판매완료</div>
+<!--                <div th:case="'CTWR_SELL'" class="badge bg-primary position-absolute fs-5">캣타워판매글</div>-->
+<!--                <div th:case="'FDST_SELL'" class="badge bg-success position-absolute fs-5">식사용품판매글</div>-->
+<!--                <div th:case="'FOOD_SELL'" class="badge bg-success position-absolute fs-5">소모품(식사류)판매글</div>-->
+<!--                <div th:case="'HSW_SELL'" class="badge bg-warning position-absolute fs-5">집사용품판매글</div>-->
+<!--                <div th:case="'HYG_SELL'" class="badge bg-info position-absolute fs-5">위생용품판매글</div>-->
+<!--                <div th:case="'WSH_SELL'" class="badge bg-info position-absolute fs-5">목욕용품판매글</div>-->
+<!--                <div th:case="'SELL_CMPL'" class="badge bg-secondary position-absolute fs-5">판매완료</div>-->
 
-                <div th:case="'CTWR_FREE'" class="badge bg-primary position-absolute fs-5">캣타워무료나눔</div>
-                <div th:case="'FDST_FREE'" class="badge bg-success position-absolute fs-5">식사용품무료나눔</div>
-                <div th:case="'FOOD_FREE'" class="badge bg-success position-absolute fs-5">소모품(식사류)무료나눔</div>
-                <div th:case="'HSW_FREE'" class="badge bg-warning position-absolute fs-5">집사용품무료나눔</div>
-                <div th:case="'HYG_FREE'" class="badge bg-info position-absolute fs-5">위생용품무료나눔</div>
-                <div th:case="'FREE_CMPL'" class="badge bg-secondary position-absolute fs-5">무료나눔완료</div>
+<!--                <div th:case="'CTWR_FREE'" class="badge bg-primary position-absolute fs-5">캣타워무료나눔</div>-->
+<!--                <div th:case="'FDST_FREE'" class="badge bg-success position-absolute fs-5">식사용품무료나눔</div>-->
+<!--                <div th:case="'FOOD_FREE'" class="badge bg-success position-absolute fs-5">소모품(식사류)무료나눔</div>-->
+<!--                <div th:case="'HSW_FREE'" class="badge bg-warning position-absolute fs-5">집사용품무료나눔</div>-->
+<!--                <div th:case="'HYG_FREE'" class="badge bg-info position-absolute fs-5">위생용품무료나눔</div>-->
+<!--                <div th:case="'FREE_CMPL'" class="badge bg-secondary position-absolute fs-5">무료나눔완료</div>-->
 
-                <div th:case="'GNR_POST'" class="badge bg-light position-absolute fs-5">일반글</div>
-                <div th:case="'NTC_POST'" class="badge bg-danger position-absolute fs-5">공지글</div>
+<!--                <div th:case="'GNR_POST'" class="badge bg-light position-absolute fs-5">일반글</div>-->
+<!--                <div th:case="'NTC_POST'" class="badge bg-danger position-absolute fs-5">공지글</div>-->
 
-              </div>
+<!--              </div>-->
 
               <img th:if = "${communityMaster.sumImg != null}"  th:src="@{|/upload/${communityMaster.sumImg}|}" style="width:100%; height:230px;"/>
               <img th:unless="${communityMaster.sumImg != null}" src="../img/noimg.gif" style="width:100%; height:250px;"/>
@@ -206,7 +294,7 @@
               <!-- post actions-->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" th:href="@{/boardview(postNo=${communityMaster.postNo})}">자세히 보기</a>
+                    <a class="btn btn-outline-dark mt-auto" th:href="@{/boardview(postNo=${communityMaster.postNo}, id=${comid})}">자세히 보기</a>
                 </div>
               </div>
             </div>
@@ -220,15 +308,15 @@
     <a
       type="button" style="text-align: center;"
       class="btn btn-secondary fs-5 btn-lg"
-      th:href="@{/boardwrite}"><i class="bi bi-pencil-square"></i>
-      게시글 작성
+      th:href="@{/boardwrite(id=${comid})}"><i class="bi bi-pencil-square"></i>
+        게시글 작성
     </a>
     </div>
 
 
     <!-- 페이지 -->
-    <nav class="marbot_100" aria-label="Page navigation example" >
-      <ul class="pagination">
+    <nav class="marbot_100" aria-label="Page navigation example"  th:style="${totalPage<=0 ? 'visibility:hidden' : 'visibility'}" >
+      <ul class="pagination" >
         <li class="page-item" th:classappend="${1 == nowPage} ? 'disabled'">
           <a class="page-link" href="#" aria-label="Previous"
              th:href="@{/boardlist(id=${comid},page=${startPage-1})}">
@@ -247,11 +335,11 @@
             th:if="${i >= nowPage-5 and i <= nowPage+4}">
           <a class="page-link" href="#"
              th:href="@{/boardlist(id=${comid},page=${i - 1},searchKeyword = ${param.searchKeyword})}"
-             th:text="${i}">1</a></li>
+             th:text="${i}" th:style="${i<=0 ? 'display:none' : 'display:block'}"></a></li>
 
         <li class="page-item" th:classappend="${endPage == nowPage} ? 'disabled'">
           <a class="page-link" href="#" aria-label="Next"  th:href="@{/boardlist(id=${comid},page=${nowPage})}">
-            <span aria-hidden="true">&gt;</span>
+            <span  aria-hidden="true">&gt;</span>
           </a>
         <li class="page-item" th:classappend="${endPage == nowPage} ? 'disabled'">
           <a class="page-link" href="#" aria-label="Next"  th:href="@{/boardlist(id=${comid},page=${endPage-1})}">
@@ -259,6 +347,7 @@
           </a>
         </li>
       </ul>
+
     </nav>
     <!-- section - end -->
 

@@ -11584,13 +11584,16 @@ footer{
 
 .bg-menu {
   position: absolute;
-  top: -100px;
-  left: 0;
   width: 900px;
   height: 700px;
   opacity: 0.6;
 }
-
+.card-img-overlay {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
 .pagination {
   display: flex;
   align-items: center;
@@ -11600,12 +11603,7 @@ footer{
 header h5 {
   font-size: xx-large;
 }
-.card-img-overlay {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-}
+
 .top_btn {
   right: 18%;
   font-family: 'Noto Sans KR', sans-serif, "Jua", "Noto Serif KR", serif, -apple-system,

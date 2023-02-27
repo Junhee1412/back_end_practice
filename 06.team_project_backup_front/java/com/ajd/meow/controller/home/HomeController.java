@@ -26,14 +26,4 @@ public class HomeController {
     public String business(){
         return "business/business_info";
     }
-
-    @GetMapping("/businessTest")
-    public String businessTest(){
-        return "business/business_info_test";
-    }
-
-    @GetMapping("/test")
-    public String a(){
-        return "fragments/testfile";
-    }
 }

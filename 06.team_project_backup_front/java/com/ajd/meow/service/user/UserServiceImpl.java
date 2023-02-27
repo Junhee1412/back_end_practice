@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService{
     @Override
     public void insertMember(UserMaster user, MultipartFile file) throws Exception {
         //  파일 경로 생성
-        String imgPath = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\files";
+        String imgPath = "/home/ec2-user/imges";
 
         UUID uuid = UUID.randomUUID();
 
@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void updateMember(UserMaster user, MultipartFile file) throws Exception{
-        String imgPath = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\files";
+        String imgPath = "/home/ec2-user/imges";
         UUID uuid = UUID.randomUUID();
         String fileName = uuid + "_" + file.getOriginalFilename();
         File saveFile = new File(imgPath, fileName);

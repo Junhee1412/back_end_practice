@@ -1,4 +1,15 @@
 @charset "UTF-8";
+/*!
+* Start Bootstrap - Stylish Portfolio v6.0.5 (https://startbootstrap.com/theme/stylish-portfolio)
+* Copyright 2013-2022 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
+*/
+/*!
+ * Bootstrap v5.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
 
 @import url("https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap");
 
@@ -26,7 +37,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #1d809f;
-  --bs-secondary: #6c757d;
+  --bs-secondary: #ecb807;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ecb807;
@@ -34,7 +45,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 29, 128, 159;
-  --bs-secondary-rgb: 108, 117, 125;
+  --bs-secondary-rgb: 236, 184, 7;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 236, 184, 7;
@@ -641,7 +652,7 @@ progress {
 .figure {
   display: inline-block;
 }
-bs-gutter
+
 .figure-img {
   margin-bottom: 0.5rem;
   line-height: 1;
@@ -6204,11 +6215,11 @@ fieldset:disabled .btn {
 }
 
 .link-secondary {
-  color: #6c757d;
+  color: #ecb807;
 }
 .link-secondary:hover,
 .link-secondary:focus {
-  color: #6c757d;
+  color: #f0c639;
 }
 
 .link-success {
@@ -6661,7 +6672,7 @@ fieldset:disabled .btn {
 }
 
 .border-secondary {
-  border-color: #6c757d !important;
+  border-color: #ecb807 !important;
 }
 
 .border-success {
@@ -11700,10 +11711,6 @@ footer {
     BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
-
-
-
-
 
 #adopt_commu h3 {
   font-weight: 400;

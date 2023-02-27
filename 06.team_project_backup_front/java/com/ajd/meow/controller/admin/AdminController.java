@@ -121,24 +121,31 @@ public class AdminController {
 
 
 
-    @GetMapping("adminUserList") // 유저리스트 보기
-    public String userList(HttpSession session, Model model, @PageableDefault(page = 0,size = 10, sort = "userNo", direction = Sort.Direction.DESC) Pageable pageable){
+    @GetMapping("adminUserList") // 유저리스트 보기 - 230225 수정
+    public String userList(HttpSession session, Model model, @PageableDefault(page = 0,size = 10, sort = "userNo", direction = Sort.Direction.DESC) Pageable pageable, String searchKeyword){
         if(session.getAttribute("user")==null){
             return "redirect:/";
         }else{
             UserMaster user=(UserMaster)session.getAttribute("user");
             //model.addAttribute("user",user);
             if(user.getUserType().equals("ADMIN")){
-                Page<UserMaster> everyUser=userRepository.findAll(pageable);//userRepository.findAll();
+                Page<UserMaster> everyUser=null;
+                if(searchKeyword==null){
+                    everyUser=userRepository.findAll(pageable);
+                }else{ // 아이디로 검색
+                    everyUser=userRepository.findByUserIdContaining(searchKeyword,pageable);
+                }
 
                 int nowPage = everyUser.getPageable().getPageNumber()+1 ;
                 int startPage = Math.max(0 , 1);
                 int endPage = Math.min(nowPage + 10 , everyUser.getTotalPages());
+                int totalPage=everyUser.getTotalPages();
 
                 model.addAttribute("nowPage", nowPage);
                 model.addAttribute("startPage", startPage);
                 model.addAttribute("endPage", endPage);
                 model.addAttribute("maxPage",10);
+                model.addAttribute("totalPage", totalPage);
 
                 model.addAttribute("userList",everyUser);
                 return "admin/admin_user_list"; // 어드민 마이페이지로 이동
@@ -187,8 +194,8 @@ public class AdminController {
 
 
 
-    @GetMapping("adminUserPost") // 해당 유저의 글 리스트
-    public String userPostList(HttpSession session, Long userNo, Model model, @PageableDefault(page = 0,size = 10, sort = "postNo", direction = Sort.Direction.DESC) Pageable pageable){
+    @GetMapping("adminUserPost") // 해당 유저의 글 리스트 - 230225 추가
+    public String userPostList(HttpSession session, Long userNo, Model model, @PageableDefault(page = 0,size = 10, sort = "postNo", direction = Sort.Direction.DESC) Pageable pageable, String searchKeyword){
         if(session.getAttribute("user")==null){
             return "redirect:/";
         }else{
@@ -198,16 +205,23 @@ public class AdminController {
                     //model.addAttribute("err","해당유저가 존재하지않습니다.");
                     return "redirect:/adminUserList";
                 }else{
-                    Page<CommunityMaster> boardListFindByUserNO= communityService.boardListByUserNO(userNo, pageable);
+                    Page<CommunityMaster> boardListFindByUserNO=null;
+                    if(searchKeyword==null){
+                        boardListFindByUserNO= communityService.boardListByUserNO(userNo, pageable);
+                    }else{
+                        boardListFindByUserNO=communityService.searchBySubjectAndUser(searchKeyword,userNo,pageable);
+                    }
 
                     int nowPage = boardListFindByUserNO.getPageable().getPageNumber()+1 ;
                     int startPage = Math.max(0 , 1);
                     int endPage = Math.min(nowPage + 10 , boardListFindByUserNO.getTotalPages());
+                    int totalPage= boardListFindByUserNO.getTotalPages();
 
                     model.addAttribute("nowPage", nowPage);
                     model.addAttribute("startPage", startPage);
                     model.addAttribute("endPage", endPage);
                     model.addAttribute("maxPage",10);
+                    model.addAttribute("totalPage",totalPage);
 
                     model.addAttribute("userNickName",userService.getUser(userNo).getNickName());
                     model.addAttribute("postList",boardListFindByUserNO);
@@ -222,6 +236,7 @@ public class AdminController {
             }
         }
     }
+
 
 
 
@@ -316,24 +331,31 @@ public class AdminController {
 
 
 
-    @GetMapping("adminPostManage") // 모든 게시글 보기
-    public String postManage(HttpSession session, Model model, @PageableDefault(page = 0,size = 10, sort = "postNo", direction = Sort.Direction.DESC) Pageable pageable){
+    @GetMapping("adminPostManage") // 모든 게시글 보기 - 230225 수정
+    public String postManage(HttpSession session, Model model, @PageableDefault(page = 0,size = 10, sort = "postNo", direction = Sort.Direction.DESC) Pageable pageable, String searchKeyword){
         if(session.getAttribute("user")==null){
             return "redirect:/";
         }else{
             UserMaster user=userService.getUserMaster((UserMaster)session.getAttribute("user"));
             //model.addAttribute("user",user);
             if(user.getUserType().equals("ADMIN")){
-                Page<CommunityMaster> everyPost=communityService.getEveryPost(pageable);
+                Page<CommunityMaster> everyPost=null;
+                if(searchKeyword==null){
+                    everyPost=communityService.getEveryPost(pageable);
+                }else{
+                    everyPost=communityService.communitySearchKeyword(searchKeyword,pageable);
+                }
 
                 int nowPage = everyPost.getPageable().getPageNumber()+1 ;
                 int startPage = Math.max(0 , 1);
                 int endPage = Math.min(nowPage + 10 , everyPost.getTotalPages());
+                int totalPage= everyPost.getTotalPages();
 
                 model.addAttribute("nowPage", nowPage);
                 model.addAttribute("startPage", startPage);
                 model.addAttribute("endPage", endPage);
                 model.addAttribute("maxPage",10);
+                model.addAttribute("totalPage",totalPage);
 
                 model.addAttribute("postList",everyPost);
                 model.addAttribute("userType",user.getUserType());

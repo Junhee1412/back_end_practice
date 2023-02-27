@@ -3,6 +3,7 @@ package com.ajd.meow.service.community;
 import com.ajd.meow.entity.CommunityImage;
 import com.ajd.meow.entity.CommunityLike;
 import com.ajd.meow.entity.CommunityMaster;
+import com.ajd.meow.entity.SecondHandTrade;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.ui.Model;
@@ -53,5 +54,10 @@ public interface CommunityService {
     void deleteAllLikeByPostNo(Long postNo);
 
     void deleteAllcomIMG(Long postNo);
+
+    //230225 추가 - 제목/커뮤로 검색, 제목/유저로 검색
+    Page<CommunityMaster> searchBySubjectAndComid(String searchKeyword, String communityId, Pageable pageable);
+
+    Page<CommunityMaster> searchBySubjectAndUser(String searchKeyword, Long userNo, Pageable pageable);
 
 }

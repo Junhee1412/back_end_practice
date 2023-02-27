@@ -73,22 +73,23 @@
           <ul>
             <li class="dropdown"><a href="/"><span>Meow me, you</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
-                <li><a href="/loginpage">사업소개</a></li>
-                <li><a href="#">후원내역</a></li>
+                <li><a href="business">사업소개</a></li>
+                <!--                <li><a th:href="@{/boardlist?(id=ADP_REV)}">후원내역</a></li>-->
               </ul>
             </li>
-            <li><a href="/loginpage">후원하기</a></li>
+            <li><a href="donatehome">후원하기</a></li>
             <li class="dropdown"><a href="#"><span>물품거래</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
-                <li><a href="/loginpage">무료 나눔</a></li>
-                <li><a href="/loginpage">중고 거래</a></li>
+                <li><a th:href="@{/boardlist?(id=FRE_SEL)}">무료 나눔</a></li>
+                <li><a th:href="@{/boardlist?(id=USD_TRN)}">중고 거래</a></li>
               </ul>
             </li>
             <li class="dropdown"><a href="#"><span>커뮤니티</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
-                <li><a href="/loginpage">분양하기</a></li>
-                <li><a href="/loginpage">분양후기</a></li>
-                <li><a href="/loginpage">캣스타그램</a></li>
+   <!--                <li><a th:href="@{/boardlist?(id=NOTICE)}">공지사항</a></li>-->
+                <li><a th:href="@{/boardlist?(id=ADP_ACT)}">분양하기</a></li>
+                <li><a th:href="@{/boardlist?(id=ADP_REV)}">분양후기</a></li>
+                <li><a th:href="@{/boardlist?(id=CAT_STR)}">캣스타그램</a></li>
               </ul>
             </li>
         </nav>

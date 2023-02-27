@@ -29,4 +29,7 @@ public interface UserRepository extends JpaRepository<UserMaster, Long> {
 
     @Override
     Optional<UserMaster> findById(Long userNo);
+
+    //230225 추가
+    Page<UserMaster> findByUserIdContaining(String searchKeyword, Pageable pageable);
 }

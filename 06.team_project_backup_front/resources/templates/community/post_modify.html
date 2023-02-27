@@ -79,21 +79,22 @@
             <li class="dropdown"><a href="/"><span>Meow me, you</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
                 <li><a href="business">사업소개</a></li>
-                <li><a href="#">후원내역</a></li>
+                <!--                <li><a th:href="@{/boardlist?(id=ADP_REV)}">후원내역</a></li>-->
               </ul>
             </li>
             <li><a href="donatehome">후원하기</a></li>
             <li class="dropdown"><a href="#"><span>물품거래</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
-                <li><a href="#">무료 나눔</a></li>
-                <li><a href="#">중고 거래</a></li>
+                <li><a th:href="@{/boardlist?(id=FRE_SEL)}">무료 나눔</a></li>
+                <li><a th:href="@{/boardlist?(id=USD_TRN)}">중고 거래</a></li>
               </ul>
             </li>
             <li class="dropdown"><a href="#"><span>커뮤니티</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
-                <li><a href="boardlist">분양하기</a></li>
-                <li><a href="#">분양후기</a></li>
-                <li><a href="#">캣스타그램</a></li>
+   <!--                <li><a th:href="@{/boardlist?(id=NOTICE)}">공지사항</a></li>-->
+                <li><a th:href="@{/boardlist?(id=ADP_ACT)}">분양하기</a></li>
+                <li><a th:href="@{/boardlist?(id=ADP_REV)}">분양후기</a></li>
+                <li><a th:href="@{/boardlist?(id=CAT_STR)}">캣스타그램</a></li>
               </ul>
             </li>
             <li class="dropdown"><a href="my_page"><span>마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -113,23 +114,109 @@
       </div>
     </header><!-- End Header -->
 
-     <div class="header-card">
-      <div class="card bg-crop">
-        <img
-          src="../img/mypost/post.jpg"
-          class="card-img rounded mx-auto d-block bg-menu"
-          alt="커뮤니티설명"
-        />
-        <div class="card-img-overlay" id="community_type">
-          <h5 class="card-title text-dark text-center fs-1">
-            분양하기 커뮤니티
-          </h5>
-          <p class="card-text text-dark text-center fs-3">
-            고양이를 분양을 하는 곳입니다. 새로운 가족을 찾아주세요~
-          </p>
+    <div th:switch="${board.communityId}">
+
+        <div th:case="'ADP_ACT'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/adopt_action_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" style="top:-250px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        분양하기 커뮤니티
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        고양이를 분양을 하는 곳입니다. 새로운 가족을 찾아주세요~
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-     </div>
+
+        <div th:case="'ADP_REV'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/adopt_review_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" style="top:-100px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        분양후기 커뮤니티
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        분양 받은 고양이들이 어떻게 지내고 있는지 알려주세요!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div th:case="'CAT_STR'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/cat_star_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" style="top:-150px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        캣스타그램
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        고양이들의 일상을 적어보는 커뮤니티!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div th:case="'DON_HST'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/donate_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" style="top:-150px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        Meow me you 후원내역입니다.
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        후원해주신 모금액은 아래와 같이 전달되고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div th:case="'FRE_SEL'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/free_sell_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명"  style="top:-100px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        고양이, 집사용품 무료나눔!
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        가지고 있기에 아까운 물품들을 나눠주세요!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div th:case="'USD_TRN'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/used_trans_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" style="top:-200px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        고양이, 집사용품 중고거래!
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        고양이, 집사용품을 거래할 수 있는 커뮤니티입니다~
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div th:case="'NOTICE'" class="header-card">
+            <div class="card bg-crop">
+                <img src="../img/banner/notice_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명" style="top:-100px;left:0px;"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-1">
+                        공지사항
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        Meow, me you 공지사항입니다!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
     <form id="frm" th:action="@{/boardupdate/{postNo}(postNo=${board.postNo})}" method="post" enctype="multipart/form-data">
     <div id="insert_text_box">
       <div class="row w-50 mb-3">

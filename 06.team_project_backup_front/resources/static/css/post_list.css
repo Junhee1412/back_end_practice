@@ -11594,8 +11594,6 @@ footer{
 
 .bg-menu {
   position: absolute;
-  top: -100px;
-  left: 0;
   width: 900px;
   height: 700px;
   opacity: 0.6;

@@ -91,8 +91,8 @@
      <!-- section -->
      <div class="header-card">
       <div class="thumb-wrapper stagger-item">
-          <img th:if = "${user.profileImagePath != null}"  th:src="@{|/upload/${user.profileImagePath}|}" style="width:150px;,height:150px;" class="rounded-circle"/>
-          <img th:unless="${user.profileImagePath != null}" src="../img/noimg.gif" style="width:150px;,height:150px;" class="rounded-circle"/>
+          <img th:if = "${user.profileImageName != null}"  th:src="@{|/upload/${user.profileImageName}|}" class="thumb"/>
+          <img th:unless="${user.profileImageName != null}" src="../img/noimg.gif" class="thumb"/>
       </div>
 
       <div class="text-area">

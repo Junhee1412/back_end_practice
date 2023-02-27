@@ -123,7 +123,7 @@ public class DonateController {
 
     @GetMapping("/donatelist")
     public String donatelistForm(@PageableDefault(page = 0,size = 10, sort = "donateCode", direction = Sort.Direction.DESC)
-                                     Pageable pageable, HttpSession session, Model model){
+                                 Pageable pageable, HttpSession session, Model model){
 
         UserMaster loginUser=userService.getUserMaster((UserMaster)session.getAttribute("user"));
         model.addAttribute("user",loginUser);
@@ -132,14 +132,15 @@ public class DonateController {
         Page<DonateMaster> lists = donateservice.donateList(pageable);
         int nowPage = lists.getPageable().getPageNumber()+1 ;
         int startPage = Math.max(0 , 1);
-
         int endPage = Math.min(nowPage + 10 , lists.getTotalPages());
+        int totalPage= lists.getTotalPages();
 
         model.addAttribute("list", lists);
         model.addAttribute("nowPage", nowPage);
         model.addAttribute("startPage", startPage);
         model.addAttribute("endPage", endPage);
         model.addAttribute("maxPage",10);
+        model.addAttribute("totalPage", totalPage);
 
         return "donate/my_donate_list";
     }

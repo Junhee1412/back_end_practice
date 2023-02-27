@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@RequiredArgsConstructor
 public class UserController {
     @Autowired
     private UserService userService;

@@ -11592,13 +11592,16 @@ footer{
 
 .bg-menu {
   position: absolute;
-  top: -100px;
-  left: 0;
   width: 900px;
   height: 700px;
   opacity: 0.6;
 }
-
+.card-img-overlay {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
 #community_type {
   display: flex;
   flex-flow: column;

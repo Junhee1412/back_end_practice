@@ -11732,3 +11732,11 @@ button :hover{
 .btn{
   width:60%;
 }
+
+
+.thumb {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.24);
+}
