@@ -49,13 +49,14 @@ public class CommunityController {
 
 
     @PostMapping("/boardwritepro")
-    public String boardWritePro(HttpSession session, Model model, CommunityMaster communityMaster,
+    public String boardWritePro(HttpSession session, Model model, CommunityMaster communityMaster, int price,
                                 @RequestParam("files") List<MultipartFile> files) throws Exception {
+        System.out.println("111111111111111111111111");
 
         UserMaster loginUser = (UserMaster) session.getAttribute("user");
         model.addAttribute("user", loginUser);
 
-        communityService.write(communityMaster);
+        communityService.write(communityMaster, price);
 
         for (MultipartFile img : files) {
             communityMaster.setPostNo(communityMaster.getPostNo());
@@ -63,8 +64,8 @@ public class CommunityController {
 
             communityService.saveFile(img, session, model, communityMaster);
         }
-            model.addAttribute("message", "글 작성 완료.");
-            model.addAttribute("SearchUrl", "/boardlist?id="+communityMaster.getCommunityId());
+        model.addAttribute("message", "글 작성 완료.");
+        model.addAttribute("SearchUrl", "/boardlist?id="+communityMaster.getCommunityId());
 //        return "redirect:/boardlist";
         return "community/community_message";
     }

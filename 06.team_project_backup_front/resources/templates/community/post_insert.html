@@ -235,17 +235,22 @@
             <div th:switch="${comid}">
                 <div th:case="'ADP_ACT'">
                     <input type="hidden" name="postId" value="ADT_ING"/>
+                    <input type="hidden" name="price" value="0">
                 </div>
                 <div th:case="'ADP_REV'">
                     <input type="hidden" name="postId" value="GNR_POST"/>
+                    <input type="hidden" name="price" value="0">
                 </div>
                 <div th:case="'CAT_STR'">
                     <input type="hidden" name="postId" value="GNR_POST"/>
+                    <input type="hidden" name="price" value="0">
                 </div>
                 <div th:case="'DON_HST'">
                     <input type="hidden" name="postId" value="NTC_POST"/>
+                    <input type="hidden" name="price" value="0">
                 </div>
                 <div th:case="'FRE_SEL'" >
+                    <input type="hidden" name="price" value="0">
                     <div class="col-sm-10 mb-3" style="display:flex; justify-content: center; align-items: center;">
                         <label for="post_id_select_byFreeSell" class="col-sm-2 col-form-label">무료나눔품목 *</label>
                         <select id= "post_id_select_byFreeSell" name="postId" class="form-select" aria-label="post_type">
@@ -319,7 +324,9 @@
         <hr class="border border-white" />
 
         <div class="bot_btn_group">
-            <button class="btn btn-dark mr-5" style="margin-right:10px;"><i class="bi bi-pencil-square"></i>등록하기</button>
+            <button type="submit" class="btn btn-dark mr-5" style="margin-right:10px;">
+                <i class="bi bi-pencil-square"></i>등록하기
+            </button>
             <button type="button" class="btn btn-dark ml-5" style="margin-left:10px;">
                 <a href="/boardlist" class="text-white"><i class="bi bi-list"></i> 목록으로</a>
             </button>

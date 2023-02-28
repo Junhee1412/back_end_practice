@@ -7,6 +7,7 @@ import com.ajd.meow.repository.community.CommunityLikeRepository;
 import com.ajd.meow.repository.community.CommunityMasterRepository;
 import com.ajd.meow.repository.community.SecondHandTradeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -33,20 +34,27 @@ public class CommunityServiceImpl implements CommunityService{
     @Autowired
     private CommunityImageRepository communityImageRepository;
 
+    @Bean
+    private SecondHandTrade getSecondHandTrade(){
+        return new SecondHandTrade();
+    }
+
+    //글 작성
     @Autowired
     private SecondHandTradeRepository secondHandTradeRepository;
 
-    //글 작성
-    public void write(CommunityMaster communityMaster){
+    public void write(CommunityMaster communityMaster, int price){
 
         communityMaster.setCommunityId(communityMaster.getCommunityId());
         communityMaster.setCreatePostDate(LocalDateTime.now());
         communityMasterRepository.save(communityMaster);
 
-//        if(communityMaster.getCommunityId()=="USD_TRN"){
-//            secondHandTrade.setPostNo(communityMaster.getPostNo());
-//            secondHandTradeRepository.save();
-//        }
+        if(communityMaster.getCommunityId().equals("USD_TRN")){
+            SecondHandTrade secondHandTrade=getSecondHandTrade();
+            secondHandTrade.setPostNo(communityMaster.getPostNo());
+            secondHandTrade.setPrice(price);
+            secondHandTradeRepository.save(secondHandTrade);
+        }
     }
 
     //파일 업로드

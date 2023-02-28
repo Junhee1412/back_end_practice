@@ -15,7 +15,7 @@ import java.util.List;
 
 public interface CommunityService {
     //글 작성
-    void write(CommunityMaster communityMaster);
+    void write(CommunityMaster communityMaster, int price);
     //파일 저장
     Long saveFile(MultipartFile files, HttpSession session , Model model , CommunityMaster communityMaster) throws IOException;
     //페이징
