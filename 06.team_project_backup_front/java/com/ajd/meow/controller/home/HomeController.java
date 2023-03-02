@@ -26,4 +26,15 @@ public class HomeController {
     public String business(){
         return "business/business_info";
     }
+
+    @GetMapping("/businessTest")
+    public String business_test(){
+        return "business/business_info_test";
+    }
+
+    @GetMapping("/test")
+    public String TestLayout(){
+        return "fragments/testfile";
+    }
+
 }
