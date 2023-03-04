@@ -37,4 +37,9 @@ public class HomeController {
         return "fragments/testfile";
     }
 
+    @GetMapping("/termtest")
+    public String termLayout(){
+        return "user/terms_test";
+    }
+
 }
