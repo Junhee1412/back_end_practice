@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap");
+
+.jua{font-family:'Jua', sans-serif, "Noto Serif KR", serif,
+                 -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial,
+                 sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+                 Noto Color Emoji;}
+
+.sans{font-family:"Noto Sans KR", sans-serif, "Noto Serif KR", serif,
+                 -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial,
+                 sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+                 Noto Color Emoji;}
+
+.serif{font-family:"Noto Serif KR", serif, "Noto Sans KR", sans-serif,
+                 -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial,
+                 sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+                 Noto Color Emoji;}

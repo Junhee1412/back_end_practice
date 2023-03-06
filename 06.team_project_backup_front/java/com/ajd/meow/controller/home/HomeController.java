@@ -42,4 +42,10 @@ public class HomeController {
         return "user/terms_test";
     }
 
+
+    @GetMapping("/donate_home_test")
+    public String donate_home_test(){
+        return "donate/donate_home_test";
+    }
+
 }
