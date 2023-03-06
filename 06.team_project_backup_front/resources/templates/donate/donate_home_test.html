@@ -4,44 +4,42 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/layout}">
 
-<!--&lt;!&ndash; index.html 고유 CSS 추가 &ndash;&gt;-->
+<!-- 고유 CSS 추가 -->
 <th:block layout:fragment="css">
     <link rel="stylesheet" th:href="@{/css/donate/donate_home_test.css}" >
 </th:block>
 
-<!--&lt;!&ndash; index.html 고유 스크립트 추가 &ndash;&gt;-->
+<!-- 고유 스크립트 추가 -->
 <th:block layout:fragment="script">
     <script th:src="@{/js/donate/donate_home_test.js}"></script>
 </th:block>
+
 <title>후원하기 홈 테스트</title>
+
 <div layout:fragment="content">
     <div class="header-card serif" >
         <div class="card bg-crop">
-            <img
-                    src="../img/banner/donate_banner.jpg"
-                    class="card-img rounded mx-auto d-block bg-menu"
-                    alt="커뮤니티설명"
-            />
-            <div class="card-img-overlay">
-
-                <h5 class="card-title text-dark text-center fs-2">
-                    길 위의 아이들이
-                </h5>
-                <p class="card-text text-dark text-center fs-3">
-                    내일을 기대할 수 있도록 함께해주세요!
-                </p>
+            <img src="../img/banner/donate_banner.jpg" class="card-img rounded mx-auto d-block bg-menu" alt="커뮤니티설명"/>
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark text-center fs-2">
+                        길 위의 아이들이
+                    </h5>
+                    <p class="card-text text-dark text-center fs-3">
+                        내일을 기대할 수 있도록 함께해주세요!
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="serif">
-        <div class="text-center fs-1 mt-5">
-            <p>후원사업 선택</p>
-        </div>
 
-        <div class="text-center fs-3 mb-5">
-            <p>원하시는 후원사업을 선택해주세요!</p>
+        <div class="serif">
+            <div class="text-center fs-1 mt-5">
+                <p>후원사업 선택</p>
+            </div>
+
+            <div class="text-center fs-3 mb-5">
+                <p>원하시는 후원사업을 선택해주세요!</p>
+            </div>
         </div>
-    </div>
 
 
     <!-- section -->

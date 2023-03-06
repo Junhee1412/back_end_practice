@@ -8,6 +8,7 @@
     <!-- favicon-->
     <link rel="icon" th:href="@{img/favicon/favicon-remove-bg.ico}" type="image/x-icon" sizes="16x16"/>
     <title th:replace="${title}">제목</title>
+
     <!-- common used css files-->
     <link rel="stylesheet" th:href="@{css/fragments/header_nav.css}">
     <!-- bootstrap 5.2.3 CSS settings only -->
@@ -19,13 +20,15 @@
     <!-- footer css -->
     <link rel="stylesheet" th:href="@{css/fragments/footer.css}">
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"> -->
     <!-- Jquery core JS-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"></script>
     <!--common JS -->
     <script th:src="@{js/fragments/header_nav.js}"></script>
+    <!-- bootstrap core JS settings -->
+<!--    <script th:src="@{js/fragments/bootstrap.bundle.min.js}"></script>-->
 
     <!-- 컨텐츠페이지의 CSS 영역이 들어감 -->
     <th:block layout:fragment="css"></th:block>

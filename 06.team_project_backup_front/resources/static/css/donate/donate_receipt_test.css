@@ -1,0 +1,111 @@
+
+.header-card {
+  width: 100%;
+  height: 400px;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jua", 'Noto Sans KR', sans-serif, "Noto Serif KR", serif, -apple-system,
+  BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif,
+  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.header-card .card {
+  width: 900px;
+  height: 300px;
+}
+.bg-crop {
+  position: relative;
+  width: 900px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.bg-menu {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 900px;
+  height: 700px;
+  opacity: 0.6;
+}
+
+#community_type {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+#community_type h5 {
+  font-size: xx-large;
+}
+
+#donate_receipt_info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:150px;
+}
+
+.card-img-overlay {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+table{
+  font-family: 'Noto Sans KR', sans-serif, "Noto Serif KR", serif, -apple-system,
+  BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif,
+  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+button{
+    font-family: 'Noto Sans KR', sans-serif, "Noto Serif KR", serif, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+#donate_receipt_box{
+  width:690px;
+}
+
+th{
+  text-align:center;
+  border-right: 1px solid RGB(234, 236, 238);
+}
+tr{
+  border-left: 1px solid RGB(234, 236, 238);
+  border-right: 1px solid RGB(234, 236, 238);
+}
+
+.donate_content th{
+  width:230px;
+}
+
+@media print {
+
+  .print-button { display:none;}
+
+}
+
+.donate_content td{
+    border-right: 1px solid RGB(234, 236, 238);
+    text-align: center;
+}
+
+#print{
+font-family:'Noto Sans KR', sans-serif, "Noto Serif KR", serif, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    position:relative;left:58%;
+    border:1px solid gray;
+}
+
+#back{
+font-family: 'Noto Sans KR', sans-serif, "Noto Serif KR", serif,  -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    position:relative;left:58%;
+    border:1px solid gray;
+}
