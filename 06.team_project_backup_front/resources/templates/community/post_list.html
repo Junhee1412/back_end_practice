@@ -305,11 +305,17 @@
     </section>
 
     <div class="d-flex justify-content-end" style="margin-right:13.2%;">
-    <a
+    <a th:if="${comid}!='NOTICE'"
       type="button" style="text-align: center;"
       class="btn btn-secondary fs-5 btn-lg"
       th:href="@{/boardwrite(id=${comid})}"><i class="bi bi-pencil-square"></i>
         게시글 작성
+    </a>
+    <a th:if="${comid}=='NOTICE' and ${member}!='MEMBER'"
+      type="button" style="text-align: center;"
+      class="btn btn-secondary fs-5 btn-lg"
+      th:href="@{/boardwrite(id=${comid})}"><i class="bi bi-pencil-square"></i>
+        공지글 작성
     </a>
     </div>
 

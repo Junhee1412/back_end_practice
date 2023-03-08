@@ -67,4 +67,9 @@ public class CommunityMaster {
     @OneToMany(mappedBy = "communityMaster",cascade = CascadeType.REMOVE,orphanRemoval = true)
     @JsonIgnoreProperties({"communityMaster"})
     private List<CommunityLike> communityLikes;
+
+
+    //230306 추가
+    @OneToMany(mappedBy = "communityMaster", cascade = CascadeType.REMOVE,orphanRemoval = true)
+    private List<SecondHandTrade> secondHandTradesList;
 }

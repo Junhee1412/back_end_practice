@@ -222,7 +222,6 @@
       <div class="row w-50 mb-3">
         <label for="formTextContent" class="col-sm-2 col-form-label">제목 *</label>
         <div class="col-sm-10">
-
           <input
             type="text" name="subject"
             class="form-control"
@@ -231,6 +230,56 @@
           />
         </div>
       </div>
+      <!--이후 추가-->
+      <div class="row w-50 mb-5">
+
+        <div th:if="${board.communityId}=='USD_TRN' or ${board.communityId}=='FRE_SEL'">
+
+        <div th:switch="${board.communityId}">
+          <div th:case="'FRE_SEL'">
+              <input type="hidden" name="price" value="0">
+              <div class="col-sm-10 mb-3" style="display:flex; justify-content: center; align-items: center;">
+                  <label for="post_id_select_byFreeSell" class="col-sm-2 col-form-label">무료나눔품목 *</label>
+                  <select id= "post_id_select_byFreeSell" name="postId" th:value="${board.postId}" class="form-select" aria-label="post_type">
+                      <option th:selected="${board.postId}=='CTWR_FREE'" value="CTWR_FREE">캣타워</option>
+                      <option th:selected="${board.postId}=='FDST_FREE'" value="FDST_FREE">식사용품</option>
+                      <option th:selected="${board.postId}=='FOOD_FREE'" value="FOOD_FREE">소모품(식사류)</option>
+                      <option th:selected="${board.postId}=='HSW_FREE'" value="HSW_FREE">집사용품</option>
+                      <option th:selected="${board.postId}=='HYG_FREE'" value="HYG_FREE">위생용품</option>
+                  </select>
+              </div>
+          </div>
+          <div th:case="'USD_TRN'" >
+
+              <div class="mb-3" style="display:flex; justify-content: space-between; align-items: center;">
+
+                      <label for="post_id_select_byUsedTransfer" class="col-form-label col-sm-2">중고거래품목 *</label>
+                      <select id= "post_id_select_byUsedTransfer" name="postId" class="form-select" aria-label="post_type">
+                          <option th:selected="${board.postId}=='CTWR_SELL'" value="CTWR_SELL">캣타워</option>
+                          <option th:selected="${board.postId}=='FDST_SELL'" value="FDST_SELL">식사용품</option>
+                          <option th:selected="${board.postId}=='FOOD_SELL'" value="FOOD_SELL">소모품(식사류)</option>
+                          <option th:selected="${board.postId}=='HSW_SELL'" value="HSW_SELL">집사용품</option>
+                          <option th:selected="${board.postId}=='HYG_SELL'" value="HYG_SELL">위생용품</option>
+                          <option th:selected="${board.postId}=='WSH_SELL'" value="WSH_SELL">목욕용품</option>
+                      </select>
+
+
+
+                      <label for="second_amount" class="col-form-label col-sm-2">가격 *</label>
+                      <input type="text" class="form-control form_info" id="second_amount" name="price" th:value="${price}" onkeyup="inputNumberFormat(this);">
+
+              </div>
+          </div>
+        </div>
+
+        </div>
+
+        <div th:unless="${board.communityId}=='USD_TRN' or ${board.communityId}=='FRE_SEL'">
+          <input type="hidden" name="price" value="0">
+        </div>
+        
+      </div>
+      <!--이후 추가 끗-->
       <div class="row w-50 mb-5">
         <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label"
           >내용 *</label
@@ -279,7 +328,7 @@
         <button class="btn btn-dark" ><i class="bi bi-pencil-square"></i>수정하기</button>
 
         <button type="button" class="btn btn-dark" style="margin-left:10px;">
-          <a href="/boardlist" class="text-white"> <i class="bi bi-list"></i> 목록으로</a>
+          <a th:href="@{/boardlist(id=${board.communityId})}" class="text-white"> <i class="bi bi-list"></i> 목록으로</a>
         </button>
       </div>
     </form>

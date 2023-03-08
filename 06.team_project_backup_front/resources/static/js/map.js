@@ -32,27 +32,32 @@ function drawMap(locations, area_select){
 // https://apis.map.kakao.com/web/sample/addMapClickEventWithMarker/ <- 마크 찍으면 위도경도 알려줌
     if(area_select=='대구'){
         center_area={
-            center: new kakao.maps.LatLng(35.871389, 128.601564),
+            center: new kakao.maps.LatLng(35.863710, 128.735898),
             level: 7
         };}
     else if(area_select=='부산'){
         center_area={
-            center: new kakao.maps.LatLng(35.268543, 129.075210),
+            center: new kakao.maps.LatLng(35.179674, 129.075066),
+            level: 8
+        };}
+    else if(area_select=='울산'){
+        center_area={
+            center: new kakao.maps.LatLng(35.556796, 129.248462),
             level: 7
         };}
-        else if(area_select=='대전'){
+    else if(area_select=='대전'){
         center_area={
-            center: new kakao.maps.LatLng(36.350539, 127.384857),
+            center: new kakao.maps.LatLng(36.362966, 127.286842),
             level: 4
         };}
     else if(area_select=='광주'){
         center_area={
-                center: new kakao.maps.LatLng(35.159967, 126.851773),
+                center: new kakao.maps.LatLng(35.222950, 126.881650),
                 level: 5
         };}
     else if(area_select=='제주'){
         center_area={
-            center: new kakao.maps.LatLng(33.367575, 126.529260),
+            center: new kakao.maps.LatLng(33.455190, 126.581018),
             level: 7
     };}
     else if(area_select=='인천'){

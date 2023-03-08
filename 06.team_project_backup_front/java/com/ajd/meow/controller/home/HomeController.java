@@ -26,30 +26,4 @@ public class HomeController {
     public String business(){
         return "business/business_info";
     }
-
-    @GetMapping("/businessTest")
-    public String business_test(){
-        return "business/business_info_test";
-    }
-
-    @GetMapping("/test")
-    public String TestLayout(){
-        return "fragments/testfile";
-    }
-
-    @GetMapping("/termtest")
-    public String termLayout(){
-        return "user/terms_test";
-    }
-
-    @GetMapping("/donate_home_test")
-    public String donate_home_test(){
-        return "donate/donate_home_test";
-    }
-
-    @GetMapping("/donate_insert_test")
-    public String donate_insert_test(){
-        return "donate/donate_insert_test";
-    }
-
 }

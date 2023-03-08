@@ -306,6 +306,21 @@
             <img th:unless="${board.getUserMaster().getProfileImagePath() != null}" src="../img/noimg.gif" style="width:100px;,height:100px;" class="rounded-circle"/>
         </div>
         <ul>
+          <!-- 230301 추가 -->
+          <li th:if="${comid}=='USD_TRN'">가격 : <span th:text="${price}"></span></li>
+          <!-- 230301 끝 -->
+          <!-- 이후 추가 -->
+          <li th:if="${comid}=='USD_TRN' or ${comid}=='FRE_SEL'"> 물품 : 
+            <th:block th:switch="${board.postId}">
+              <span th:case="CTWR_FREE">캣타워</span><span th:case="CTWR_SELL">캣타워</span>
+              <span th:case="FDST_FREE">식사용품</span><span th:case="FDST_SELL">식사용품</span>
+              <span th:case="FOOD_FREE">소모품(식사류)</span><span th:case="FOOD_SELL">소모품(식사류)</span>
+              <span th:case="HYG_FREE">위생용품</span><span th:case="HYG_SELL">위생용품</span>
+              <span th:case="HSW_FREE">위생용품</span><span th:case="HSW_SELL">집사용품</span>
+              <span th:case="SELL_CMPL">판매완료</span><span th:case="FREE_CMPL">무료나눔완료</span>
+            </th:block>
+          </li>
+          <!-- 이후 추가 끗 -->
           <li>작성자    : <span th:text="${board.getUserMaster().getNickName()}" >작성자</span></li>
           <li>작성일자  : <span th:text="${#temporals.format(board.createPostDate, 'yyyy-MM-dd HH:mm:ss')}">작성일자</span></li>
           <li>조회수    : <span th:text="${board.viewCount}"></span></li>
@@ -387,7 +402,7 @@
         <i class="bi bi-trash-fill"></i> 삭제하기
       </a>
       <button type="button" class="btn btn-outline-dark">
-        <a href="/boardlist"> <i class="bi bi-list"></i> 목록으로</a>
+        <a th:href="@{/boardlist(id=${comid})}"> <i class="bi bi-list"></i> 목록으로</a>
       </button>
     </div>
    

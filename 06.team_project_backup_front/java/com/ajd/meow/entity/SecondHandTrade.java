@@ -25,4 +25,9 @@ public class SecondHandTrade {
 
     @Column(name="PRICE")
     private int price;
+
+    //230306 추가
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn( name="post_no" ,insertable = false, updatable = false)
+    private CommunityMaster communityMaster;
 }
