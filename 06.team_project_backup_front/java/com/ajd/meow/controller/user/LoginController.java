@@ -43,4 +43,10 @@ public class LoginController {
         status.setComplete();
         return "redirect:/"; // 로그아웃 후 인덱스
     }
+    // 이후 추가
+    @GetMapping("/boardmodify/logout")
+    public String logoutInBoardModifyPage(SessionStatus status){
+        status.setComplete();
+        return "redirect:/"; // 로그아웃 후 인덱스
+    }
 }

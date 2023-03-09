@@ -74,7 +74,7 @@
 
     <i class="mobile-nav-toggle mobile-nav-show bi bi-list "></i>
     <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x "></i>
-    <nav th:if="${userType}=='MEMBER'" id="navbar" class="navbar">
+    <nav id="navbar" class="navbar">
       <ul>
         <li class="dropdown"><a href="/"><span>Meow me, you</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
@@ -97,7 +97,7 @@
             <li><a th:href="@{/boardlist?(id=CAT_STR)}">캣스타그램</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="my_page"><span>마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <li th:if="${userType}=='MEMBER'" class="dropdown"><a href="my_page"><span>마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
             <li><a href="myPost">내 글 모아보기</a></li>
             <li><a href="myReply">내가 쓴 댓글 모아보기</a></li>
@@ -106,13 +106,7 @@
             <li><a href="modifyUser">회원정보 수정하기</a></li>
           </ul>
         </li>
-        <li><a class="get-a-quote" href="logout">로그아웃</a></li>
-      </ul>
-    </nav>
-    <!-- .navbar -->
-    <nav th:if="${userType}=='ADMIN'" id="navbar" class="navbar">
-      <ul>
-        <li class="dropdown"><a href="adminMypage"><span>관리자마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <li th:if="${userType}=='ADMIN'" class="dropdown"><a href="adminMypage"><span>관리자마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
             <li><a href="adminMypage">관리자마이페이지</a></li>
             <li><a href="adminUserList">유저 리스트</a></li>
@@ -124,7 +118,6 @@
         <li><a class="get-a-quote" href="logout">로그아웃</a></li>
       </ul>
     </nav>
-    <!-- .navbar -->
     <!-- .navbar -->
 
   </div>

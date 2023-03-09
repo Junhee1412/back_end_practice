@@ -398,7 +398,7 @@ public class AdminController {
 
 
 
-    @GetMapping("adminInsertNotice")//공지적는 폼으로 이동
+    /*@GetMapping("adminInsertNotice")//공지적는 폼으로 이동 - 공지글 작성을 커뮤니티로 뺐음 (이후 추가)
     public String insertNoticeForm(HttpSession session, Model model){
         if(session.getAttribute("user")==null){
             return "redirect:/";
@@ -408,7 +408,7 @@ public class AdminController {
             model.addAttribute("adminNo",userMaster.getUserNo());
             return "admin/admin_post_insert";
         }
-    }
+    }*/
 
 
 
