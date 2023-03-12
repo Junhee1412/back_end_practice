@@ -52,7 +52,6 @@ public class CommunityController {
     @PostMapping("/boardwritepro")
     public String boardWritePro(HttpSession session, Model model, CommunityMaster communityMaster, int price,
                                 @RequestParam("files") List<MultipartFile> files) throws Exception {
-        System.out.println("111111111111111111111111");
 
         UserMaster loginUser = (UserMaster) session.getAttribute("user");
         model.addAttribute("user", loginUser);
@@ -155,8 +154,8 @@ public String communityList(String id, @PageableDefault(page = 0, size = 12, sor
         return "community/community_message";
     }
 
-    @GetMapping("/boardmodify/{postNo}")
-    public String boardModify(String id,@PathVariable("postNo") Long postNo, HttpSession session, Model model,CommunityImage communityImage) {
+    @GetMapping("/boardmodify{postNo}")
+    public String boardModify(String id, Long postNo, HttpSession session, Model model,CommunityImage communityImage) {
         UserMaster loginUser = (UserMaster) session.getAttribute("user");
         model.addAttribute("user", loginUser);
 
@@ -170,8 +169,8 @@ public String communityList(String id, @PageableDefault(page = 0, size = 12, sor
             return "community/post_modify";
     }
 
-    @PostMapping("/boardupdate/{postNo}")
-    public String communityPostModify(String id,@PathVariable("postNo") Long postNo, HttpSession session, CommunityMaster communityMaster, int price, Model model, @RequestParam("files") List<MultipartFile> files,CommunityImage communityImage) throws Exception {
+    @PostMapping("/boardupdate{postNo}")
+    public String communityPostModify(String id, Long postNo, HttpSession session, CommunityMaster communityMaster, int price, Model model, @RequestParam("files") List<MultipartFile> files,CommunityImage communityImage) throws Exception {
         UserMaster loginUser = (UserMaster) session.getAttribute("user");
 
         model.addAttribute("user", loginUser);

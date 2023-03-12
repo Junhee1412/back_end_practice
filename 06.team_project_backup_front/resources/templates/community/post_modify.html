@@ -1,129 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="http://mintable1.cafe24.com/Meow_me_you_front/html/"
-    />
-    <meta property="og:title" content="미유미유" />
-    <meta property="og:description" content="너와 나의 이야기가 펼쳐지는 곳" />
-   <link href="/css/bootstrap-icons.css" rel="stylesheet">
-    <meta
-      property="og:image"
-      content="http://mintable1.cafe24.com/Meow_me_you_front/img/kakao_preview.jpg"
-    />
-    <meta
-      property="og:site_name"
-      content="유기묘 커뮤니티에 오신걸 환영합니다!"
-    />
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-    crossorigin="anonymous"
-  />
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-  
-    <link
-      rel="icon"
-      href="/img/favicon/favicon-remove-bg.ico"
-      type="image/x-icon"
-      sizes="16x16"
-    />
-    <title>글 쓰기 페이지</title>
-    <!-- Font Awesome icons (free version)-->
-    <script
-      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Simple line icons-->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google fonts-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="/css/community/post_insert.css" rel="stylesheet" />
-  </head>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout_5.2.3}">
 
-  <body id="page-top">
-    <!-- Navigation-->
-    <header id="header" class="header d-flex align-items-center fixed-top">
-      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-  
-       
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <a class="logo d-flex align-items-center" href="/"><img alt="Brand" src="/img/logo/logo_remove_bg.png"></a>
-        </a>
-  
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list "></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x "></i>
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li class="dropdown"><a href="/"><span>Meow me, you</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a href="business">사업소개</a></li>
-                <!--                <li><a th:href="@{/boardlist?(id=ADP_REV)}">후원내역</a></li>-->
-              </ul>
-            </li>
-            <li><a href="donatehome">후원하기</a></li>
-            <li class="dropdown"><a href="#"><span>물품거래</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a th:href="@{/boardlist?(id=FRE_SEL)}">무료 나눔</a></li>
-                <li><a th:href="@{/boardlist?(id=USD_TRN)}">중고 거래</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="#"><span>커뮤니티</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a th:href="@{/boardlist?(id=NOTICE)}">공지사항</a></li>
-                <li><a th:href="@{/boardlist?(id=ADP_ACT)}">분양하기</a></li>
-                <li><a th:href="@{/boardlist?(id=ADP_REV)}">분양후기</a></li>
-                <li><a th:href="@{/boardlist?(id=CAT_STR)}">캣스타그램</a></li>
-              </ul>
-            </li>
-            <li th:if="${user.userType}=='MEMBER'" class="dropdown"><a href="my_page"><span>마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a href="myPost">내 글 모아보기</a></li>
-                <li><a href="myReply">내가 쓴 댓글 모아보기</a></li>
-                <li><a href="myHeart">좋아요 목록 보기</a></li>
-                <li><a href="donatelist">내 후원 목록보기</a></li>
-                <li><a href="modifyUser">회원정보 수정하기</a></li>
-              </ul>
-            </li>
-            <li th:if="${user.userType}=='ADMIN'" class="dropdown"><a href="adminMypage"><span>관리자마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a href="adminMypage">관리자마이페이지</a></li>
-                <li><a href="adminUserList">유저 리스트</a></li>
-                <li><a href="adminPostManage">전체 글</a></li>
-                <li><a href="adminDonatemanage">후원 내역</a></li>
-                <li><a href="adminModify">관리자 수정</a></li>
-              </ul>
-            </li>
-            <li><a class="get-a-quote" href="logout">로그아웃</a></li>
-          </ul>
-        </nav>
-        <!-- .navbar -->
-  
-      </div>
-    </header><!-- End Header -->
+<!--고유 CSS 추가-->
+<th:block layout:fragment="css">
+    <link th:href="@{/css/fragments/header_card.css}" rel="stylesheet" />
+    <link th:href="@{/css/community/post_modify.css}" rel="stylesheet" />
+</th:block>
 
-    <div th:switch="${board.communityId}">
+<!--고유 스크립트 추가-->
+<th:block layout:fragment="script">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</th:block>
+<title>글 수정하기 페이지</title>
+<div layout:fragment="content">
+
+    <div class="jua" th:switch="${board.communityId}">
 
         <div th:case="'ADP_ACT'" class="header-card">
             <div class="card bg-crop">
@@ -226,138 +121,120 @@
 
     </div>
 
-    <form id="frm" th:action="@{/boardupdate/{postNo}(postNo=${board.postNo})}" method="post" enctype="multipart/form-data">
-    <div id="insert_text_box">
-      <div class="row w-50 mb-3">
-        <label for="formTextContent" class="col-sm-2 col-form-label">제목 *</label>
-        <div class="col-sm-10">
-          <input
-            type="text" name="subject"
-            class="form-control"
-            id="formTextContent"
-            placeholder="제목을 입력해주세요." th:value="${board.subject}" required
-          />
-        </div>
-      </div>
-      <!--이후 추가-->
-      <div class="row w-50 mb-5">
+    <form class="sans" id="frm" th:action="@{/boardupdate(postNo=${board.postNo})}" method="post" enctype="multipart/form-data">
+        <div id="insert_text_box">
+            <div class="row w-50 mb-3">
+                <label for="formTextContent" class="col-sm-2 col-form-label">제목 *</label>
+                <div class="col-sm-10">
+                    <input
+                        type="text" name="subject"
+                        class="form-control"
+                        id="formTextContent"
+                        placeholder="제목을 입력해주세요." th:value="${board.subject}" required
+                    />
+                </div>
+            </div>
+            <!--이후 추가-->
+            <div class="row w-50 mb-5">
 
-        <div th:if="${board.communityId}=='USD_TRN' or ${board.communityId}=='FRE_SEL'">
+                <div th:if="${board.communityId}=='USD_TRN' or ${board.communityId}=='FRE_SEL'">
 
-        <div th:switch="${board.communityId}">
-          <div th:case="'FRE_SEL'">
-              <input type="hidden" name="price" value="0">
-              <div class="col-sm-10 mb-3" style="display:flex; justify-content: center; align-items: center;">
-                  <label for="post_id_select_byFreeSell" class="col-sm-2 col-form-label">무료나눔품목 *</label>
-                  <select id= "post_id_select_byFreeSell" name="postId" th:value="${board.postId}" class="form-select" aria-label="post_type">
-                      <option th:selected="${board.postId}=='CTWR_FREE'" value="CTWR_FREE">캣타워</option>
-                      <option th:selected="${board.postId}=='FDST_FREE'" value="FDST_FREE">식사용품</option>
-                      <option th:selected="${board.postId}=='FOOD_FREE'" value="FOOD_FREE">소모품(식사류)</option>
-                      <option th:selected="${board.postId}=='HSW_FREE'" value="HSW_FREE">집사용품</option>
-                      <option th:selected="${board.postId}=='HYG_FREE'" value="HYG_FREE">위생용품</option>
-                  </select>
-              </div>
-          </div>
-          <div th:case="'USD_TRN'" >
+                    <div th:switch="${board.communityId}">
+                        <div th:case="'FRE_SEL'">
+                            <input type="hidden" name="price" value="0">
+                            <div class="col-sm-10 mb-3" style="display:flex; justify-content: center; align-items: center;">
+                                <label for="post_id_select_byFreeSell" class="col-sm-2 col-form-label">무료나눔품목 *</label>
+                                <select id= "post_id_select_byFreeSell" name="postId" th:value="${board.postId}" class="form-select" aria-label="post_type">
+                                    <option th:selected="${board.postId}=='CTWR_FREE'" value="CTWR_FREE">캣타워</option>
+                                    <option th:selected="${board.postId}=='FDST_FREE'" value="FDST_FREE">식사용품</option>
+                                    <option th:selected="${board.postId}=='FOOD_FREE'" value="FOOD_FREE">소모품(식사류)</option>
+                                    <option th:selected="${board.postId}=='HSW_FREE'" value="HSW_FREE">집사용품</option>
+                                    <option th:selected="${board.postId}=='HYG_FREE'" value="HYG_FREE">위생용품</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div th:case="'USD_TRN'" >
 
-              <div class="mb-3" style="display:flex; justify-content: space-between; align-items: center;">
+                            <div class="mb-3" style="display:flex; justify-content: space-between; align-items: center;">
 
-                      <label for="post_id_select_byUsedTransfer" class="col-form-label col-sm-2">중고거래품목 *</label>
-                      <select id= "post_id_select_byUsedTransfer" name="postId" class="form-select" aria-label="post_type">
-                          <option th:selected="${board.postId}=='CTWR_SELL'" value="CTWR_SELL">캣타워</option>
-                          <option th:selected="${board.postId}=='FDST_SELL'" value="FDST_SELL">식사용품</option>
-                          <option th:selected="${board.postId}=='FOOD_SELL'" value="FOOD_SELL">소모품(식사류)</option>
-                          <option th:selected="${board.postId}=='HSW_SELL'" value="HSW_SELL">집사용품</option>
-                          <option th:selected="${board.postId}=='HYG_SELL'" value="HYG_SELL">위생용품</option>
-                          <option th:selected="${board.postId}=='WSH_SELL'" value="WSH_SELL">목욕용품</option>
-                      </select>
+                                <label for="post_id_select_byUsedTransfer" class="col-form-label col-sm-2">중고거래품목 *</label>
+                                <select id= "post_id_select_byUsedTransfer" name="postId" class="form-select" aria-label="post_type">
+                                    <option th:selected="${board.postId}=='CTWR_SELL'" value="CTWR_SELL">캣타워</option>
+                                    <option th:selected="${board.postId}=='FDST_SELL'" value="FDST_SELL">식사용품</option>
+                                    <option th:selected="${board.postId}=='FOOD_SELL'" value="FOOD_SELL">소모품(식사류)</option>
+                                    <option th:selected="${board.postId}=='HSW_SELL'" value="HSW_SELL">집사용품</option>
+                                    <option th:selected="${board.postId}=='HYG_SELL'" value="HYG_SELL">위생용품</option>
+                                    <option th:selected="${board.postId}=='WSH_SELL'" value="WSH_SELL">목욕용품</option>
+                                </select>
 
 
 
-                      <label for="second_amount" class="col-form-label col-sm-2">가격 *</label>
-                      <input type="text" class="form-control form_info" id="second_amount" name="price" th:value="${price}" onkeyup="inputNumberFormat(this);">
+                                <label for="second_amount" class="col-form-label col-sm-2">가격 *</label>
+                                <input type="text" class="form-control form_info" id="second_amount" name="price" th:value="${price}" onkeyup="inputNumberFormat(this);">
 
-              </div>
-          </div>
-        </div>
+                            </div>
+                        </div>
+                    </div>
 
-        </div>
+                </div>
 
-        <div th:unless="${board.communityId}=='USD_TRN' or ${board.communityId}=='FRE_SEL'">
-          <input type="hidden" name="price" value="0">
-        </div>
-        
-      </div>
-      <!--이후 추가 끗-->
-      <div class="row w-50 mb-5">
-        <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label"
-          >내용 *</label
-        >
-        <div class="col-sm-10">
+                <div th:unless="${board.communityId}=='USD_TRN' or ${board.communityId}=='FRE_SEL'">
+                    <input type="hidden" name="price" value="0">
+                </div>
+
+            </div>
+            <!--이후 추가 끝-->
+            <div class="row w-50 mb-5">
+                <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label"
+                >내용 *</label
+                >
+                <div class="col-sm-10">
           <textarea
-            class="form-control" name="content"
-            id="exampleFormControlTextarea1"
-            rows="10"
-            placeholder="내용을 입력해주세요." th:text="${board.content}" required
+                  class="form-control" name="content"
+                  id="exampleFormControlTextarea1"
+                  rows="10"
+                  placeholder="내용을 입력해주세요." th:text="${board.content}" required
           ></textarea>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div id="insert_pic_box">
-      <div class="row w-50 mb-3">
-        <label for="inputGroupFile02" class="col-sm-2 col-form-label"
-          >이미지첨부</label>
-        <div class="col-sm-10">
-          <div class="input-group mb-3">
-              <!-- 파일 업로드   -->
-            <input type="file" name="files" multiple="multiple" class="form-control" id="inputGroupFile02"/>
-            <label class="input-group-text" for="inputGroupFile02">Upload</label>
-          </div>
+        <div id="insert_pic_box">
+            <div class="row w-50 mb-3">
+                <label for="inputGroupFile02" class="col-sm-2 col-form-label"
+                >이미지첨부</label>
+                <div class="col-sm-10">
+                    <div class="input-group mb-3">
+                        <!-- 파일 업로드   -->
+                        <input type="file" name="files" multiple="multiple" class="form-control" id="inputGroupFile02"/>
+                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                    </div>
+                </div>
+
+                <!--   첨부된 이미지    -->
+                <div th:if="${!#lists.isEmpty(orgName)}" id="img_pic_box" > 첨부된 이미지 :
+                    <div th:each="communityImage : ${orgName}" >
+                        <a th:href="@{${communityImage.imgPath}}" th:text="${communityImage.imageOrgName}"></a>
+                    </div>
+                </div>
+                <div th:if="${#lists.isEmpty(orgName)}" ></div>
+            </div>
         </div>
 
-        <!--   첨부된 이미지    -->
-          <div th:if="${!#lists.isEmpty(orgName)}" id="img_pic_box" > 첨부된 이미지 :
-          <div    th:each="communityImage : ${orgName}" >
-            <a   th:href="@{${communityImage.imgPath}}" th:text="${communityImage.imageOrgName}"></a>
-          </div>
+        <div class="mx-auto" id="upload_info">
+            <p>* 사진은 5개 까지 첨부할 수 있습니다.</p>
+            <p>* 사진은 개당 5MB를 넘을 수 없습니다.</p>
+            <p>* 사진은 최대 20MB까지 첨부할 수 있습니다.</p>
         </div>
-        <div th:if="${#lists.isEmpty(orgName)}" ></div>
-      </div>
-    </div>
 
-    <div class="mx-auto" id="upload_info">
-      <p>* 사진은 5개 까지 첨부할 수 있습니다.</p>
-      <p>* 사진은 개당 5MB를 넘을 수 없습니다.</p>
-      <p>* 사진은 최대 20MB까지 첨부할 수 있습니다.</p>
-    </div>
+        <hr class="border border-white" />
 
-    <hr class="border border-white" />
+        <div class="bot_btn_group">
+            <button class="btn btn-dark" ><i class="bi bi-pencil-square"></i>수정하기</button>
 
-      <div class="bot_btn_group" style="margin-right:10px;">
-        <button class="btn btn-dark" ><i class="bi bi-pencil-square"></i>수정하기</button>
-
-        <button type="button" class="btn btn-dark" style="margin-left:10px;">
-          <a th:href="@{/boardlist(id=${board.communityId})}" class="text-white"> <i class="bi bi-list"></i> 목록으로</a>
-        </button>
-      </div>
+            <button type="button" class="btn btn-dark" style="margin-left:10px;">
+                <a th:href="@{/boardlist(id=${board.communityId})}" class="text-white"> <i class="bi bi-list"></i> 목록으로</a>
+            </button>
+        </div>
     </form>
-
-
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
-      <div class="container px-4">
-        <p class="m-0 text-center text-white">
-          Copyright &copy; Your Website 2022
-        </p>
-      </div>
-    </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top"
-      ><i class="fas fa-angle-up"></i
-    ></a>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="/js/template.js"></script>
-  </body>
+</div>
 </html>

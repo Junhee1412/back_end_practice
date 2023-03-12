@@ -1,0 +1,19 @@
+#page_navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-item.disabled .page-link {
+  color: #fff;
+  pointer-events: none;
+  background-color: #5c636a;
+  border-color: #dee2e6;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

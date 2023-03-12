@@ -1,129 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="http://mintable1.cafe24.com/Meow_me_you_front/html/"
-    />
-    <meta property="og:title" content="미유미유" />
-    <meta property="og:description" content="너와 나의 이야기가 펼쳐지는 곳" />
-   <link href="../css/bootstrap-icons.css" rel="stylesheet">
-   <link
-   href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-   rel="stylesheet"
-   integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-   crossorigin="anonymous"
- />
-    <meta
-      property="og:image"
-      content="http://mintable1.cafe24.com/Meow_me_you_front/img/kakao_preview.jpg"
-    />
-    <meta
-      property="og:site_name"
-      content="유기묘 커뮤니티에 오신걸 환영합니다!"
-    />
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout_5.2.3}">
+
+<!--고유 CSS 추가-->
+<th:block layout:fragment="css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link
-      rel="icon"
-      href="../img/favicon/favicon-remove-bg.ico"
-      type="image/x-icon"
-      sizes="16x16"
-    />
-    <title>커뮤니티 글 상세페이지</title>
-    <!-- Font Awesome icons (free version)-->
-    <script
-      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Simple line icons-->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google fonts-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../css/community/community_read.css" rel="stylesheet" />
-  </head>
+    <link rel="stylesheet" th:href="@{/css/community/post_view.css}">
+    <link rel="stylesheet" th:href="@{/css/fragments/header_card.css}"/>
+</th:block>
 
-  <body id="page-top">
-    <!-- Navigation-->
-    <header id="header" class="header d-flex align-items-center fixed-top">
-      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-  
-       
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <a class="logo d-flex align-items-center" href="/"><img alt="Brand" src="../img/logo/logo_remove_bg.png"></a>
-        </a>
-  
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list "></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x "></i>
-          <nav id="navbar" class="navbar">
-              <ul>
-                  <li class="dropdown"><a href="/"><span>Meow me, you</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                      <ul>
-                          <li><a href="business">사업소개</a></li>
-                          <!--                <li><a th:href="@{/boardlist?(id=ADP_REV)}">후원내역</a></li>-->
-                      </ul>
-                  </li>
-                  <li><a href="donatehome">후원하기</a></li>
-                  <li class="dropdown"><a href="#"><span>물품거래</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                      <ul>
-                          <li><a th:href="@{/boardlist?(id=FRE_SEL)}">무료 나눔</a></li>
-                          <li><a th:href="@{/boardlist?(id=USD_TRN)}">중고 거래</a></li>
-                      </ul>
-                  </li>
-                  <li class="dropdown"><a href="#"><span>커뮤니티</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                      <ul>
-                          <li><a th:href="@{/boardlist?(id=NOTICE)}">공지사항</a></li>
-                          <li><a th:href="@{/boardlist?(id=ADP_ACT)}">분양하기</a></li>
-                          <li><a th:href="@{/boardlist?(id=ADP_REV)}">분양후기</a></li>
-                          <li><a th:href="@{/boardlist?(id=CAT_STR)}">캣스타그램</a></li>
-                      </ul>
-                  </li>
-                  <li th:if="${user.userType}=='MEMBER'" class="dropdown"><a href="my_page"><span>마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                    <ul>
-                      <li><a href="myPost">내 글 모아보기</a></li>
-                      <li><a href="myReply">내가 쓴 댓글 모아보기</a></li>
-                      <li><a href="myHeart">좋아요 목록 보기</a></li>
-                      <li><a href="donatelist">내 후원 목록보기</a></li>
-                      <li><a href="modifyUser">회원정보 수정하기</a></li>
-                    </ul>
-                  </li>
-                  <li th:if="${user.userType}=='ADMIN'" class="dropdown"><a href="adminMypage"><span>관리자마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                    <ul>
-                      <li><a href="adminMypage">관리자마이페이지</a></li>
-                      <li><a href="adminUserList">유저 리스트</a></li>
-                      <li><a href="adminPostManage">전체 글</a></li>
-                      <li><a href="adminDonatemanage">후원 내역</a></li>
-                      <li><a href="adminModify">관리자 수정</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="get-a-quote" href="logout">로그아웃</a></li>
-              </ul>
-          </nav>
-        <!-- .navbar -->
-  
-      </div>
-    </header><!-- End Header -->
+<!--고유 스크립트 추가-->
+<th:block layout:fragment="script">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer th:src="@{/js/community/reply.js}"></script>
+    <script defer th:src="@{/js/community/community.js}"></script>
+</th:block>
 
-    <!-- section-->
+<title>글 상세보기</title>
 
-    <div th:switch="${comid}">
+<div layout:fragment="content">
+
+    <div class="jua" th:switch="${comid}">
 
         <div th:case="'ADP_ACT'" class="header-card">
             <div class="card bg-crop">
@@ -226,7 +125,7 @@
 
     </div>
 
-    <section class="sec-ma">
+    <section class="sec-ma sans">
 
 
         <div
@@ -300,139 +199,119 @@
 
     </section>
 
-    <div class="com_auto">
+    <div class="com_auto sans">
 
-      <h1 class="text-dark fs-1" id="post_title" th:text="${board.subject}">제목입니다.</h1>
-      <div class="heart">
-        <div class="flex-shrink-0">
-<!--          <img-->
-<!--            class="rounded-circle" style="width:70px;,height:70px;"-->
-<!--            th:src="@{|/upload/${board.getUserMaster().getProfileImagePath()}|}"-->
-<!--            alt="..."-->
-<!--          />-->
+        <h1 class="text-dark fs-1" id="post_title" th:text="${board.subject}">제목입니다.</h1>
+        <div class="heart">
+            <div class="flex-shrink-0">
+                <!--          <img-->
+                <!--            class="rounded-circle" style="width:70px;,height:70px;"-->
+                <!--            th:src="@{|/upload/${board.getUserMaster().getProfileImagePath()}|}"-->
+                <!--            alt="..."-->
+                <!--          />-->
 
-            <img th:if = "${board.getUserMaster().getProfileImagePath() != null}"  th:src="@{|/upload/${board.getUserMaster().getProfileImageName()}|}" style="width:70px;,height:70px;" class="rounded-circle"/>
-            <img th:unless="${board.getUserMaster().getProfileImagePath() != null}" src="../img/noimg.gif" style="width:100px;,height:100px;" class="rounded-circle"/>
-        </div>
-        <ul>
-          <!-- 230301 추가 -->
-          <li th:if="${comid}=='USD_TRN'">가격 : <span th:text="${price}"></span></li>
-          <!-- 230301 끝 -->
-          <!-- 이후 추가 -->
-          <li th:if="${comid}=='USD_TRN' or ${comid}=='FRE_SEL'"> 물품 : 
-            <th:block th:switch="${board.postId}">
-              <span th:case="CTWR_FREE">캣타워</span><span th:case="CTWR_SELL">캣타워</span>
-              <span th:case="FDST_FREE">식사용품</span><span th:case="FDST_SELL">식사용품</span>
-              <span th:case="FOOD_FREE">소모품(식사류)</span><span th:case="FOOD_SELL">소모품(식사류)</span>
-              <span th:case="HYG_FREE">위생용품</span><span th:case="HYG_SELL">위생용품</span>
-              <span th:case="HSW_FREE">위생용품</span><span th:case="HSW_SELL">집사용품</span>
-              <span th:case="SELL_CMPL">판매완료</span><span th:case="FREE_CMPL">무료나눔완료</span>
-            </th:block>
-          </li>
-          <!-- 이후 추가 끗 -->
-          <li>작성자    : <span th:text="${board.getUserMaster().getNickName()}" >작성자</span></li>
-          <li>작성일자  : <span th:text="${#temporals.format(board.createPostDate, 'yyyy-MM-dd HH:mm:ss')}">작성일자</span></li>
-          <li>조회수    : <span th:text="${board.viewCount}"></span></li>
-        </ul>
-<!--          작성자 : 미우미우<br />작성일자 :-->
-          <div id="heart_box">
-              <a th:href="@{/countHeart?(postNo=${board.postNo})}">
-                  <i th:if="${clickHeart}==false" class="bi bi-heart"></i>
-                  <i th:if="${clickHeart}==true" class="bi bi-heart-fill"></i>
-              </a>
-              <span class="fs-2" id="like_number" th:text="${numberOfHeart}">11115</span>
-          </div>
-    
+                <img th:if = "${board.getUserMaster().getProfileImagePath() != null}"  th:src="@{|/upload/${board.getUserMaster().getProfileImageName()}|}" style="width:70px;,height:70px;" class="rounded-circle"/>
+                <img th:unless="${board.getUserMaster().getProfileImagePath() != null}" src="../img/noimg.gif" style="width:100px;,height:100px;" class="rounded-circle"/>
+            </div>
+            <ul>
+                <!-- 230301 추가 -->
+                <li th:if="${comid}=='USD_TRN'">가격 : <span th:text="${price}"></span></li>
+                <!-- 230301 끝 -->
+                <!-- 이후 추가 -->
+                <li th:if="${comid}=='USD_TRN' or ${comid}=='FRE_SEL'"> 물품 :
+                    <th:block th:switch="${board.postId}">
+                        <span th:case="CTWR_FREE">캣타워</span><span th:case="CTWR_SELL">캣타워</span>
+                        <span th:case="FDST_FREE">식사용품</span><span th:case="FDST_SELL">식사용품</span>
+                        <span th:case="FOOD_FREE">소모품(식사류)</span><span th:case="FOOD_SELL">소모품(식사류)</span>
+                        <span th:case="HYG_FREE">위생용품</span><span th:case="HYG_SELL">위생용품</span>
+                        <span th:case="HSW_FREE">위생용품</span><span th:case="HSW_SELL">집사용품</span>
+                        <span th:case="SELL_CMPL">판매완료</span><span th:case="FREE_CMPL">무료나눔완료</span>
+                    </th:block>
+                </li>
+                <!-- 이후 추가 끗 -->
+                <li>작성자    : <span th:text="${board.getUserMaster().getNickName()}" >작성자</span></li>
+                <li>작성일자  : <span th:text="${#temporals.format(board.createPostDate, 'yyyy-MM-dd HH:mm:ss')}">작성일자</span></li>
+                <li>조회수    : <span th:text="${board.viewCount}"></span></li>
+            </ul>
+            <!--          작성자 : 미우미우<br />작성일자 :-->
+            <div id="heart_box">
+                <a th:href="@{/countHeart?(postNo=${board.postNo})}">
+                    <i th:if="${clickHeart}==false" class="bi bi-heart"></i>
+                    <i th:if="${clickHeart}==true" class="bi bi-heart-fill"></i>
+                </a>
+                <span class="fs-2" id="like_number" th:text="${numberOfHeart}">11115</span>
+            </div>
+
         </div>
 
         <div style="width: 100%;">
-          <p class="text-dark fs-6 text-break" id="community_content" th:text="${board.content}">
-            고양이가 너무 흥분하거나 불안, 우울감을 느꼈을 때 기지개를 켜기도 해요.
-            특히, 사냥 놀이를 할 때 고양이가 갑자기 기지개를 켜기도 합니다. 이는
-            고양이가 놀이가 지루해서 그런 게 아니라, 극도로 흥분한 나머지 마음을
-            다잡기 위해 하는 행동이라고 합니다. 그리고 고양이가 사냥감을 놓치거나,
-            발을 헛디뎌 미끄러졌을 때 민망하고 부끄러움을 감추기 위해서도 기지개를
-            켠다고 해요. 갑자기 고양이가 두 발로 얼굴을 감싸 그루밍하거나 기지개를
-            켠다면, 모른 척 지나가 줍시다.
-          </p>
-              </div>
-    <!-- Comments section-->
+            <p class="text-dark fs-6 text-break" id="community_content" th:text="${board.content}">
+                고양이가 너무 흥분하거나 불안, 우울감을 느꼈을 때 기지개를 켜기도 해요.
+                특히, 사냥 놀이를 할 때 고양이가 갑자기 기지개를 켜기도 합니다. 이는
+                고양이가 놀이가 지루해서 그런 게 아니라, 극도로 흥분한 나머지 마음을
+                다잡기 위해 하는 행동이라고 합니다. 그리고 고양이가 사냥감을 놓치거나,
+                발을 헛디뎌 미끄러졌을 때 민망하고 부끄러움을 감추기 위해서도 기지개를
+                켠다고 해요. 갑자기 고양이가 두 발로 얼굴을 감싸 그루밍하거나 기지개를
+                켠다면, 모른 척 지나가 줍시다.
+            </p>
+        </div>
+        <!-- Comments section-->
 
-    <div class="reply_auto">
-      <div class="card"  >
-        <div class="card-header" >Reply List</div>
-        <ul id="reply--box" class="list-group" >
-          <li id="reply--1" class="list-group-item d-flex justify-content-between"
-              th:each="reply : ${board.replyList}">
-          <div th:text="${reply.replyContent}">댓글내용입니다</div>
-            <div class="d-flex" >
-              <span class="text-monospace mr-1">작성자: </span><div class="text-monospace mr-1"
-                      th:text="${reply.getUserMaster().getNickName()}"></div>
-              <button th:if="${reply.userNo == user.userNo}"
-                      th:onclick="|replyIndex.replyDelete('${board.postNo}', '${reply.replyNo}')|"
-                      class="badge btn-danger" style="margin-left: 10px;">삭제</button>
-            </div>
-          </li>
-
-        </ul>
-      </div>
-
-
-        <div class="card mt-3" >
-            <div class="card-header bg-light ">
-                <i class="fa fa-comment fa"></i>Reply
-            </div>
-
-            <form>
-                <input type="hidden" id="postNo" th:value="${board.postNo}">
-                <ul class="list-group list-group-flush" style="text-align:center">
-                    <li class="list-group-item marAuto">
-                        <textarea class="form-control marArea" id="reply_content" rows="2"></textarea>
-                        <button id="reply-btn-save" type="button" class="btn btn-dark btn_mar">등록</button>
+        <div class="reply_auto">
+            <div class="card"  >
+                <div class="card-header" >Reply List</div>
+                <ul id="reply--box" class="list-group" >
+                    <li id="reply--1" class="list-group-item d-flex justify-content-between"
+                        th:each="reply : ${board.replyList}">
+                        <div th:text="${reply.replyContent}">댓글내용입니다</div>
+                        <div class="d-flex" >
+                            <span class="text-monospace mr-1">작성자: </span><div class="text-monospace mr-1"
+                                                                               th:text="${reply.getUserMaster().getNickName()}"></div>
+                            <button th:if="${reply.userNo == user.userNo}"
+                                    th:onclick="|replyIndex.replyDelete('${board.postNo}', '${reply.replyNo}')|"
+                                    class="badge btn-danger" style="margin-left: 10px;">삭제</button>
+                        </div>
                     </li>
-                </ul>
 
-            </form>
+                </ul>
+            </div>
+
+
+            <div class="card mt-3" >
+                <div class="card-header bg-light ">
+                    <i class="fa fa-comment fa"></i>Reply
+                </div>
+
+                <form>
+                    <input type="hidden" id="postNo" th:value="${board.postNo}">
+                    <ul class="list-group list-group-flush" style="text-align:center">
+                        <li class="list-group-item marAuto">
+                            <textarea class="form-control marArea" id="reply_content" rows="2"></textarea>
+                            <button id="reply-btn-save" type="button" class="btn btn-dark btn_mar">등록</button>
+                        </li>
+                    </ul>
+
+                </form>
+            </div>
+
         </div>
 
-    </div>
-
 
     </div>
 
 
-    <div class="footer-btn-group" id="post_button_group">
-      <a type="button" class="btn btn-outline-primary" style="margin-right : 10px" th:if="${board.userNo == user.userNo}" th:href="@{/boardmodify/{postNo}(postNo=${board.postNo},id=${comid})}">
+    <div class="footer-btn-group sans" id="post_button_group">
+        <a type="button" class="btn btn-outline-primary" style="margin-right : 10px" th:if="${board.userNo == user.userNo}" th:href="@{/boardmodify(postNo=${board.postNo},id=${comid})}">
 
-        <i class="bi bi-pencil-square"></i> 수정하기
-      </a>
-      </a>
-      <a type="button" class="btn btn-outline-danger confirm_btn" th:if="${board.userNo == user.userNo}" th:href="@{/boarddelete/(postNo=${board.postNo},id=${comid} )}">
-        <i class="bi bi-trash-fill"></i> 삭제하기
-      </a>
-      <button type="button" class="btn btn-outline-dark">
-        <a th:href="@{/boardlist(id=${comid})}"> <i class="bi bi-list"></i> 목록으로</a>
-      </button>
+            <i class="bi bi-pencil-square"></i> 수정하기
+        </a>
+        </a>
+        <a type="button" class="btn btn-outline-danger confirm_btn" th:if="${board.userNo == user.userNo}" th:href="@{/boarddelete/(postNo=${board.postNo},id=${comid} )}">
+            <i class="bi bi-trash-fill"></i> 삭제하기
+        </a>
+        <button type="button" class="btn btn-outline-dark">
+            <a th:href="@{/boardlist(id=${comid})}"> <i class="bi bi-list"></i> 목록으로</a>
+        </button>
     </div>
-   
-
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
-      <div class="container px-4">
-        <p class="m-0 text-center text-white">
-          Copyright &copy; Your Website 2022
-        </p>
-      </div>
-    </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top"
-      ><i class="fas fa-angle-up"></i
-    ></a>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="../js/template.js"></script>
-    <script src="../js/community/reply.js"></script>
-    <script src="../js/community/community.js"></script>
-  </body>
+</div>
 </html>

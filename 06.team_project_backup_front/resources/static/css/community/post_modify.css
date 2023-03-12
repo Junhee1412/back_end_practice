@@ -9,17 +9,6 @@
   justify-content: center;
 }
 
-#community_type {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#community_type h5 {
-  font-size: xx-large;
-}
-
 #insert_text_box {
   display: flex;
   flex-direction: column;
@@ -40,6 +29,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  margin-right:10px
 }
 
 #upload_info {

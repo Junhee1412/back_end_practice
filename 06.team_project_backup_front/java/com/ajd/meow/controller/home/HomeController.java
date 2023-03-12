@@ -33,4 +33,9 @@ public class HomeController {
         model.addAttribute("userType",userService.getUserMaster((UserMaster)session.getAttribute("user")).getUserType());
         return "business/business_info";
     }
+
+    @GetMapping("/test")
+    public  String test(){
+        return "fragments/testfile";
+    }
 }
