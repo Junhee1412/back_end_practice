@@ -195,7 +195,9 @@ public String communityList(String id, @PageableDefault(page = 0, size = 12, sor
         boardTemp.setSubject(communityMaster.getSubject());
         boardTemp.setContent(communityMaster.getContent());
         // 이후 추가
-        boardTemp.setPostId(communityMaster.getPostId());
+        if(boardTemp.getCommunityId().equals("USD_TRN") || boardTemp.getCommunityId().equals("FRE_SEL")){
+            boardTemp.setPostId(communityMaster.getPostId());
+        }
         if(boardTemp.getCommunityId().equals("USD_TRN")){
             secondHandTradeRepository.findById(postNo).get().setPrice(price);
             secondHandTradeRepository.save(secondHandTradeRepository.findById(postNo).get());

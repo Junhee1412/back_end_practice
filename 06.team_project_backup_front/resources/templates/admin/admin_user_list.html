@@ -152,7 +152,7 @@
           <td th:text="${userMaster.getUserType()}"></td>
           <td class="text-center">
             <a class="btn btn-outline-dark btn-sm" th:href="@{|/adminUserDetail?userNo=${userMaster.getUserNo()}|}">조회</a>
-          </td>
+          </td>z
           <td class="text-center">
             <a th:if="${userMaster.getUserType()=='MEMBER'}" th:href="@{/adminUserDelete?(userNo=${userMaster.getUserNo()})}" type="button" id="confirm_deleteUser_btn" class="btn btn-outline-danger confirm_deleteUser_btn btn-sm">삭제</a><!--onclick="checkcheck(e)"-->
           </td>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout_5.1.3}">
+
+<!--고유 CSS 추가-->
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/admin/admin_mypage_modify.css}" >
+</th:block>
+
+<!--고유 스크립트 추가-->
+<th:block layout:fragment="script">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script defer th:src="@{/js/admin/admin_mypage_modify.js}"></script>
+</th:block>
+<title>회원정보수정하기</title>
+
+
+<div layout:fragment="content">
+
+    <!-- section -->
+    <div class="insert">
+        <h3>회원정보수정하기</h3>
+        <div class="thumb-wrapper stagger-item">
+            <img th:if = "${user.profileImagePath != null}"  th:src="@{|/upload/${user.profileImageName}|}" class="thumb"/>
+            <img th:unless="${user.profileImagePath != null}" src="../img/noimg.gif" class="thumb"/>
+        </div>
+    </div>
+    <section>
+        <div class="container py-4">
+
+            <form th:action="adminModify" method="post" onsubmit="return ValidChecked();" enctype="multipart/form-data">
+                <input type="hidden" th:value="${user.getUserId()}" name="userId">
+                <div class="form-group">
+                    <label>프로필사진</label>
+                    <div class="filebox">
+                        <input class="form-control" type="file" name="file" id="file">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label mt-1">이름</label>
+                    <input type="text" class="form-control" id="sign_name" name="userName" th:value="${user.getUserName()}" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label mt-1">닉네임</label>
+                    <input type="text" class="form-control" id="sign_nick" name="nickName" th:value="${user.getNickName()}" readonly>
+                </div>
+                <div class="form-group">
+                    <label class="form-label mt-2">지역</label>
+                    <input type="text" class="form-control" id="sign_tel" name="address" th:value="${user.getAddress()}">
+                </div>
+                <div class="form-group has-success">
+                    <label class="form-label mt-2">비밀번호</label>
+                    <input type="password" class="form-control" id="sign_pwd" required>
+                </div>
+                <p style="font-size:8px;">※ 비밀번호는 영문 대,소문자와 숫자, 특수기호가 적어도 1개 이상씩 포함된 8자 ~ 20자의 비밀번호여야 합니다.</p>
+
+                <div class="form-group has-danger">
+                    <label class="form-label mt-2" for="inputInvalid">비밀번호 재확인</label>
+                    <input type="password" class="form-control" id="sign_pwd2" name="userPassword" required>
+                </div>
+                <div><span id="checkPW"></span></div>
+
+
+                <div class="form-group ">
+                    <label class="form-label mt-2">핸드폰</label>
+                    <select class="form-select" id="sign_phone" name="phoneType" th:value="${user.getPhoneType()}">
+                        <option th:selected="${user.getPhoneType()}=='KT'">KT</option>
+                        <option th:selected="${user.getPhoneType()}=='LG U+'">LG U+</option>
+                        <option th:selected="${user.getPhoneType()}=='SKT'">SKT</option>
+                    </select>
+                    <input type="text" class="form-control " id="sign_ph" name="phoneNumber" th:value="${user.getPhoneNumber()}" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="form-label mt-2">소개</label>
+                    <input type="text" class="form-control" id="sign_tel" name="introduce" th:value="${user.getIntroduce()}">
+                </div>
+
+
+
+
+
+                <div class="bot_btn_group">
+                    <button class="btn btn-dark btn-lg" type="submit" id="submitButton">변경</button>
+                    <button class="btn btn-dark btn-lg" type="button"><a class="text-white" onclick="history.back()">취소</a></button>
+                    <!--href="adminMypage"-->
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <!-- section - end -->
+
+
+</div>
+</html>
