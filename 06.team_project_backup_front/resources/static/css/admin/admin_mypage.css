@@ -12,7 +12,7 @@
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap');
- 
+
 :root {
   --bs-blue: #1d809f;
   --bs-indigo: #6610f2;
@@ -11306,7 +11306,7 @@ footer.footer .social-link:hover {
   z-index: 997;
   padding: 30px 0;
    /* 네브바 백그라운드 */
-   background: #fff;    
+   background: #fff;
    padding: 15px 0;
    box-shadow: 0px 2px 20px rgba(14, 29, 52, 0.1);
 }
@@ -11351,7 +11351,7 @@ footer.footer .social-link:hover {
     transition: 0.3s;
   }
 
-  
+
   .navbar a i,
   .navbar a:focus i {
     font-size: 12px;
@@ -11401,7 +11401,7 @@ footer.footer .social-link:hover {
     min-width: 200px;
   }
 
- 
+
 
   .navbar .dropdown ul a i {
     font-size: 12px;

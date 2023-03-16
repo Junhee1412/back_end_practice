@@ -30,7 +30,11 @@ public class HomeController {
 
     @GetMapping("/business") // 이후 추가
     public String business(HttpSession session, Model model){
-        model.addAttribute("userType",userService.getUserMaster((UserMaster)session.getAttribute("user")).getUserType());
+        if(session.getAttribute("user")==null){
+            model.addAttribute("userType","noUser");
+        }else{
+            model.addAttribute("userType",userService.getUserMaster((UserMaster)session.getAttribute("user")).getUserType());
+        }
         return "business/business_info";
     }
 

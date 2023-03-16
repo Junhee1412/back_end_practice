@@ -6,7 +6,7 @@
 */
 document.addEventListener('DOMContentLoaded', () => {
     "use strict";
-  
+
     /**
      * Preloader
      */
@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         preloader.remove();
       });
     }
-  
-    
+
+
     /**
      * Scroll top button
      */
@@ -33,75 +33,75 @@ document.addEventListener('DOMContentLoaded', () => {
         behavior: 'smooth'
       }));
     }
-  
+
     /**
      * Mobile nav toggle
      */
     const mobileNavShow = document.querySelector('.mobile-nav-show');
     const mobileNavHide = document.querySelector('.mobile-nav-hide');
-  
+
     document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
       el.addEventListener('click', function(event) {
         event.preventDefault();
         mobileNavToogle();
       })
     });
-  
+
     function mobileNavToogle() {
       document.querySelector('body').classList.toggle('mobile-nav-active');
       mobileNavShow.classList.toggle('d-none');
       mobileNavHide.classList.toggle('d-none');
     }
-  
+
     /**
      * Hide mobile nav on same-page/hash links
      */
     document.querySelectorAll('#navbar a').forEach(navbarlink => {
-  
+
       if (!navbarlink.hash) return;
-  
+
       let section = document.querySelector(navbarlink.hash);
       if (!section) return;
-  
+
       navbarlink.addEventListener('click', () => {
         if (document.querySelector('.mobile-nav-active')) {
           mobileNavToogle();
         }
       });
-  
+
     });
-  
+
     /**
      * Toggle mobile nav dropdowns
      */
     const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
-  
+
     navDropdowns.forEach(el => {
       el.addEventListener('click', function(event) {
         if (document.querySelector('.mobile-nav-active')) {
           event.preventDefault();
           this.classList.toggle('active');
           this.nextElementSibling.classList.toggle('dropdown-active');
-  
+
           let dropDownIndicator = this.querySelector('.dropdown-indicator');
           dropDownIndicator.classList.toggle('bi-chevron-up');
           dropDownIndicator.classList.toggle('bi-chevron-down');
         }
       })
     });
-  
+
     /**
      * Initiate pURE cOUNTER
      */
     new PureCounter();
-  
+
     /**
      * Initiate glightbox
      */
     const glightbox = GLightbox({
       selector: '.glightbox'
     });
-  
+
     /**
      * Init swiper slider with 1 slide at once in desktop view
      */
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         prevEl: '.swiper-button-prev',
       }
     });
-  
+
     /**
      * Animation on scroll function and init
      */
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', () => {
       aos_init();
     });
-  
+
   });
 
 
@@ -177,21 +177,21 @@ event = event || window.event;
 var _val = this.value.trim();
 this.value = autoHypenPhone(_val);
 }
-  
-  
+
+
   function ValidChecked() {
 
     var n_RegExp = /^[가-힣a-zA-Z\s]+$/;
     var p_RegExp = /^(?:(010-\d{4})|(01[1|6|7|8|9]-\d{3,4}))-(\d{4})$/;
     var pw_RegExp = /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*\W)(?=\S+$).{8,20}$/;
-  
-  
+
+
     var objName = document.getElementById("sign_name");
     var objPhone = document.getElementById("sign_ph");
     var objPassword=document.getElementById("sign_pwd");
     var objPWconfirm=document.getElementById("sign_pwd2");
-  
-  
+
+
          //이름 유효성 검사
        if (objName.value == "") {
          alert("이름을 입력하세요.");
@@ -203,7 +203,7 @@ this.value = autoHypenPhone(_val);
          objName.focus();
          return false;
        };
-  
+
         // 비밀번호 유효성검사
        if(objPassword.value==""){
         alert("비밀번호를 입력해주세요")
@@ -220,7 +220,7 @@ this.value = autoHypenPhone(_val);
         objPassword.focus();
         return false;
        }
-  
+
         //휴대폰번호 유효성검사
       if (objPhone.value == "") {
         alert("휴대폰번호를 입력하세요.");

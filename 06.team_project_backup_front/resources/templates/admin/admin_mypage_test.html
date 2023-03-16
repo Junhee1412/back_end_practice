@@ -1,10 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/admin_layout_5.1.3}">
 
-</body>
+<!--고유 CSS 추가-->
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/admin/admin_mypage.css}" >
+</th:block>
+
+<!--고유 스크립트 추가-->
+<th:block layout:fragment="script">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script defer src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script defer th:src="@{/js/admin/admin_mypage.js}"></script>
+    <script defer th:src="@{/js/scripts.js}"></script>
+</th:block>
+<title>관리자페이지</title>
+<div layout:fragment="content">
+
+
+    <!-- section -->
+    <div class="header-card">
+        <div class="thumb-wrapper stagger-item">
+            <img th:if = "${user.profileImageName != null}"  th:src="@{|/upload/${user.profileImageName}|}" class="thumb"/>
+            <img th:unless="${user.profileImageName != null}" src="../img/noimg.gif" class="thumb"/>
+        </div>
+
+        <div class="text-area">
+            <h3 class="greeting stagger-item"><p th:text="${user.getUserName()}"></p></h3>
+            <div class="desc stagger-item" id="user_info_box">
+                <div id="user_info">
+                    <p>
+                        이름 : <span th:text="${user.getUserId()}"></span><br />
+                        닉네임 : <span th:text="${user.getNickName()}"></span><br />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+
+        <div class="list-group list_user">
+            <span class="fw-bold fs-5 text-dark mb-3 mt-3" disabled>회원관리</span>
+            <a href="adminUserList" class="list-group-item list-group-item-action">회원 목록</a>
+            <a href="adminPostManage" class="list-group-item list-group-item-action">게시글 관리</a>
+            <a href="adminDonatemanage" class="list-group-item list-group-item-action">후원관리하기</a>
+
+
+
+
+            <!--  어드민 등록 Modal -->
+            <div class="modal fade modal-center" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">ADMIN 생성</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <form action="adminCreate" method="post" onsubmit="return ValidChecked();" enctype="multipart/form-data">
+
+
+                                <div class="form-group text-start">
+                                    <label class="form-label mt-2">아이디*</label>
+                                    <input type="text" class="form-control" id="sign_id" name="userId" required>
+                                </div>
+                                <div class="form-group text-start">
+                                    <label class="form-label mt-2">비번*</label>
+                                    <input type="password" class="form-control" id="sign_pwd" name="userPassword" required>
+                                </div>
+                                <div class="form-group text-start">
+                                    <label class="form-label mt-2">비번확인*</label>
+                                    <input type="password" class="form-control" id="sign_pwd2" required>
+                                </div>
+                                <div class="form-group text-start">
+                                    <label class="form-label mt-2">이름*</label>
+                                    <input type="text" class="form-control" id="sign_name" name="userName" required>
+                                </div>
+                                <div class="form-group text-start">
+                                    <label class="form-label mt-2">닉네임*</label>
+                                    <input type="text" class="form-control" id="sign_nickname" name="nickName" required>
+                                </div>
+                                <div class="form-group text-start">
+                                    <label class="form-label mt-2">지역</label>
+                                    <input type="text" class="form-control" id="sign_address" name="address" value="이젠아카데미" required>
+                                </div>
+                                <div class="form-group text-start" >
+                                    <label class="form-label mt-2">핸드폰*</label>
+                                    <div id="phone_box" style="display:flex;">
+                                        <select class="form-select" id="sign_phone" name="phoneType" style="width:20%;">
+                                            <option th:selected="${type}=='SKT'">SKT</option>
+                                            <option th:selected="${type}=='LG U+'">LG U+</option>
+                                            <option th:selected="${type}=='KT'">KT</option>
+                                        </select>
+                                        <input type="text" class="form-control " id="sign_ph" name="phoneNumber" style="width:75%; margin-left:20px;" maxlength="13" required>
+                                    </div>
+                                </div>
+
+                                <div id=find_idpw>
+                                    <button class="w-30 btn btn-lg btn-dark mt-4">등록</button><!--onclick="findID()"-->
+                                </div>
+
+
+                            </form>
+                        </div>
+                        <div class="modal-footer mt-3">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><span style="padding-left:100px;">닫기</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="list-group list_admin">
+            <span class="fw-bold fs-5 text-dark mb-3 mt-3" disabled>관리자메뉴</span>
+            <a href="javascript:openDetail('/chat?id=master')" data-toggle="tooltip" data-placement="top" id="chat_btn" title="Chat" class="list-group-item list-group-item-action enter_chat">관리자 채팅</a>
+            <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#myModal">관리자생성하기</a>&nbsp;&nbsp;&nbsp;
+        </div>
+
+    </section>
+
+
+</div>
 </html>

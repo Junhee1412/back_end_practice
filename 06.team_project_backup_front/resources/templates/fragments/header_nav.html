@@ -36,16 +36,26 @@
                               <li><a th:href="@{/boardlist?(id=CAT_STR)}">캣스타그램</a></li>
                           </ul>
                       </li>
-                      <li class="dropdown"><a href="my_page"><span>마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                          <ul>
-                              <li><a href="myPost">내 글 모아보기</a></li>
-                              <li><a href="myReply">내가 쓴 댓글 모아보기</a></li>
-                              <li><a href="myHeart">좋아요 목록 보기</a></li>
-                              <li><a href="donatelist">내 후원 목록보기</a></li>
-                              <li><a href="modifyUser">회원정보 수정하기</a></li>
-                          </ul>
+                      <li th:if="${userType}=='MEMBER'" class="dropdown"><a href="my_page"><span>마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul>
+                          <li><a href="myPost">내 글 모아보기</a></li>
+                          <li><a href="myReply">내가 쓴 댓글 모아보기</a></li>
+                          <li><a href="myHeart">좋아요 목록 보기</a></li>
+                          <li><a href="donatelist">내 후원 목록보기</a></li>
+                          <li><a href="modifyUser">회원정보 수정하기</a></li>
+                        </ul>
                       </li>
-                      <li><a class="get-a-quote" href="logout">로그아웃</a></li>
+                      <li th:if="${userType}=='ADMIN'" class="dropdown"><a href="adminMypage"><span>관리자마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul>
+                          <li><a href="adminMypage">관리자마이페이지</a></li>
+                          <li><a href="adminUserList">유저 리스트</a></li>
+                          <li><a href="adminPostManage">전체 글</a></li>
+                          <li><a href="adminDonatemanage">후원 내역</a></li>
+                          <li><a href="adminModify">관리자 수정</a></li>
+                        </ul>
+                      </li>
+                      <li th:if="${userType}=='ADMIN' or ${userType}=='MEMBER'"><a class="get-a-quote" href="logout">로그아웃</a></li>
+                      <li th:unless="${userType}=='ADMIN' or ${userType}=='MEMBER'"><a class="get-a-quote" href="loginpage">로그인</a></li>
                   </ul>
               </nav>
               <!-- .navbar -->

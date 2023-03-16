@@ -45,6 +45,8 @@ public class CommunityController {
         model.addAttribute("user", loginUser);
         model.addAttribute("comid",id);
 
+        model.addAttribute("userType",loginUser.getUserType()); // ADD_USERTYPE
+
         return "community/post_insert";
     }
 
@@ -100,7 +102,7 @@ public String communityList(String id, @PageableDefault(page = 0, size = 12, sor
         model.addAttribute("totalPage", totalPage);
         model.addAttribute("maxPage", 10);
         model.addAttribute("comid",id );
-        model.addAttribute("member",loginUser.getUserType());// 230301 추가
+        model.addAttribute("userType",loginUser.getUserType());// 230301 추가 - 수정 -> ADD_USERTYPE
 
         return "community/post_list";
 
@@ -113,6 +115,8 @@ public String communityList(String id, @PageableDefault(page = 0, size = 12, sor
         model.addAttribute("user", loginUser);
         model.addAttribute("comid",id);
 
+        model.addAttribute("userType",loginUser.getUserType()); // ADD_USERTYPE
+
         List<CommunityImage> filess = communityImageRepository.findByPostNo(postNo);
 
         if (communityService.communityImgFindByPostNo(postNo) != null) {
@@ -124,10 +128,10 @@ public String communityList(String id, @PageableDefault(page = 0, size = 12, sor
         model.addAttribute("numberOfHeart",communityService.countNumberOfHeart(postNo));
 
         if(communityService.getInfoAboutClickLike(loginUser.getUserNo(), postNo)){
-            System.out.println("색칠하트");
+            //System.out.println("색칠하트");
             model.addAttribute("clickHeart",true);
         }else{
-            System.out.println("빈하트");
+            //System.out.println("빈하트");
             model.addAttribute("clickHeart",false);
         }
 
@@ -161,6 +165,9 @@ public String communityList(String id, @PageableDefault(page = 0, size = 12, sor
 
         model.addAttribute("board", communityService.communityPostView(postNo));
         model.addAttribute("orgName", communityService.communityImgFindByPostNo(postNo));
+
+        model.addAttribute("userType",loginUser.getUserType()); // ADD_USERTYPE
+
         // 이후 추가
         if(communityService.communityPostView(postNo).getCommunityId().equals("USD_TRN")){
             model.addAttribute("price",secondHandTradeRepository.findById(postNo).get().getPrice());
