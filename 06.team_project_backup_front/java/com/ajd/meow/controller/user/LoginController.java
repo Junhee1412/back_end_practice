@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
+import javax.servlet.http.HttpSession;
+
 //@RequiredArgsConstructor
 @Controller
 @SessionAttributes("user")
@@ -19,8 +21,13 @@ public class LoginController {
     private UserService userService;
 
     @GetMapping("/loginpage")
-    public String login(){
-        return "user/login_page";
+    public String login(HttpSession session, Model model){
+        if(session.getAttribute("user")==null){
+            model.addAttribute("userType","noUser");
+            return "user/login_page";
+        }else{ // 혹시 로그인되잇는데 로그인버튼을 눌럿을 경우 대비해 적어봄
+            return "redirect:/";
+        }
     }
 
     @PostMapping("/loginpage")
@@ -28,11 +35,8 @@ public class LoginController {
         UserMaster findUser=userService.getUserMaster(user);
         if(findUser!=null && findUser.getUserPassword().equals(user.getUserPassword())){
             model.addAttribute("user",findUser);
-            if(findUser.getUserType().equals("ADMIN")) {
-                 return "redirect:/"; // 어드민 홈으로 이동
-            } else {
-                return "redirect:/"; // 일반유저 홈으로 이동
-            }
+            model.addAttribute("userType",findUser.getUserType());
+            return "redirect:/";
         }else {
             model.addAttribute("errMsg", "로그인 실패! 다시 입력해주세요.");
             return "user/login_page";}

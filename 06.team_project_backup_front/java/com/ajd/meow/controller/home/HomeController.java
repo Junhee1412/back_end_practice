@@ -15,17 +15,15 @@ public class HomeController {
     private UserService userService;
 
     @GetMapping("/")
-    public String home(HttpSession session){
-        if(session.getAttribute("user")==null){
-            return "index";
-        }else{
-            UserMaster loginUser= (UserMaster)session.getAttribute("user");
-            if(loginUser.getUserType().equals("ADMIN")){
-                return "admin/admin_index";// 어드민 페이지로 이동
-            }else{
-                return "user/index_login";
-            }
+    public String home(HttpSession session,Model model) {
+        if (session.getAttribute("user") == null) {
+            model.addAttribute("userType", "noUser");
+        } else {
+            UserMaster loginUser = (UserMaster) session.getAttribute("user");
+            //if(loginUser.getUserType().equals("ADMIN")){return "admin/admin_index";}else{return "user/index_login";}}
+            model.addAttribute("userType", loginUser.getUserType());
         }
+        return "index";
     }
 
     @GetMapping("/business") // 이후 추가
