@@ -49,7 +49,7 @@ public class DonateController {
     public String donatehome(Model model, HttpSession session){
         // 이후 추가
         if(session.getAttribute("user")==null){
-            return "redirect:/";
+            return "redirect:/loginpage";
         }else{
             model.addAttribute("userType",userService.getUserMaster((UserMaster)session.getAttribute("user")).getUserType());
             return "donate/donate_home";

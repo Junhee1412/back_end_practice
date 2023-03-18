@@ -42,6 +42,7 @@ public class MyPageController {
         }else{
             UserMaster loginUser=userService.getUserMaster((UserMaster)session.getAttribute("user"));
             model.addAttribute("user",loginUser);
+            model.addAttribute("userType",loginUser.getUserType()); // ADD_USERTYPE
             return "user/mypage";
         }
     }
@@ -198,6 +199,8 @@ public class MyPageController {
             model.addAttribute("userNickName",loginUser.getNickName());
             model.addAttribute("likes",likes);
 
+            model.addAttribute("userType",loginUser.getUserType()); // ADD_USERTYPE
+
             return "user/user_likes_list";
         }
     }
@@ -223,6 +226,7 @@ public class MyPageController {
         }else{
             UserMaster loginUser=userService.getUserMaster((UserMaster)session.getAttribute("user"));
             model.addAttribute("user",loginUser);
+            model.addAttribute("userType",loginUser.getUserType()); // ADD_USERTYPE
             return "user/mypage_modify";
         }
     }
@@ -246,6 +250,7 @@ public class MyPageController {
         }else{
             UserMaster loginUser=userService.getUserMaster((UserMaster)session.getAttribute("user"));
             model.addAttribute("user", loginUser);
+            model.addAttribute("userType",loginUser.getUserType()); // ADD_USERTYPE
             return "user/delete_user";
         }
     }
@@ -266,6 +271,7 @@ public class MyPageController {
                 return "redirect:/";
             }else{
                 model.addAttribute("dontpatchpassword","비밀번호가 틀립니다.");
+                model.addAttribute("userType",deleteUser.getUserType()); // ADD_USERTYPE
                 return "user/delete_user";
             }
         }

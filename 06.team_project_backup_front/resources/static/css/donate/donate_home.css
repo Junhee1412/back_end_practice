@@ -1,38 +1,16 @@
 .header-card {
-  width: 100%;
-  height: 400px;
   margin-top: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Noto Serif KR", serif, "Jua", 'Noto Sans KR', sans-serif,  -apple-system,
-  BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif,
-  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-}
-
-.header-card .card {
-  width: 900px;
-  height: 300px;
-}
-
-.bg-crop {
-  position: relative;
-  width: 900px;
-  height: 300px;
-  overflow: hidden;
 }
 
 .bg-menu {
-  position: absolute;
   top: -150px;
   left: 0;
-  width: 900px;
-  height: 700px;
-  opacity: 0.6;
 }
 
 .card-body{
-  height: 400px; padding: 30px; border:1px black solid"
+  height: 400px;
+  padding: 30px;
+  border:1px black solid"
 }
 
 

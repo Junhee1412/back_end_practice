@@ -19,7 +19,7 @@ public class HomeController {
         if (session.getAttribute("user") == null) {
             model.addAttribute("userType", "noUser");
         } else {
-            UserMaster loginUser = (UserMaster) session.getAttribute("user");
+            UserMaster loginUser = userService.getUserMaster((UserMaster) session.getAttribute("user"));
             //if(loginUser.getUserType().equals("ADMIN")){return "admin/admin_index";}else{return "user/index_login";}}
             model.addAttribute("userType", loginUser.getUserType());
         }

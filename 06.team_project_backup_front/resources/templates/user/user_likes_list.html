@@ -140,11 +140,11 @@
       <tr>
         <th scope="col">커뮤니티</th>
         <th scope="col">글제목</th>
-        <th scope="col">조회 수</th>
+        <th class="text-center" scope="col">조회 수</th>
         <!--<th scope="col">댓글 수</th>
         <th scope="col">좋아요 수</th>-->
-        <th scope="col">작성자</th>
-        <th scope="col">작성일자</th>
+        <th class="text-center" scope="col">작성자</th>
+        <th class="text-center" scope="col">작성일자</th>
 
       </tr>
       </thead>
@@ -160,11 +160,11 @@
           <span th:case="'NOTICE'">공지사항</span>
         </td>
         <td><a style="text-decoration: none;" th:href="@{/boardview?(postNo=${likeList.postNo})}"><span th:text="${likeList.getCommunityMaster().getSubject()}"></span></a></td>
-        <td th:text="${likeList.getCommunityMaster().getViewCount()}">조회수</td>
-        <td th:text="${likeList.getCommunityMaster().getUserMaster().getNickName()}">닉네임</td>
+        <td class="text-center" th:text="${likeList.getCommunityMaster().getViewCount()}">조회수</td>
+        <td class="text-center" th:text="${likeList.getCommunityMaster().getUserMaster().getNickName()}">닉네임</td>
         <!--<td th:text="${postMaster.getViewCount()}">댓글수</td>
         <td th:text="${postMaster.getViewCount()}">좋아요수</td>-->
-        <td th:text="${likeList.getCommunityMaster().getCreatePostDate().toString().replace('T','  ')}">작성일</td>
+        <td class="text-center" th:text="${likeList.getCommunityMaster().getCreatePostDate().toString().replace('T','  ')}">작성일</td>
         <!--<td><a th:href="@{/boarddelete?(postNo=${postMaster.postNo})}" type="button" class="btn btn-outline-danger confirm_deletePost_btn">삭제</a></td>-->
       </tr>
       </tbody>

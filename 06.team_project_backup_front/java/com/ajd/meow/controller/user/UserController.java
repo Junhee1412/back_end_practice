@@ -21,12 +21,14 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping("goToTerms")
-    public String goToTerms(){
+    public String goToTerms(Model model){
+        model.addAttribute("userType","noUser"); // ADD_USERTYPE
         return "user/terms";
     }
 
     @GetMapping("sign_user")
-    public String memberSign(){
+    public String memberSign(Model model){
+        model.addAttribute("userType","noUser"); // ADD_USERTYPE
         return "user/sign_page";
     }
 
@@ -47,12 +49,12 @@ public class UserController {
     }
 
     @PostMapping("sign_success") //@ModelAttribute
-    public String memberSignSuccess(UserMaster user, MultipartFile file) throws Exception{
+    public String memberSignSuccess(UserMaster user, MultipartFile file, Model model) throws Exception{
         if(userRepository.existsByUserId(user.getUserId())){
             return "redirect:/";
-            // 아마 이 화면 온거면 login안되잇을테니까 일단 걍 session 안받앗음.
             // 새로고침 시 유저가 중복 추가되는거 방지용으로 넣었음 - 걍 홈으로 이동함니다.
         }else{
+            model.addAttribute("userType","noUser"); // ADD_USERTYPE
             userService.insertMember(user, file);
             return "user/sign_success";
         }
@@ -97,11 +99,13 @@ public class UserController {
     @PostMapping("resetting_pw") // resetting_pw/${resetid}
     public String resetPW(@RequestParam("userId")String userId, Model model){
         model.addAttribute("userid",userId);
+        // model.addAttribute("userType","noUser"); // ADD_USERTYPE << 아마 없어도 될듯?
         return "user/pwd_reset";
     }
     @PostMapping("finalResetPW")
     public String finalResetPWForm(@RequestParam("userId")String userId, Model model){
         model.addAttribute("userid",userId);
+        model.addAttribute("userType","noUser"); // ADD_USERTYPE
         return "user/pwd_reset";
     }
 
@@ -113,6 +117,7 @@ public class UserController {
         userRepository.save(userRepository.findByUserId(userId).get());
         //model.addAttribute("userid",user.getUserId());
         model.addAttribute("userid",userRepository.findByUserId(userId));
+        model.addAttribute("userType","noUser"); // ADD_USERTYPE
         return "user/pwd_success";
     }
 }

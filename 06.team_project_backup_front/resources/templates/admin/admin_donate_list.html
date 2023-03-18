@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layouts/admin_layout_5.2.3}">
+      layout:decorate="~{layouts/layout_5.2.3}">
 
 <!--고유 CSS 추가-->
 <th:block layout:fragment="css">
@@ -90,24 +90,24 @@
   <nav class="marbot_100 sans" aria-label="Page navigation example" th:style="${totalPage<=0 ? 'visibility:hidden' : 'visibility'}">
     <ul class="pagination">
       <li class="page-item" th:classappend="${1 == nowPage} ? 'disabled'">
-        <a class="page-link" th:if="${userType}=='ADMIN'" href="#" aria-label="Previous" th:href="@{/adminDonatemanage(page=${startPage-1})}"><span aria-hidden="true">&laquo;</span></a>
-        <a class="page-link" th:if="${userType}=='MEMBER'" href="#" aria-label="Previous" th:href="@{/adminUserDonate(userNo=${userNo},page=${startPage-1})}"><span aria-hidden="true">&laquo;</span></a>
+        <a class="page-link" th:if="${donateUserType}=='allDonate'" href="#" aria-label="Previous" th:href="@{/adminDonatemanage(page=${startPage-1})}"><span aria-hidden="true">&laquo;</span></a>
+        <a class="page-link" th:if="${donateUserType}=='userDonate'" href="#" aria-label="Previous" th:href="@{/adminUserDonate(userNo=${userNo},page=${startPage-1})}"><span aria-hidden="true">&laquo;</span></a>
       </li>
       <li class="page-item" th:classappend="${1 == nowPage} ? 'disabled'">
-        <a class="page-link" th:if="${userType}=='ADMIN'" href="#" aria-label="Previous" th:href="@{/adminDonatemanage(page=${nowPage-2})}"><span aria-hidden="true">&lt;</span></a>
-        <a class="page-link" th:if="${userType}=='MEMBER'" href="#" aria-label="Previous" th:href="@{/adminUserDonate(userNo=${userNo},page=${nowPage-2})}"><span aria-hidden="true">&lt;</span></a>
+        <a class="page-link" th:if="${donateUserType}=='allDonate'" href="#" aria-label="Previous" th:href="@{/adminDonatemanage(page=${nowPage-2})}"><span aria-hidden="true">&lt;</span></a>
+        <a class="page-link" th:if="${donateUserType}=='userDonate'" href="#" aria-label="Previous" th:href="@{/adminUserDonate(userNo=${userNo},page=${nowPage-2})}"><span aria-hidden="true">&lt;</span></a>
       </li>
       <li class="page-item" th:classappend="${i == nowPage} ? 'disabled'" th:each="i : ${#numbers.sequence(startPage, endPage)}">
-        <a class="page-link" th:if="${userType}=='ADMIN'" href="#"  th:href="@{/adminDonatemanage(page=${i - 1})}" th:text="${i}">1</a>
-        <a class="page-link" th:if="${userType}=='MEMBER'" href="#"  th:href="@{/adminUserDonate(userNo=${userNo},page=${i - 1})}" th:text="${i}">1</a>
+        <a class="page-link" th:if="${donateUserType}=='allDonate'" href="#"  th:href="@{/adminDonatemanage(page=${i - 1})}" th:text="${i}">1</a>
+        <a class="page-link" th:if="${donateUserType}=='userDonate'" href="#"  th:href="@{/adminUserDonate(userNo=${userNo},page=${i - 1})}" th:text="${i}">1</a>
       </li>
       <li class="page-item" th:classappend="${endPage == nowPage} ? 'disabled'">
-        <a class="page-link" th:if="${userType}=='ADMIN'" href="#" aria-label="Next"  th:href="@{/adminDonatemanage(page=${nowPage})}"><span aria-hidden="true">&gt;</span></a>
-        <a class="page-link" th:if="${userType}=='MEMBER'" href="#" aria-label="Next"  th:href="@{/adminUserDonate(userNo=${userNo},page=${nowPage})}"><span aria-hidden="true">&gt;</span></a>
+        <a class="page-link" th:if="${donateUserType}=='allDonate'" href="#" aria-label="Next"  th:href="@{/adminDonatemanage(page=${nowPage})}"><span aria-hidden="true">&gt;</span></a>
+        <a class="page-link" th:if="${donateUserType}=='userDonate'" href="#" aria-label="Next"  th:href="@{/adminUserDonate(userNo=${userNo},page=${nowPage})}"><span aria-hidden="true">&gt;</span></a>
       </li>
       <li class="page-item" th:classappend="${endPage == nowPage} ? 'disabled'">
-        <a class="page-link" th:if="${userType}=='ADMIN'" href="#" aria-label="Next"  th:href="@{/adminDonatemanage(page=${endPage-1})}"><span aria-hidden="true">&raquo;</span></a>
-        <a class="page-link" th:if="${userType}=='MEMBER'" href="#" aria-label="Next"  th:href="@{/adminUserDonate(userNo=${userNo},page=${endPage-1})}"><span aria-hidden="true">&raquo;</span></a>
+        <a class="page-link" th:if="${donateUserType}=='allDonate'" href="#" aria-label="Next"  th:href="@{/adminDonatemanage(page=${endPage-1})}"><span aria-hidden="true">&raquo;</span></a>
+        <a class="page-link" th:if="${donateUserType}=='userDonate'" href="#" aria-label="Next"  th:href="@{/adminUserDonate(userNo=${userNo},page=${endPage-1})}"><span aria-hidden="true">&raquo;</span></a>
       </li>
     </ul>
   </nav>

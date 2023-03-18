@@ -53,11 +53,10 @@ public class AdminController {
         }else{
             UserMaster user=(UserMaster)session.getAttribute("user");
             model.addAttribute("user",user);
+            model.addAttribute("userType",user.getUserType()); // ADD_USERTYPE
             if(user.getUserType().equals("ADMIN")){
                 return "admin/admin_mypage"; // 어드민 마이페이지로 이동
-            }else{
-                return "redirect:/my_page"; // 유저 마이페이지로 이동?
-            }
+            }else{return "redirect:/";}
         }
     }
 
@@ -70,11 +69,10 @@ public class AdminController {
         }else{
             UserMaster user=(UserMaster)session.getAttribute("user");
             model.addAttribute("user",user);
+            model.addAttribute("userType",user.getUserType()); // ADD_USERTYPE
             if(user.getUserType().equals("ADMIN")){
                 return "admin/admin_mypage_modify"; // 어드민 수정 페이지
-            }else{
-                return "redirect:/";
-            }
+            }else{return "redirect:/";}
         }
     }
 
@@ -95,10 +93,8 @@ public class AdminController {
             Optional<UserMaster> userMM=userRepository.findByUserId(userMaster.getUserId());
             model.addAttribute("user",userMM.get());
             if(userMM.get().getUserType().equals("ADMIN")){
-                return "redirect:/adminMypage";//"admin/admin_mypage";
-            }else{
-                return "redirect:/";
-            }
+                return "redirect:/adminMypage";
+            }else{return "redirect:/";}
         }
     }
 
@@ -115,7 +111,7 @@ public class AdminController {
                 users.setUserJoinDate(LocalDateTime.now());
                 userRepository.save(users);
                 return "redirect:adminMypage";
-            }else{return "redirect:/my_page";}
+            }else{return "redirect:/";}
         }
     }
 
@@ -148,10 +144,11 @@ public class AdminController {
                 model.addAttribute("totalPage", totalPage);
 
                 model.addAttribute("userList",everyUser);
+
+                model.addAttribute("userType",user.getUserType()); // ADD_USERTYPE
+
                 return "admin/admin_user_list"; // 어드민 마이페이지로 이동
-            }else{
-                return "redirect:/";
-            }
+            }else{return "redirect:/";}
         }
     }
 
@@ -167,11 +164,10 @@ public class AdminController {
                 }else{
                     UserMaster certainuser=userRepository.findById(userNo).get();
                     model.addAttribute("user",certainuser);
+                    model.addAttribute("userType",user.getUserType()); // ADD_USERTYPE
                     return "admin/admin_user_detail";
                 }
-            }else{
-                return "redirect:/";
-            }
+            }else{return "redirect:/";}
         }
     }
 
@@ -186,9 +182,7 @@ public class AdminController {
             if(loginuser.getUserType().equals("ADMIN")){
                 userService.deleteMember(userService.getUser(userNo));
                 return "redirect:/adminUserList";
-            }else{
-                return "redirect:/my_page";
-            }
+            }else{return "redirect:/";}
         }
     }
 
@@ -202,7 +196,6 @@ public class AdminController {
             UserMaster user=(UserMaster) session.getAttribute("user");
             if(user.getUserType().equals("ADMIN")){
                 if(userRepository.findById(userNo).isEmpty()){
-                    //model.addAttribute("err","해당유저가 존재하지않습니다.");
                     return "redirect:/adminUserList";
                 }else{
                     Page<CommunityMaster> boardListFindByUserNO=null;
@@ -231,9 +224,7 @@ public class AdminController {
                     model.addAttribute("userNo",userNo);
                     return "user/user_post_list";
                 }
-            }else{
-                return "redirect:/";
-            }
+            }else{return "redirect:/";}
         }
     }
 
@@ -256,19 +247,20 @@ public class AdminController {
                 int nowPage = userAllDonateList.getPageable().getPageNumber()+1 ;
                 int startPage = Math.max(0 , 1);
                 int endPage = Math.min(nowPage + 10 , userAllDonateList.getTotalPages());
+                int totalPage= userAllDonateList.getTotalPages();
 
                 model.addAttribute("nowPage", nowPage);
                 model.addAttribute("startPage", startPage);
                 model.addAttribute("endPage", endPage);
                 model.addAttribute("maxPage",10);
+                model.addAttribute("totalPage",totalPage);
 
-                //추가
-                model.addAttribute("userType", userService.getUser(userNo).getUserType());
+                //추가 - 수정
+                model.addAttribute("donateUserType", "userDonate");
+                model.addAttribute("userType", user.getUserType());
 
-                return "admin/admin_donate_list";//"donate/my_donate_list";
-            }else{
-                return "redirect:/";
-            }
+                return "admin/admin_donate_list";
+            }else{return "redirect:/";}
         }
     }
 
@@ -379,15 +371,18 @@ public class AdminController {
                 int nowPage = donateMaster.getPageable().getPageNumber()+1 ;
                 int startPage = Math.max(0 , 1);
                 int endPage = Math.min(nowPage + 10 , donateMaster.getTotalPages());
+                int totalPage=donateMaster.getTotalPages();
 
                 model.addAttribute("list",donateMaster);
                 model.addAttribute("nowPage", nowPage);
                 model.addAttribute("startPage", startPage);
                 model.addAttribute("endPage", endPage);
                 model.addAttribute("maxPage",10);
+                model.addAttribute("totalPage",totalPage);
 
                 //추가
                 model.addAttribute("userType",user.getUserType());
+                model.addAttribute("donateUserType", "allDonate");
 
                 return "admin/admin_donate_list";
             }else{
