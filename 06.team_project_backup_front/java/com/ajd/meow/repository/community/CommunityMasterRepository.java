@@ -31,6 +31,7 @@ public interface CommunityMasterRepository extends JpaRepository<CommunityMaster
     // 230225 추가
     Page<CommunityMaster> findBySubjectContainingAndUserNo(String searchKeyword, Long userNo, Pageable pageable);
 
+
     /*@Transactional
     @Query(value = "select * from CMNTY_MSTR where CMNTY_ID=:communityId and SUBJECT like ':subject' order by POST_NO DESC", nativeQuery = true)
     Page<CommunityMaster> findBySubjectAndCommunityId(@Param("communityId")String communityId, @Param("subject")String subject, Pageable pageable);*/

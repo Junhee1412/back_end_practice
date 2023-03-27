@@ -269,7 +269,7 @@
                                                                                th:text="${reply.getUserMaster().getNickName()}"></div>
                             <button th:if="${reply.userNo == user.userNo}"
                                     th:onclick="|replyIndex.replyDelete('${board.postNo}', '${reply.replyNo}')|"
-                                    class="badge btn-danger" style="margin-left: 10px;">삭제</button>
+                                    class="btn btn-outline-danger btn-sm confirm_deleteReply_btn" style="margin-left: 10px;">삭제</button>
                         </div>
                     </li>
 
@@ -284,6 +284,7 @@
 
                 <form>
                     <input type="hidden" id="postNo" th:value="${board.postNo}">
+                    <input type="hidden" id="comId" th:value="${comid}">
                     <ul class="list-group list-group-flush" style="text-align:center">
                         <li class="list-group-item marAuto">
                             <textarea class="form-control marArea" id="reply_content" rows="2"></textarea>
@@ -300,7 +301,7 @@
     </div>
 
 
-    <div class="footer-btn-group sans" id="post_button_group">
+    <div class="footer-btn-group sans" id="post_button_group" style="display:flex; justify-content:center; align-items:center; margin-top:40px; margin-bottom:90px;">
         <a type="button" class="btn btn-outline-primary" style="margin-right : 10px" th:if="${board.userNo == user.userNo}" th:href="@{/boardmodify(postNo=${board.postNo},id=${comid})}">
 
             <i class="bi bi-pencil-square"></i> 수정하기

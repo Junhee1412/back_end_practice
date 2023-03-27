@@ -23,7 +23,8 @@
   <div class="insert">
     <h3>회원정보수정하기</h3>
     <div class="thumb-wrapper stagger-item">
-      <a href="#"><img class="thumb" th:src="@{|/upload/${user.profileImageName}|}" /></a>
+      <a href="#"><img th:if = "${user.profileImageName != null}" class="thumb" th:src="@{|/upload/${user.profileImageName}|}" /></a>
+      <a href="#"><img th:unless="${user.profileImageName != null}" class="thumb"  src="../img/noimg.gif"/></a>
     </div>
   </div>
   <!-- 회원가입 -->

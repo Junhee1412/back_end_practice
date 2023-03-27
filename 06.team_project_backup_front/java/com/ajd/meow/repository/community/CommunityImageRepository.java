@@ -21,4 +21,5 @@ public interface CommunityImageRepository extends JpaRepository<CommunityImage, 
 
     void deleteAllByPostNo(Long postNo);
 
+
 }

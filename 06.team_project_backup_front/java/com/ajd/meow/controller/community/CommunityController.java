@@ -223,14 +223,15 @@ public String communityList(String id, @PageableDefault(page = 0, size = 12, sor
 
     // 주희 추가
     @GetMapping("countHeart")
-    public String countHeart(HttpSession session, Long postNo, Model model, CommunityLike communityLike){
+    public String countHeart(HttpSession session, Long postNo, Model model){
         if(session.getAttribute("user")==null){
             return "rediect:/";
         }
         else{
             UserMaster loginUser=userService.getUserMaster((UserMaster)session.getAttribute("user"));
+
             communityService.countHeart(postNo, loginUser.getUserNo());
-            return "redirect:/boardview?postNo="+postNo;
+            return "redirect:/boardview?postNo="+postNo+"&id="+communityService.communityPostView(postNo).getCommunityId();
         }
     }
     // 주희 추가 끝

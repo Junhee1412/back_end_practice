@@ -42,10 +42,10 @@
   />
   <title>회원 목록 보기</title>
   <!-- Font Awesome icons (free version)-->
-  <script
-          src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
-          crossorigin="anonymous"
-  ></script>
+<!--  <script-->
+<!--          src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"-->
+<!--          crossorigin="anonymous"-->
+<!--  ></script>-->
   <!-- Simple line icons-->
   <link
           href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
@@ -152,7 +152,7 @@
           <td th:text="${userMaster.getUserType()}"></td>
           <td class="text-center">
             <a class="btn btn-outline-dark btn-sm" th:href="@{|/adminUserDetail?userNo=${userMaster.getUserNo()}|}">조회</a>
-          </td>z
+          </td>
           <td class="text-center">
             <a th:if="${userMaster.getUserType()=='MEMBER'}" th:href="@{/adminUserDelete?(userNo=${userMaster.getUserNo()})}" type="button" id="confirm_deleteUser_btn" class="btn btn-outline-danger confirm_deleteUser_btn btn-sm">삭제</a><!--onclick="checkcheck(e)"-->
           </td>

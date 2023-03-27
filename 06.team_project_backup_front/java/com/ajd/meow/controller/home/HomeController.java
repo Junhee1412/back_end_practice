@@ -35,9 +35,4 @@ public class HomeController {
         }
         return "business/business_info";
     }
-
-    @GetMapping("/test")
-    public  String test(){
-        return "fragments/testfile";
-    }
 }

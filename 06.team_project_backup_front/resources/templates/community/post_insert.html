@@ -157,8 +157,8 @@
                         </div>
                         <div th:case="'FRE_SEL'" >
                             <input type="hidden" name="price" value="0">
-                            <div class="col-sm-10 mb-3" style="display:flex; justify-content: center; align-items: center;">
-                                <label for="post_id_select_byFreeSell" class="col-sm-2 col-form-label">무료나눔품목 *</label>
+                            <div class="col-sm-5 mb-3" style="display:flex; justify-content: center; align-items: center;">
+                                <label for="post_id_select_byFreeSell" class="col-sm-2 col-form-label" style="margin-right:24%;">무료나눔품목 *</label>
                                 <select id= "post_id_select_byFreeSell" name="postId" class="form-select" aria-label="post_type">
                                     <option value="" selected>품목을 선택해주세요!</option>
                                     <option value="CTWR_FREE">캣타워</option>
@@ -186,7 +186,7 @@
 
 
 
-                                <label for="second_amount" class="col-form-label col-sm-2">가격 *</label>
+                                <label for="second_amount" class="col-form-label col-sm-2 text-center" style="margin-left:15%;">가격 *</label>
                                 <input type="text" class="form-control form_info" id="second_amount" name="price" onkeyup="inputNumberFormat(this);">
 
                             </div>
