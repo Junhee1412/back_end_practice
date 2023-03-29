@@ -28,7 +28,7 @@
         <h1 class="h3 mb-3 fw-normal fs-1 mt-4">로그인</h1>
 
         <div class="form-floating">
-          <input type="text" class="form-control mb-1" id="userId" name="userId" placeholder="아이디 입력..." value="member1@gmail.com">
+          <input type="text" class="form-control mb-1" id="userId" name="userId" placeholder="아이디 입력..." value="admin1@gmail.com">
           <label for="userId">아이디</label>
         </div>
         <div class="form-floating">
@@ -84,9 +84,9 @@
           <!-- 아이디 찾기 modal - end  -->
 
           <a href="#" data-toggle="modal"
-             data-target="#myModal1">비밀번호 찾기</a>&nbsp;&nbsp;&nbsp;
+             data-target="#myModal1">비밀번호 재설정</a>&nbsp;&nbsp;&nbsp;
 
-          <!--  비밀번호 찾기 Modal -->
+          <!--  비밀번호 재설정 Modal -->
           <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
               <div class="modal-content">
@@ -145,64 +145,55 @@
               </div>
             </div>
           </div>
-          <!-- 비밀번호 찾기 modal - end  -->
+          <!-- 비밀번호 재설정 modal - end  -->
 
           <a href="goToTerms">회원가입</a>
         </label>
       </div>
     </main>
 
-
-    <div class="card" style="width: 18rem;">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-      </ul>
-    </div>
-
-    <div class="mb-1 row">
-      <label for="memberId" class="col-sm-4 col-form-label text-start">일반회원1</label>
-      <div class="col-sm-8">
-        <input type="text" readonly class="form-control-plaintext" id="memberId" value="member1@gmail.com">
-      </div>
-    </div>
-    <div class="mb-3 row">
-      <label for="memberName" class="col-sm-2 col-form-label text-start">이름</label>
-      <div class="col-sm-2">
-        <input type="text" readonly class="form-control-plaintext text-start" id="memberName" value="맴버">
-      </div>
-      <label for="memberPhone" class="col-sm-2 col-form-label text-start" style="white-space:nowrap">핸드폰</label>
-      <div class="col-sm-6">
-        <input type="text" readonly class="form-control-plaintext" id="memberPhone" value="KT 010-1111-1111">
-      </div>
-    </div>
-
-
-
-    <div class="mb-1 row">
-      <label for="adminId" class="col-sm-4 col-form-label text-start">관리자회원1</label>
-      <div class="col-sm-8">
-        <input type="text" readonly class="form-control-plaintext" id="adminId" value="admin1@gmail.com">
-      </div>
-    </div>
-
-    <div class="mb-1 row">
-      <label for="memberSubId" class="col-sm-4 col-form-label text-start">일반회원2</label>
-      <div class="col-sm-8">
-        <input type="text" readonly class="form-control-plaintext" id="memberSubId" value="member2@gmail.com">
-      </div>
-    </div>
-
-    <div class="mb-1 row">
-      <label for="adminSubId" class="col-sm-4 col-form-label text-start">관리자회원2</label>
-      <div class="col-sm-8">
-        <input type="text" readonly class="form-control-plaintext" id="adminSubId" value="admin2@gmail.com">
-      </div>
-    </div>
-
-    <input class="form-control mb-3 row" type="text" value="공용비밀번호 : Qwer1234!" aria-label="readonly input example" readonly>
-
+<h5 class="mb-1">공용 아이디, 비밀번호</h5>
+    <p class="text-muted mb-3">이름과 핸드폰번호는 아이디찾기에 사용하실 수 있습니다.</p>
+    <table class="table" id="common_id_info">
+      <thead>
+      <tr>
+        <th scope="col">구분</th>
+        <th scope="col">ID</th>
+        <th scope="col">이름</th>
+        <th scope="col">핸드폰</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td scope="row">관리자1</td>
+        <td class="text-start">admin1@gmail.com</td>
+        <td>관리자</td>
+        <td>KT 010-1111-1111</td>
+      </tr>
+      <tr>
+        <td scope="row">관리자2</td>
+        <td class="text-start">admin2@gmail.com</td>
+        <td>관리자</td>
+        <td>SKT 010-2222-2222</td>
+      </tr>
+      <tr>
+        <td scope="row">일반회원1</td>
+        <td class="text-start">member1@gmail.com</td>
+        <td>맴버</td>
+        <td>LG 010-3333-3333</td>
+      </tr>
+      <tr>
+        <td scope="row">일반회원2</td>
+        <td class="text-start">member2@gmail.com</td>
+        <td>맴버</td>
+        <td>KT 010-4444-4444</td>
+      </tr>
+      <tr>
+        <td scope="row">공용비밀번호</td>
+        <td class="text-start" colspan="3">Qwer1234!</td>
+      </tr>
+      </tbody>
+    </table>
   </section>
 
 

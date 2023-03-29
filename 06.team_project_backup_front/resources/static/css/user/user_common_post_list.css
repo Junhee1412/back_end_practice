@@ -1,0 +1,42 @@
+.header-card {
+  margin-top: 80px;
+}
+
+.card-img-overlay {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header h5 {
+  font-size: xx-large;
+}
+
+.badge {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.marbot_100{
+  margin-bottom:100px;
+}
+
+.right_18per{
+  right:18%;
+}
+
+.text-box{
+  border:1px solid #808080;
+}
+
+#table_box{
+  width:60%;
+  margin:0 auto;
+}
+
+.small_btn {
+  padding: 0.15rem 0.25rem;
+  font-size: 0.7rem;
+  border-radius: 0.2rem;
+}

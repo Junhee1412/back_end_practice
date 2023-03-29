@@ -52,7 +52,7 @@
         </thead>
         <tbody>
         <tr th:if="${user.getUserNo()}==${donateList.getUserNo()}" th:each="donateList:${list}">
-          <td th:text="${donateList.donateName}"></td>
+          <td class="text-start" th:text="${donateList.donateName}"></td>
           <td th:text="${donateList.donateType}"></td>
           <td class="text-end" style="padding-right:100px;" th:text="${#numbers.formatInteger(donateList.donateAmount, 0, 'COMMA')+'원'}"></td>
           <td th:switch="${donateList.donateWayCode}">

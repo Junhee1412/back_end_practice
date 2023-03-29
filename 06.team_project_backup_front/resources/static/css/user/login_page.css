@@ -135,3 +135,7 @@ section {
 #input_id_find_box{
   display:flex;
 }
+
+#common_id_info{
+  width:60%;position:relative;margin:0 auto;
+}

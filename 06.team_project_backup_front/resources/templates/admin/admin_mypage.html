@@ -1,242 +1,133 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://meowmeyou.com/"/>
-    <meta property="og:title" content="미유미유" />
-    <meta property="og:description" content="너와 나의 이야기가 펼쳐지는 곳" />
-   <link href="/css/bootstrap-icons.css" rel="stylesheet">
-    <meta
-      property="og:image"
-      content="http://meowmeyou.com/img/index/kakao_preview.jpg"
-    />
-    <meta
-      property="og:site_name"
-      content="유기묘 커뮤니티에 오신걸 환영합니다!"
-    />
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout_5.1.3}">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<!--고유 CSS 추가-->
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/admin/admin_mypage.css}" >
+</th:block>
 
-    <link
-      rel="icon"
-      href="../img/favicon/favicon-remove-bg.ico"
-      type="image/x-icon"
-      sizes="16x16"
-    />
-    <title>관리자페이지</title>
-    <!-- Font Awesome icons (free version)-->
-<!--    <script-->
-<!--      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"-->
-<!--      crossorigin="anonymous"-->
-<!--    ></script>-->
-    <!-- Simple line icons-->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google fonts-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../css/admin/admin_mypage.css" rel="stylesheet" />
-  </head>
+<!--고유 스크립트 추가-->
+<th:block layout:fragment="script">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script defer th:src="@{/js/admin/admin_mypage.js}"></script>
+</th:block>
 
-  <body id="page-top">
-    <!-- Navigation-->
-    <header id="header" class="header d-flex align-items-center fixed-top">
-      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+<title>관리자페이지</title>
 
+<div class="sans" layout:fragment="content">
 
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <a class="logo d-flex align-items-center" href="/"><img alt="Brand" src="../img/logo/logo_remove_bg.png"></a>
-        </a>
-
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list "></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x "></i>
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li class="dropdown"><a href="/"><span>Meow me, you</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a href="business">사업소개</a></li>
-                <!--<li><a th:href="@{/boardlist?(id=ADP_REV)}">후원내역</a></li>-->
-              </ul>
-            </li>
-            <li><a href="donatehome">후원하기</a></li>
-            <li class="dropdown"><a href="#"><span>물품거래</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a th:href="@{/boardlist?(id=FRE_SEL)}">무료 나눔</a></li>
-                <li><a th:href="@{/boardlist?(id=USD_TRN)}">중고 거래</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="#"><span>커뮤니티</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a th:href="@{/boardlist?(id=NOTICE)}">공지사항</a></li>
-                <li><a th:href="@{/boardlist?(id=ADP_ACT)}">분양하기</a></li>
-                <li><a th:href="@{/boardlist?(id=ADP_REV)}">분양후기</a></li>
-                <li><a th:href="@{/boardlist?(id=CAT_STR)}">캣스타그램</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="adminMypage"><span>관리자마이페이지</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a href="adminMypage">관리자마이페이지</a></li>
-                <li><a href="adminUserList">유저 리스트</a></li>
-                <li><a href="adminPostManage">전체 글</a></li>
-                <li><a href="adminDonatemanage">후원 내역</a></li>
-                <li><a href="adminModify">관리자 수정</a></li>
-              </ul>
-            </li>
-            <li><a class="get-a-quote" href="logout">로그아웃</a></li>
-          </ul>
-        </nav>
-        <!-- .navbar -->
-
-      </div>
-    </header><!-- End Header -->
-
-     <!-- section -->
-     <div class="header-card">
-      <div class="thumb-wrapper stagger-item">
-          <img th:if = "${user.profileImageName != null}"  th:src="@{|/upload/${user.profileImageName}|}" class="thumb"/>
-          <img th:unless="${user.profileImageName != null}" src="../img/noimg.gif" class="thumb"/>
-      </div>
-
-      <div class="text-area">
-        <h3 class="greeting stagger-item"><p th:text="${user.getUserName()}"></p></h3>
-        <div class="desc stagger-item" id="user_info_box">
-          <div id="user_info">
-            <p>
-              이름 : <span th:text="${user.getUserId()}"></span><br />
-              닉네임 : <span th:text="${user.getNickName()}"></span><br />
-            </p>
-          </div>
+    <!-- section -->
+    <div class="header-card">
+        <div class="thumb-wrapper stagger-item">
+            <img th:if = "${user.profileImageName != null}"  th:src="@{|/upload/${user.profileImageName}|}" class="thumb"/>
+            <img th:unless="${user.profileImageName != null}" src="../img/noimg.gif" class="thumb"/>
         </div>
-      </div>
-    </div>
 
-
-   <section>
-
-    <div class="list-group list_user">
-      <span class="fw-bold fs-5 text-dark mb-3 mt-3" disabled>회원관리</span>
-      <a href="adminUserList" class="list-group-item list-group-item-action">회원 목록</a>
-      <a href="adminPostManage" class="list-group-item list-group-item-action">게시글 관리</a>
-      <a href="adminDonatemanage" class="list-group-item list-group-item-action">후원관리하기</a>
-
-
-
-
-              <!--  어드민 등록 Modal -->
-        <div class="modal fade modal-center" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">ADMIN 생성</h4>
-              </div>
-              <div class="modal-body">
-
-                <form action="adminCreate" method="post" onsubmit="return ValidChecked();" enctype="multipart/form-data">
-
-
-                  <div class="form-group text-start">
-                    <label class="form-label mt-2">아이디*</label>
-                    <input type="text" class="form-control" id="sign_id" name="userId" required>
-                  </div>
-                  <div class="form-group text-start">
-                    <label class="form-label mt-2">비번*</label>
-                    <input type="password" class="form-control" id="sign_pwd" name="userPassword" required>
-                  </div>
-                  <div class="form-group text-start">
-                    <label class="form-label mt-2">비번확인*</label>
-                    <input type="password" class="form-control" id="sign_pwd2" required>
-                  </div>
-                  <div class="form-group text-start">
-                    <label class="form-label mt-2">이름*</label>
-                    <input type="text" class="form-control" id="sign_name" name="userName" required>
-                  </div>
-                  <div class="form-group text-start">
-                    <label class="form-label mt-2">닉네임*</label>
-                    <input type="text" class="form-control" id="sign_nickname" name="nickName" required>
-                  </div>
-                  <div class="form-group text-start">
-                    <label class="form-label mt-2">지역</label>
-                    <input type="text" class="form-control" id="sign_address" name="address" value="이젠아카데미" required>
-                  </div>
-                  <div class="form-group text-start" >
-                    <label class="form-label mt-2">핸드폰*</label>
-                      <div id="phone_box" style="display:flex;">
-                    <select class="form-select" id="sign_phone" name="phoneType" style="width:20%;">
-                      <option th:selected="${type}=='SKT'">SKT</option>
-                      <option th:selected="${type}=='LG U+'">LG U+</option>
-                      <option th:selected="${type}=='KT'">KT</option>
-                    </select>
-                    <input type="text" class="form-control " id="sign_ph" name="phoneNumber" style="width:75%; margin-left:20px;" maxlength="13" required>
-                      </div>
-                  </div>
-
-                <div id=find_idpw>
-                  <button class="w-30 btn btn-lg btn-dark mt-4">등록</button><!--onclick="findID()"-->
+        <div class="text-area">
+            <h3 class="greeting stagger-item"><p th:text="${user.getUserName()}"></p></h3>
+            <div class="desc stagger-item" id="user_info_box">
+                <div id="user_info">
+                    <p>
+                        이름 : <span th:text="${user.getUserId()}"></span><br />
+                        닉네임 : <span th:text="${user.getNickName()}"></span><br />
+                    </p>
                 </div>
-
-
-              </form>
-              </div>
-              <div class="modal-footer mt-3">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><span style="padding-left:100px;">닫기</span></button>
-              </div>
             </div>
-          </div>
         </div>
-
-
-
     </div>
-      <div class="list-group list_admin">
-        <span class="fw-bold fs-5 text-dark mb-3 mt-3" disabled>관리자메뉴</span>
-        <a href="javascript:openDetail('/chat?id=master')" data-toggle="tooltip" data-placement="top" id="chat_btn" title="Chat" class="list-group-item list-group-item-action enter_chat">관리자 채팅</a>
-        <!--<a href="createdonateBS.meow" class="list-group-item list-group-item-action">후원 사업게시</a>
-        <a href="deletedonateBS.meow" class="list-group-item list-group-item-action">후원 사업삭제</a>--><!--비즈니스마스터-->
-        <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#myModal">관리자생성하기</a>&nbsp;&nbsp;&nbsp;
-      </div>
+
+
+    <section>
+
+        <div class="list-group list_user">
+            <span class="fw-bold fs-5 text-dark mb-3 mt-3" disabled>회원관리</span>
+            <a href="adminUserList" class="list-group-item list-group-item-action">회원 목록</a>
+            <a href="adminPostManage" class="list-group-item list-group-item-action">게시글 관리</a>
+            <a href="adminDonatemanage" class="list-group-item list-group-item-action">후원관리하기</a>
+
+
+
+
+            <!--  어드민 등록 Modal -->
+            <div class="modal fade modal-center" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">ADMIN 생성</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <form action="adminCreate" method="post" onsubmit="return ValidChecked();" enctype="multipart/form-data">
+
+
+                                <div class="form-group text-start">
+                                    <label class="form-label mt-2">아이디*</label>
+                                    <input type="text" class="form-control" id="sign_id" name="userId" required>
+                                </div>
+                                <div class="form-group text-start">
+                                    <label class="form-label mt-2">비번*</label>
+                                    <input type="password" class="form-control" id="sign_pwd" name="userPassword" required>
+                                </div>
+                                <div class="form-group text-start">
+                                    <label class="form-label mt-2">비번확인*</label>
+                                    <input type="password" class="form-control" id="sign_pwd2" required>
+                                </div>
+                                <div class="form-group text-start">
+                                    <label class="form-label mt-2">이름*</label>
+                                    <input type="text" class="form-control" id="sign_name" name="userName" required>
+                                </div>
+                                <div class="form-group text-start">
+                                    <label class="form-label mt-2">닉네임*</label>
+                                    <input type="text" class="form-control" id="sign_nickname" name="nickName" required>
+                                </div>
+                                <div class="form-group text-start">
+                                    <label class="form-label mt-2">지역</label>
+                                    <input type="text" class="form-control" id="sign_address" name="address" value="이젠아카데미" required>
+                                </div>
+                                <div class="form-group text-start" >
+                                    <label class="form-label mt-2">핸드폰*</label>
+                                    <div id="phone_box" style="display:flex;">
+                                        <select class="form-select" id="sign_phone" name="phoneType" style="width:20%;">
+                                            <option th:selected="${type}=='SKT'">SKT</option>
+                                            <option th:selected="${type}=='LG U+'">LG U+</option>
+                                            <option th:selected="${type}=='KT'">KT</option>
+                                        </select>
+                                        <input type="text" class="form-control " id="sign_ph" name="phoneNumber" style="width:75%; margin-left:20px;" maxlength="13" required>
+                                    </div>
+                                </div>
+
+                                <div id=find_idpw>
+                                    <button class="w-30 btn btn-lg btn-dark mt-4">등록</button><!--onclick="findID()"-->
+                                </div>
+
+
+                            </form>
+                        </div>
+                        <div class="modal-footer mt-3">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><span style="padding-left:100px;">닫기</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="list-group list_admin">
+            <span class="fw-bold fs-5 text-dark mb-3 mt-3" disabled>관리자메뉴</span>
+            <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#myModal">관리자생성하기</a>&nbsp;&nbsp;&nbsp;
+        </div>
 
 
     </section>
-  <!-- section - end -->
+    <!-- section - end -->
 
 
-
-
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
-      <div class="container px-4">
-        <p class="m-0 text-center text-white">
-          Copyright &copy; Your Website 2023
-        </p>
-      </div>
-    </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top"
-      ><i class="fas fa-angle-up"></i
-    ></a>
-    <!-- Core theme JS-->
-    <script src="../js/admin/admin_mypage.js"></script>
-     <!-- Bootstrap core JS-->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-     <!-- Core JS-->
-
-  </body>
+</div>
 </html>
