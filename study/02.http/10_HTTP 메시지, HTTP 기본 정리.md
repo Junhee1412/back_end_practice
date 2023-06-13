@@ -8,37 +8,33 @@ http 메시지는 크게 4개의 구성요소가 있다.
 - message body
 
 http는 RFC 공식 스펙에
+
 > HTTP-message = start-line
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*(header-field CRLF)
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;CRLF
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[ message-body ]
+> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;\*(header-field CRLF)
+> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;CRLF
+> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[ message-body ]
 
 라고 되어있다. 이 구성에서 각각이 무엇을 구성하는지 알아보려한다!
 
-
 #### HTTP 요청 메시지(예시)
 
-><span style="color:red">GET /search?q=hello&hl=ko HTTP/1.1</span>
-<span style="color:blue">Host: www.google.com</span>
-<span style="color:green">(공백)</span>
+> <span style="color:red">GET /search?q=hello&hl=ko HTTP/1.1</span> > <span style="color:blue">Host: www.google.com</span> > <span style="color:green">(공백)</span>
 
 #### HTTP 응답메시지(예시)
 
-><span style="color:red">HTTP/1.1 200OK</span>
-<span style="color:blue">Content-Type: text/html;charset=UTF-8
-Content-Length: 3423</span>
-<span style="color:green">(공백)</span>
+> <span style="color:red">HTTP/1.1 200OK</span> > <span style="color:blue">Content-Type: text/html;charset=UTF-8
+> Content-Length: 3423</span> > <span style="color:green">(공백)</span>
+
 ```
 <html>
   <body>...</body>
 </html>
 ```
 
-
-
 ## start-line(시작 라인)
 
 시작라인은 붉은 글씨로 표시된 영역이다.
+
 #### 요청메시지(request)
 
 start-line = **request-line** / status-line
@@ -47,6 +43,7 @@ request-line = method SP(공백, 띄어쓰기) request-tartget SP HTTP-version C
 의 형식을 띈다.
 
 즉 이 안의 구성요소로는
+
 - HTTP 메서드(GET: 조회)
 - 요청 대상(/search?q=hello&hl=ko)
 - HTTP version 이 들어간다.
@@ -92,8 +89,9 @@ message-body가 어떤 것으로 되어있는지, message-body의 크기, 인증
 
 간단하게 총 정리를 하자면
 
-모든 것이 지금은 HTTP로 구성되어 있으며 
+모든 것이 지금은 HTTP로 구성되어 있으며
 HTTP의 특징은
+
 - 클라이언트 서버 구조
 - Stateless 지향
 - 비 연결성
@@ -102,3 +100,5 @@ HTTP의 특징은
 이로 인해 단순하면서 확장 가능하고 조금 더 효율적인 서버를 사용할 수 있도록 구성된 프로토콜인 것이다.
 
 **다음은 HTTP API를 만들어보며 HTTP 메서드에 대해 하나하나 알아보려 한다!**
+
+> 출처 : 모든 개발자를 위한 HTTP 웹 기본 지식(김영한 강사님 인프런 강의)

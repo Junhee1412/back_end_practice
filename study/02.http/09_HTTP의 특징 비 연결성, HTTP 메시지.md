@@ -17,15 +17,19 @@ HTTP는 기본이 연결을 유지하지 않는 모델이다.
 다시 말해 서버 자원을 매우 효율적으로 사용할 수 있도록 설계된 HTTP의 특징인 것이다.
 
 그러나 이 비연결성에도 단점이 있는데
+
 #### TCP/IP 연결을 새로 맺어야 한다. - 이는 3way handshake 시간이 추가된다.
+
 #### 웹 브라우저로 사이트를 요청하면 HTML 뿐 아니라 js, css 등 수 많은 자원들이 다운로드 된다.
-매번 위의 수 많은 자원을 다운로드 하면 너무 많은 다운로드가 발생하므로 
+
+매번 위의 수 많은 자원을 다운로드 하면 너무 많은 다운로드가 발생하므로
 지금은 HTTP 지속연결(Persistent Connections)로 문제를 해결했다.
 
 HTTP 초기에는 클라이언트가 서버에 연결하고 HTML을 응답받고 종료한다.
 그런데 js도 받고 이미지를 받을 때마다 3way handshake를 해야하므로 시간이 오래걸린다.
 
 #### HTTP 지속연결(Persistent Connections)
+
 현재는 SYN(서버 연결), SYN/ACK(클라이언트 연결/응답), ACK(서버 연결 종료)
 위의 3way handshake에서 SYN/ACK 단계 때 모든 js, css등 수 많은 파일을 한번에 받는 방식으로 변경하였다.
 
@@ -45,16 +49,17 @@ HTTP의 요청 메시지와 응답메시지는 구조가 다른데
 
 #### HTTP 요청 메시지
 
-><span style="color:red">GET /search?q=hello&hl=ko HTTP/1.1</span>
-<span style="color:blue">Host: www.google.com</span>
-<span style="color:green">(공백)</span>
+> <span style="color:red">GET /search?q=hello&hl=ko HTTP/1.1</span>
+> <span style="color:blue">Host: www.google.com</span>
+> <span style="color:green">(공백)</span>
 
 #### HTTP 응답메시지
 
-><span style="color:red">HTTP/1.1 200OK</span>
-<span style="color:blue">Content-Type: text/html;charset=UTF-8
-Content-Length: 3423</span>
-<span style="color:green">(공백)</span>
+> <span style="color:red">HTTP/1.1 200OK</span>
+> <span style="color:blue">Content-Type: text/html;charset=UTF-8
+> Content-Length: 3423</span>
+> <span style="color:green">(공백)</span>
+
 ```
 <html>
   <body>...</body>
@@ -67,3 +72,5 @@ HTTP의 메시지 구조는
 요청 메시지에서도 본문에 필요한 message body를 가질 수 있다.
 
 #### 다음엔 각각 메시지 구조당 어떤 내용을 가지고 있는지와 HTTP 기본에 대해 총정리를 해보겠다
+
+> 출처 : 모든 개발자를 위한 HTTP 웹 기본 지식(김영한 강사님 인프런 강의)
