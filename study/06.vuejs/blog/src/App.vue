@@ -44,36 +44,13 @@
       </div>
     </div>
   </nav>
-
-  <!-- <List :blogPost="블로그글" /> -->
-
-  <router-link
-    style="display: inline-block"
-    class="btn btn-primary me-4"
-    to="/list"
-    >리스트페이지</router-link
-  ><br />
-  <router-link style="display: inline-block" class="btn btn-primary" to="/"
-    >홈페이지</router-link
-  >
-
-  <router-view :blogPost="블로그글"></router-view>
+  <button type="button" class="btn btn-primary">Primary</button>
 </template>
 
 <script>
-// import ListComponent from "./components/ListComponent.vue";
-import blog from "./assets/blog.js";
-
 export default {
   name: "App",
-  data() {
-    return {
-      블로그글: blog,
-    };
-  },
-  components: {
-    // List: ListComponent,
-  },
+  components: {},
 };
 </script>
 
